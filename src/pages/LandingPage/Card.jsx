@@ -45,9 +45,10 @@ const Card = () => {
             </button>
           </div>
         </div>
+        {/* card */}
         <div className="card w-96 bg-base-100">
           <figure>
-            <img src="https://placeimg.com/400/225/arch" alt="Shoes" />
+            <img className="rounded" src="https://placeimg.com/400/225/arch" alt="Shoes" />
           </figure>
           <div className="card-body px-2">
             <div className=" ">

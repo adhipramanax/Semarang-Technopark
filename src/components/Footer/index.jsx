@@ -4,27 +4,30 @@ const index = () => {
   return (
     <>
       <div className="bg-[#2F3133]">
-        <footer className="footer p-10 text-white container mx-auto">
+        <footer className="flex p-10 text-white container  mx-auto justify-between">
           <div className="w-1/4">
             <span className="footer-title">Semarang Technopark</span>
+            <div>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus eius, eaque ea
+              dolore perferendis voluptate magnam possimus totam earum, officia repellat, ducimus
+              voluptatibus nam. Qui amet similique nisi accusantium eligendi?
+            </div>
           </div>
-          <div className="w-full">
+          <div className="w-1/5 flex flex-col ">
             <span className="footer-title">Layanan</span>
             <a className="link link-hover">Incubator Event</a>
             <a className="link link-hover">Pelatihan</a>
             <a className="link link-hover">Co-Working Space</a>
             <a className="link link-hover">Sewa Ala</a>
           </div>
-          <div className="w-full">
+          <div className="w-1/5 flex flex-col">
             <span className="footer-title">Profil STP</span>
             <a className="link link-hover">Tentang</a>
             <a className="link link-hover">Visi & Misi Mentor</a>
             <a className="link link-hover">Mentor</a>
             <a className="link link-hover">Partners</a>
-
-            <span>Tentang Visi & Misi Mentor Partners</span>
           </div>
-          <div className="w-full">
+          <div className="w-1/4 flex flex-col">
             <span className="footer-title">Call Us</span>
             <span className="flex gap-2 items-center ">
               <svg

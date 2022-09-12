@@ -1,11 +1,14 @@
 import React from "react";
 
+import lp from "../../assets/images/lp.png";
+
 const Hero = () => {
   return (
     <>
       <div className="hero min-h-screen ">
-        <div className="hero-content flex-col lg:flex-row-reverse justify-between text-white">
-          <img src="https://placeimg.com/260/400/arch" className="max-w-sm rounded-lg shadow-2xl" />
+        <div className="hero-content flex-col justify-end lg:flex-row-reverse text-white">
+          {/* <img src="https://placeimg.com/260/400/arch" className="max-w-sm rounded-lg shadow-2xl" /> */}
+          <img src={lp} className="absolute right-[-100px]" alt="hero" />
           <div className="w-1/3">
             <h1 className="text-5xl font-bold">Semarang Technopark</h1>
             <p className="py-6">
