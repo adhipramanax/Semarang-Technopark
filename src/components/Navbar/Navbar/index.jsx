@@ -2,6 +2,8 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
+import layanan1 from "../../../assets/images/layanan1.png";
+
 const index = (props) => {
   return (
     <>
@@ -43,39 +45,48 @@ const index = (props) => {
                 <Link to="/" className="text-white">
                   Profile
                 </Link>
-                <Link to="/" className="text-white">
-                  Layanan
-                </Link>
+                <div className="dropdown dropdown-hover dropdown-end">
+                  <label tabIndex={0} className=" text-white ">
+                    Layanan
+                  </label>
+                  <ul
+                    tabIndex={0}
+                    className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-[400px] flex flex-row flex-wrap "
+                  >
+                    <div className="flex">
+                      <li>
+                        <a>
+                          <img className="w-14" src={layanan1} alt="layanan" />
+                          Inkubasi STP
+                        </a>
+                      </li>
+                      <li>
+                        <a>
+                          <img className="w-14" src={layanan1} alt="layanan" />
+                          Sewa Alat
+                        </a>
+                      </li>
+                    </div>
+                    <div className="flex">
+                      <li>
+                        <a>
+                          <img className="w-14" src={layanan1} alt="layanan" />
+                          Co-Working Space
+                        </a>
+                      </li>
+                      <li>
+                        <a>
+                          <img className="w-14" src={layanan1} alt="layanan" />
+                          Event & Pelatihan
+                        </a>
+                      </li>
+                    </div>
+                  </ul>
+                </div>
                 <Link to="/" className="text-white">
                   Partners
                 </Link>
               </ul>
-              <div className="dropdown dropdown-hover">
-                <label tabIndex={0} className="btn m-1">
-                  Hover
-                </label>
-                <ul
-                  tabIndex={0}
-                  className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 flex flex-row"
-                >
-                  <div>
-                    <li>
-                      <a>Item 1</a>
-                    </li>
-                    <li>
-                      <a>Item 2</a>
-                    </li>
-                  </div>
-                  <div>
-                    <li>
-                      <a>Item 1</a>
-                    </li>
-                    <li>
-                      <a>Item 2</a>
-                    </li>
-                  </div>
-                </ul>
-              </div>
               <Link
                 to={props.auth}
                 class="focus:outline-none text-[#CD0606] bg-white hover:bg-[#F08619] focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm py-3 px-6  hover:text-white"
