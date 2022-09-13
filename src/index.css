@@ -4,6 +4,7 @@
 
 html {
   background-color: white !important;
+  overflow-x: hidden;
 }
 
 body {
@@ -15,4 +16,8 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+a[data-active="true"] {
+  background-color: blue !important;
 }
