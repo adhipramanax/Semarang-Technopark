@@ -32,10 +32,10 @@ const Layanan = () => {
     <>
       <div className="bg-[#F6F6F6] lg:py-24 lg:my-20 py-4 ">
         <div className="container mx-auto lg:px-6 lg:flex ">
-          <div className="lg:w-1/2 w-full flex flex-col gap-3">
+          <div className="lg:w-1/2 w-full flex flex-col gap-3 lg:pr-8">
             <div className="flex gap-2 justify-center ">
               <span className="bg-[#F08619] h-9 w-1 lg:block hidden">&nbsp;</span>
-              <div className="lg:mx-0 px-11  lg:gap-0  py-4">
+              <div className="lg:mx-0 px-11  lg:gap-0 lg:p-0  py-4">
                 <div className="flex gap-2 lg:hidden ">
                   <span className="bg-[#F08619] h-9 w-1">&nbsp;</span>
                   <h1 className="text-4xl font-medium ">Layanan Kami</h1>
@@ -53,7 +53,7 @@ const Layanan = () => {
           <div className="w-full lg:w-1/2 flex gap-2 lg:gap-7 px-10 lg:p-0 flex-col ">
             {lay.map((lays) => {
               return (
-                <div className="flex bg-white p-3 rounded-3xl gap-5 lg:gap-6 ">
+                <div className="flex bg-white p-3 rounded-3xl gap-5 lg:gap-6 ease-in duration-300 hover:scale-105">
                   <img className="w-[56px] lg:w-[97px]" src={`${lays.img}`} alt="icon" />
                   <div className="flex justify-center flex-col pr-6">
                     <h1 className="text-xl lg:text-2xl font-medium">{lays.judul}</h1>

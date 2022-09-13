@@ -78,10 +78,10 @@ const Card = () => {
           </div>
         </div>
         {/* card */}
-        <div className="flex flex-row gap-5 w-full bg-black justify-between">
+        <div className="flex flex-row gap-5 w-full  justify-between">
           {cards.map((card) => {
             return (
-              <div className="card w-full bg-base-100 h-[400px] ">
+              <div className="card w-full bg-base-100 h-[400px] ease-in duration-300 hover:scale-105">
                 <figure>
                   <img
                     className="rounded-[12px] object-cover h-48 w-96"
