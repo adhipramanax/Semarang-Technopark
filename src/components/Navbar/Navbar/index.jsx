@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const index = (props) => {
   return (
     <>
-      <nav class="bg-white border-gray-200 px-2 sm:px-24 py-2.5 rounded dark:bg-gray-900 bg-transparent ">
+      <nav class="bg-white border-gray-200 px-2 sm:px-24 py-5 rounded dark:bg-gray-900 bg-transparent ">
         <div class="container flex flex-wrap justify-between items-center mx-auto">
           <Link to="/" class="flex items-center text-white text-lg">
             {/* <img src={logo} alt="logo semarang technopark" /> */}
@@ -52,7 +52,7 @@ const index = (props) => {
               </ul>
               <Link
                 to={props.auth}
-                class="focus:outline-none text-[#CD0606] bg-white hover:bg-[#F08619] focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm py-3 px-6 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900 hover:text-white"
+                class="focus:outline-none text-[#CD0606] text-base bg-white hover:bg-red-600 duration-100 hover:text-white focus:ring-4 focus:ring-red-300 font-bold tracking-wide rounded-full py-3 px-6 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
               >
                 {props.title}
               </Link>
