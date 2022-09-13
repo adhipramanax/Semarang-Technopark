@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const index = (props) => {
   return (
     <>
-      <nav class="bg-white border-gray-200 px-2 sm:px-24 py-2.5 rounded dark:bg-gray-900 bg-transparent ">
+      <nav class="bg-white border-gray-200 px-2 sm:px-24 py-2.5 rounded  bg-transparent ">
         <div class="container flex flex-wrap justify-between items-center mx-auto">
           <Link to="/" class="flex items-center text-white text-lg">
             {/* <img src={logo} alt="logo semarang technopark" /> */}
@@ -14,7 +14,7 @@ const index = (props) => {
           <button
             data-collapse-toggle="navbar-default"
             type="button"
-            class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
             aria-controls="navbar-default"
             aria-expanded="false"
           >
@@ -50,9 +50,35 @@ const index = (props) => {
                   Partners
                 </Link>
               </ul>
+              <div className="dropdown dropdown-hover">
+                <label tabIndex={0} className="btn m-1">
+                  Hover
+                </label>
+                <ul
+                  tabIndex={0}
+                  className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 flex flex-row"
+                >
+                  <div>
+                    <li>
+                      <a>Item 1</a>
+                    </li>
+                    <li>
+                      <a>Item 2</a>
+                    </li>
+                  </div>
+                  <div>
+                    <li>
+                      <a>Item 1</a>
+                    </li>
+                    <li>
+                      <a>Item 2</a>
+                    </li>
+                  </div>
+                </ul>
+              </div>
               <Link
                 to={props.auth}
-                class="focus:outline-none text-[#CD0606] bg-white hover:bg-[#F08619] focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm py-3 px-6 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900 hover:text-white"
+                class="focus:outline-none text-[#CD0606] bg-white hover:bg-[#F08619] focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm py-3 px-6  hover:text-white"
               >
                 {props.title}
               </Link>

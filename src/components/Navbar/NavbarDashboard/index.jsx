@@ -52,37 +52,25 @@ const index = () => {
               </svg>
               <img className="w-10" src={user} alt="user" />
               {/* batas */}
-              <div>
-                <div className="dropdown dropdown-hover dropdown-end">
-                  <label tabIndex={0} className="btn m-1">
-                    Hover
-                  </label>
-                  <ul
-                    tabIndex={0}
-                    className="dropdown-content p-2 shadow bg-base-100 rounded-box w-52 !flex flex-wrap gap-2"
-                  >
-                    {/* <div className=""> */}
-                    <li className="bg-red-500">
-                      <a>Item 1</a>
-                    </li>
-                    <li>
-                      <a>Item 2</a>
-                    </li>
-                    <li>
-                      <a>Item 1</a>
-                    </li>
-                    <li>
-                      <a>Item 2</a>
-                    </li>
-                    <li>
-                      <a>Item 1</a>
-                    </li>
-                    <li>
-                      <a>Item 2</a>
-                    </li>
-                    {/* </div> */}
-                  </ul>
+              <div class="dropdown dropdown-hover dropdown-end  ">
+                <label tabindex="0" class="btn btn-ghost m-1 bg-transparent">
+                  Verdian Galang
+                </label>
+                <div class="py-3 px-4 text-sm text-gray-900 dark:text-white">
+                  <div>Bonnie Green</div>
+                  <div class="font-medium truncate">name@flowbite.com</div>
                 </div>
+                <ul
+                  tabindex="0"
+                  class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 "
+                >
+                  <li className="border-solid">
+                    <a>Item 1</a>
+                  </li>
+                  <li>
+                    <a>Logout</a>
+                  </li>
+                </ul>
               </div>
               {/* <span className="font-medium">Cecep Bagus</span> */}
             </div>
