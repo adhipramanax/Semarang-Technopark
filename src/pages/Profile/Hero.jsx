@@ -18,7 +18,7 @@ const Hero = () => {
           src="https://res.cloudinary.com/dna8dexwi/image/upload/v1663012615/semarang-technopark/right_rx8ogg.png"
           alt=""
         />
-        <div className="z-50 h-[90vh] flex flex-col justify-center items-center z-40">
+        <div className="h-[90vh] flex flex-col justify-center items-center z-40">
           <h1 className="z-50 text-center text-4xl text-white font-bold leading-relaxed mb-2 lg:text-[60px]">
             Semarang Technopark
           </h1>

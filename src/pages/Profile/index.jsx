@@ -2,6 +2,7 @@ import React from "react";
 import Hero from "./Hero";
 import Features from "./Features";
 import VisiMisi from "./VisiMisi";
+import Footer from "../../components/Footer";
 
 import stp from "../../assets/images/stp.png";
 import inkubasi from "../../assets/images/inkubasi.png";
@@ -79,6 +80,7 @@ const index = () => {
       <section>
         <VisiMisi />
       </section>
+      <Footer />
     </>
   );
 };
