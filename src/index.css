@@ -21,3 +21,23 @@ code {
 a[data-active="true"] {
   background-color: blue !important;
 }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+[data-only-image="true"] .desc-caro {
+  display: none;
+  width: 0px;
+}
+
+[data-only-image="true"] .carousel-image {
+  width: 100% !important;
+}

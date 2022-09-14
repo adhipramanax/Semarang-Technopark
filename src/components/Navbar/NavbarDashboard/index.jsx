@@ -6,7 +6,7 @@ const index = () => {
   return (
     <>
       <div className="container ">
-        <nav class="p-3 rounded border-gray-200 dark:bg-gray-800 dark:border-gray-700 bg-white">
+        <nav class="p-3 border-gray-200 dark:bg-gray-800 dark:border-gray-700 bg-white">
           <div class="container flex flex-wrap justify-between items-center mx-auto">
             <a href="#" class="flex items-center">
               <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
@@ -52,17 +52,17 @@ const index = () => {
               </svg>
               <img className="w-10" src={user} alt="user" />
               {/* batas */}
-              <div class="dropdown dropdown-hover dropdown-end  ">
-                <label tabindex="0" class="btn btn-ghost m-1 bg-transparent">
+              <div class="dropdown dropdown-content dropdown-end  ">
+                <label tabindex="0" class=" m-1 bg-transparent">
                   Verdian Galang
                 </label>
-                <div class="py-3 px-4 text-sm text-gray-900 dark:text-white">
+                {/* <div class="py-3 px-4 text-sm text-gray-900 dark:text-white">
                   <div>Bonnie Green</div>
                   <div class="font-medium truncate">name@flowbite.com</div>
-                </div>
+                </div> */}
                 <ul
                   tabindex="0"
-                  class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 "
+                  class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 mt-5"
                 >
                   <li className="border-solid">
                     <a>Item 1</a>

@@ -46,9 +46,12 @@ const Carousel = () => {
 
   let autoSlider;
   const listLength = list.length;
-  const specWidth = 1323;
   const duration = 5000;
+  const carousel = React.useRef();
+
   const [number, setNumber] = useState(0);
+  const [specWidth, setSpecWidth] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(2000);
 
   const nextSlide = () => {
     if (number >= listLength - 1) {
@@ -76,22 +79,72 @@ const Carousel = () => {
   };
 
   useEffect(() => {
+    setSpecWidth(carousel.current.offsetWidth);
+    clearInterval(autoSlider);
     autoChangeSlide();
 
-    return () => clearInterval(autoSlider);
+    carousel.current.addEventListener("mouseenter", function () {
+      clearInterval(autoSlider);
+    });
+
+    carousel.current.addEventListener("mouseleave", function () {
+      clearInterval(autoSlider);
+      autoChangeSlide();
+    });
+
+    function updateSize() {
+      let clientWidth = document.documentElement.clientWidth;
+      setWindowWidth(clientWidth);
+
+      console.log(clientWidth);
+
+      if (clientWidth <= 1323) {
+        carousel.current.classList = "caro max-w-[2000px] mx-auto relative";
+        carousel.current.parentElement.classList = "caro-wrapper py-14 mx-[32px] min-h-[200px]";
+        carousel.current.setAttribute("data-only-image", "true");
+        carousel.current.querySelector(".arrow-left").classList =
+          "arrow-left absolute left-[0] top-[50%] translate-y-[-1/2]";
+        carousel.current.querySelector(".arrow-right").classList =
+          "arrow-right absolute right-[0] top-[50%] translate-y-[-1/2]";
+
+        if (clientWidth <= 425) {
+          carousel.current.classList = "caro max-w-[320px] mx-auto relative";
+        }
+
+        setSpecWidth(carousel.current.offsetWidth);
+        return;
+      }
+
+      carousel.current.classList = "caro w-[1323px] mx-auto relative";
+      carousel.current.setAttribute("data-only-image", "false");
+      carousel.current.querySelector(".arrow-left").classList =
+        "arrow-left absolute left-[-40px] top-[50%] translate-y-[-1/2]";
+      carousel.current.querySelector(".arrow-right").classList =
+        "arrow-right absolute right-[-40px] top-[50%] translate-y-[-1/2]";
+      setSpecWidth(carousel.current.offsetWidth);
+    }
+
+    updateSize();
+
+    window.addEventListener("resize", updateSize);
+
+    return () => {
+      clearInterval(autoSlider);
+      window.removeEventListener("resize", updateSize);
+    };
   }, []);
 
   return (
     <>
       <div className="caro-wrapper py-14">
-        <div className={`caro w-[${specWidth}px] mx-auto h-[338px] relative`}>
+        <div className={`caro w-[1323px] mx-auto relative`} data-only-image="false" ref={carousel}>
           <div className="flex gap-3 mb-10 ">
             <span className="bg-[#F08619] h-9 w-1">&nbsp;</span>
-            <span className="text-4xl font-medium ">
-              Highlight <span className="text-[#CD0606]"> Semarang Technopark</span>
+            <span className="lg:text-4xl text-xl font-medium ">
+              Highlight <span className="text-[#CD0606] -"> Semarang Technopark</span>
             </span>
           </div>
-          <div className="slides-container h-full relative overflow-hidden">
+          <div className="slides-container  h-[294px] relative overflow-hidden">
             <div
               className={`flex h-full transition-all duration-1000`}
               style={{
@@ -104,12 +157,15 @@ const Carousel = () => {
                   <article key={i} className="flex w-full h-full">
                     <div
                       id={`carousel-${i}`}
-                      className={"w-1/2 bg-no-repeat bg-cover bg-center"}
+                      className={"w-1/2 bg-no-repeat bg-cover bg-center carousel-image"}
                       style={{
                         backgroundImage: "url('" + data.imageUrl + "')",
                       }}
                     ></div>
-                    <div id={`carousel-desc-${i}`} className="flex flex-col w-1/2 gap-5 p-[18px]">
+                    <div
+                      id={`carousel-desc-${i}`}
+                      className="desc-caro flex flex-col w-1/2 gap-5 p-[18px]"
+                    >
                       <div>
                         <span className="bg-[#F08619] py-[7px] px-[33px] rounded-[14px]">
                           Event
@@ -152,7 +208,7 @@ const Carousel = () => {
             onClick={() => {
               prevSlide();
             }}
-            className="absolute left-[-40px] top-[50%] translate-y-[-1/2]"
+            className="arrow-left absolute left-[-40px] top-[50%] translate-y-[-1/2]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -173,7 +229,7 @@ const Carousel = () => {
             onClick={() => {
               nextSlide();
             }}
-            className="absolute right-[-40px] top-[50%] translate-y-[-1/2]"
+            className="arrow-right absolute right-[-40px] top-[50%] translate-y-[-1/2]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
