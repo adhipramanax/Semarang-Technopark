@@ -19,7 +19,7 @@ const Hero = () => {
           alt=""
         />
         <div className="h-[90vh] flex flex-col justify-center items-center z-40">
-          <h1 className="z-50 text-center text-4xl text-white font-bold leading-relaxed mb-2 lg:text-[60px]">
+          <h1 className="z-50 text-center text-4xl text-white font-bold leading-relaxed mb-2 lg:text-6xl">
             Semarang Technopark
           </h1>
           <p className="z-50 text-center text-white sm:w-[500px] lg:w-[680px]">
