@@ -2,19 +2,21 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
+import layanan1 from "../../../assets/images/layanan1.png";
+
 const index = (props) => {
   return (
     <>
-      <nav class="bg-white border-gray-200 px-2 sm:px-24 py-2.5 rounded dark:bg-gray-900 bg-transparent ">
+      <nav class="bg-white border-gray-200 px-2 sm:px-24 py-2.5 rounded  bg-transparent ">
         <div class="container flex flex-wrap justify-between items-center mx-auto">
           <Link to="/" class="flex items-center text-white text-lg">
             {/* <img src={logo} alt="logo semarang technopark" /> */}
-            Semarang Technopark
+            Semarang TechSnopark
           </Link>
           <button
             data-collapse-toggle="navbar-default"
             type="button"
-            class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
             aria-controls="navbar-default"
             aria-expanded="false"
           >
@@ -43,16 +45,51 @@ const index = (props) => {
                 <Link to="/" className="text-white">
                   Profile
                 </Link>
-                <Link to="/" className="text-white">
-                  Layanan
-                </Link>
+                <div className="dropdown dropdown-hover dropdown-end">
+                  <label tabIndex={0} className=" text-white ">
+                    Layanan
+                  </label>
+                  <ul
+                    tabIndex={0}
+                    className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-[400px] flex flex-row flex-wrap "
+                  >
+                    <div className="flex">
+                      <li>
+                        <a>
+                          <img className="w-14" src={layanan1} alt="layanan" />
+                          Inkubasi STP
+                        </a>
+                      </li>
+                      <li>
+                        <a>
+                          <img className="w-14" src={layanan1} alt="layanan" />
+                          Sewa Alat
+                        </a>
+                      </li>
+                    </div>
+                    <div className="flex">
+                      <li>
+                        <a>
+                          <img className="w-14" src={layanan1} alt="layanan" />
+                          Co-Working Space
+                        </a>
+                      </li>
+                      <li>
+                        <a>
+                          <img className="w-14" src={layanan1} alt="layanan" />
+                          Event & Pelatihan
+                        </a>
+                      </li>
+                    </div>
+                  </ul>
+                </div>
                 <Link to="/" className="text-white">
                   Partners
                 </Link>
               </ul>
               <Link
                 to={props.auth}
-                class="focus:outline-none text-[#CD0606] bg-white hover:bg-[#F08619] focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm py-3 px-6 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900 hover:text-white"
+                class="focus:outline-none text-[#CD0606] bg-white hover:bg-[#F08619] focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm py-3 px-6  hover:text-white"
               >
                 {props.title}
               </Link>
