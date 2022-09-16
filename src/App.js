@@ -2,11 +2,11 @@ import "./App.css";
 import { Route, Routes } from "react-router-dom";
 
 import LandingPage from "./pages/LandingPage";
-import Dashboard from "./pages/Dashboard";
+import Dashboard from "./pages/Dashboard/Dashboard";
 import Login from "./pages/Auth/Login";
 import Register from "./pages/Auth/Register";
-import Verifikasi from './pages/Auth/Verifikasi'
-import Error from './pages/Error'
+import Verifikasi from "./pages/Auth/Verifikasi";
+import Error from "./pages/Error";
 
 function App() {
   return (
