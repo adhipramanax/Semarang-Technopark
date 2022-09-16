@@ -6,7 +6,7 @@ import Created from "./Created";
 const Hero = () => {
   return (
     <>
-      <div className="relative bg-[url('https://res.cloudinary.com/dna8dexwi/image/upload/v1662981768/semarang-technopark/bg-profile_ywzpvs.png')] h-[70vh] bg-no-repeat bg-cover bg-center">
+      <div className="relative bg-[url('https://res.cloudinary.com/dna8dexwi/image/upload/v1662981768/semarang-technopark/bg-profile_ywzpvs.png')] h-[70vh] lg:h-screen bg-no-repeat bg-cover bg-center">
         <Navbar auth="/register" title="Register" />
         <img
           className="absolute w-[25%] z-0 translate-y-[100px] lg:translate-y-24  md:translate-y-[40%] sm:translate-y-36"
@@ -18,11 +18,11 @@ const Hero = () => {
           src="https://res.cloudinary.com/dna8dexwi/image/upload/v1663012615/semarang-technopark/right_rx8ogg.png"
           alt=""
         />
-        <div className="h-[60vh] w-full flex flex-col justify-center items-center z-40">
+        <div className="h-[60vh] lg:h-full w-full flex flex-col justify-center items-center z-40">
           <h1 className="z-50 text-center text-4xl text-white font-bold leading-relaxed mb-2 lg:text-[60px] w-1/2 lg:w-full ">
             Semarang Technopark
           </h1>
-          <p className="z-50 text-center text-white sm:w-[500px] lg:w-[680px] w-[350px] sm:w-[350px]">
+          <p className="z-50 text-center text-white lg:w-[680px] w-[350px] sm:w-[350px]">
             Semarang Technopark memiliki berbagai program dan pengelolaan
             Inkubasi untuk menghasilkan berbagai terobosan inovasi
           </p>

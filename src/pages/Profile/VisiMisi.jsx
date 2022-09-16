@@ -3,7 +3,7 @@ import React from "react";
 const VisiMisi = () => {
   return (
     <>
-      <div className="p-8 lg:py-16 lg:px-28 lg:grid lg:grid-rows-2 lg:grid-flow-col lg:gap-x-10 ">
+      <div className="p-8 lg:pt-16 lg:px-28 lg:grid lg:grid-rows-2 lg:grid-flow-col lg:gap-x-10 ">
         <div className="lg:order-2 lg:flex lg:flex-col lg:items-start lg:self-center">
           <h5 className="text-[#D73737]">Visi & Misi</h5>
           <h1 className="text-2xl font-semibold lg:text-4xl">Mimpi Besarmu</h1>

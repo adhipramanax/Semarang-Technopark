@@ -11,7 +11,7 @@ const index = (props) => {
         <div class="container flex flex-wrap justify-between items-center mx-auto">
           <Link to="/" class="flex items-center text-white text-lg">
             {/* <img src={logo} alt="logo semarang technopark" /> */}
-            Semarang Technopark
+            Semarang TechSnopark
           </Link>
           <button
             data-collapse-toggle="navbar-default"
@@ -42,7 +42,7 @@ const index = (props) => {
                 <Link to="/" className="text-white">
                   Home
                 </Link>
-                <Link to="/" className="text-white">
+                <Link to="/profile" className="text-white">
                   Profile
                 </Link>
                 <div className="dropdown dropdown-hover dropdown-end">
@@ -55,24 +55,24 @@ const index = (props) => {
                   >
                     <div className="flex">
                       <li>
-                        <a>
+                        <Link to="/inkubasi">
                           <img className="w-14" src={layanan1} alt="layanan" />
                           Inkubasi STP
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a>
+                        <Link to="/sewa-alat">
                           <img className="w-14" src={layanan1} alt="layanan" />
                           Sewa Alat
-                        </a>
+                        </Link>
                       </li>
                     </div>
                     <div className="flex">
                       <li>
-                        <a>
+                        <Link to="co-working">
                           <img className="w-14" src={layanan1} alt="layanan" />
                           Co-Working Space
-                        </a>
+                        </Link>
                       </li>
                       <li>
                         <a>

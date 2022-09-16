@@ -2,8 +2,8 @@ import React from "react";
 import Hero from "./Hero";
 import About from "./About";
 import VisiMisi from "./VisiMisi";
-import Footer from "../../components/Footer";
 import Partners from "../../components/Partners";
+import Footer from "../../components/Footer";
 
 import stp from "../../assets/images/stp.png";
 import inkubasi from "../../assets/images/inkubasi.png";
