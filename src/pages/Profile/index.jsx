@@ -1,8 +1,9 @@
 import React from "react";
 import Hero from "./Hero";
-import Features from "./Features";
+import About from "./About";
 import VisiMisi from "./VisiMisi";
 import Footer from "../../components/Footer";
+import Partners from "../../components/Partners";
 
 import stp from "../../assets/images/stp.png";
 import inkubasi from "../../assets/images/inkubasi.png";
@@ -50,27 +51,27 @@ const index = () => {
       </section>
       <div className="bg-[#EE1E14]">
         <div className="flex flex-wrap w-full justify-center gap-y-10 py-16">
-          <Features
+          <About
             img="https://res.cloudinary.com/dna8dexwi/image/upload/v1663002765/semarang-technopark/start-up_muenov.png"
             total="12"
             name="Start Up"
           />
-          <Features
+          <About
             img="https://res.cloudinary.com/dna8dexwi/image/upload/v1663002748/event_vkyr1q.png"
             total="34"
             name="Event"
           />
-          <Features
+          <About
             img="https://res.cloudinary.com/dna8dexwi/image/upload/v1663002748/coworking-space_gtj6ru.png"
             total="56"
             name="Coworking Space"
           />
-          <Features
+          <About
             img="https://res.cloudinary.com/dna8dexwi/image/upload/v1663002747/mentor_wb5acj.png"
             total="21"
             name="Mentor"
           />
-          <Features
+          <About
             img="https://res.cloudinary.com/dna8dexwi/image/upload/v1663002747/product_pixlfm.png"
             total="90"
             name="Product"
@@ -80,6 +81,7 @@ const index = () => {
       <section>
         <VisiMisi />
       </section>
+      <Partners />
       <Footer />
     </>
   );
