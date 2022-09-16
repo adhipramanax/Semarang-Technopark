@@ -5,7 +5,6 @@ import user from "../../../assets/images/user.png";
 const index = () => {
   return (
     <>
-      {/* <div className="container "> */}
       <nav class="p-3 border-gray-200  bg-white">
         <div class="container flex flex-wrap justify-between items-center mx-auto">
           <a href="#" class="flex items-center">
@@ -49,7 +48,6 @@ const index = () => {
               />
             </svg>
             <img className="w-10" src={user} alt="user" />
-            {/* batas */}
             <div class="dropdown dropdown-content dropdown-end  ">
               <label tabindex="0" class=" m-1 bg-transparent">
                 Verdian Galang
@@ -70,7 +68,6 @@ const index = () => {
           </div>
         </div>
       </nav>
-      {/* </div> */}
     </>
   );
 };

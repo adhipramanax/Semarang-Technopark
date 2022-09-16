@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import logo from "../../assets/images/st-logo.png";
 import dashboard from "../../assets/images/svg/dashboard.svg";
@@ -7,6 +8,7 @@ const index = () => {
   const dash = [
     {
       title: "Dashboard",
+      route: "/dashboard",
       icon: (
         <svg
           className="w-6 h-6 transition text-gray-500 duration-75 group-hover:text-white"
@@ -20,6 +22,7 @@ const index = () => {
     },
     {
       title: "Proposal",
+      route: "/dashboard/proposal",
       icon: (
         <svg
           className="w-6 h-6 transition text-gray-500 duration-75 group-hover:text-white"
@@ -33,7 +36,8 @@ const index = () => {
       ),
     },
     {
-      title: "Ativitas",
+      title: "Aktivitas",
+      route: "/dashboard/aktifitas",
       icon: (
         <svg
           className="w-6 h-6 transition text-gray-500 duration-75 group-hover:text-white"
@@ -47,6 +51,7 @@ const index = () => {
     },
     {
       title: "Mentoring",
+      route: "/dashboard/mentoring",
       icon: (
         <svg
           className="w-6 h-6 transition text-gray-500 duration-75 group-hover:text-white"
@@ -61,6 +66,7 @@ const index = () => {
     },
     {
       title: "Profile Tenant",
+      route: "/dashboard/profile-tenant",
       icon: (
         <svg
           className="w-6 h-6 transition text-gray-500 duration-75 group-hover:text-white"
@@ -89,14 +95,14 @@ const index = () => {
               {dash.map((data) => {
                 return (
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to={data.route}
                       class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-[#CD0606] group hover:text-white"
                     >
                       {data.icon}
 
                       <span class="ml-3">{data.title}</span>
-                    </a>
+                    </Link>
                   </li>
                 );
               })}

@@ -14,7 +14,7 @@ const CardTenant = () => {
           <div className="text-center ">
             <div className="bg-[#F0B2B2] mb-2 rounded py-2 text-[#A40505]">Calon Tenant</div>
             <div className="bg-[#F9CFA3] rounded py-2 text-[#90500F]">Food Start Up</div>
-            <div className="flex justify-center p-3 my-3">
+            <div className="flex justify-center p-3 my-3 gap-2">
               <svg
                 width="24"
                 height="24"
