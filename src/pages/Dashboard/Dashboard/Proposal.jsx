@@ -98,10 +98,10 @@ const Proposal = () => {
 
   return (
     <>
-      <div className="flex gap-5 h-48">
+      <div className="flex gap-5 h-48 my-5">
         {proposals.map((data) => {
           return (
-            <div className={`w-[170px] rounded-lg p-5 flex flex-col gap-3 ${data.color}`}>
+            <div className={`w-full rounded-lg p-5 flex flex-col gap-3 ${data.color}`}>
               {data.icon}
               <p className="text-white font-normal">{data.title}</p>
               <h1 className="text-4xl text-white font-bold">{data.num}</h1>
