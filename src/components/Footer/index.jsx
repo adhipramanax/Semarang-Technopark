@@ -1,34 +1,42 @@
 import React from "react";
 
+import ig from "../../assets/images/ig.svg";
+import twiter from "../../assets/images/twiter.svg";
+import fb from "../../assets/images/fb.svg";
+
 const index = () => {
   return (
     <>
       <div className="bg-[#2F3133]">
         <footer className="flex p-10 text-white container  mx-auto justify-between">
-          <div className="w-1/4">
-            <span className="footer-title">Semarang Technopark</span>
+          <div className="lg:w-1/4">
+            <span className="font-medium text-[24px] text-white">Semarang Technopark</span>
             <div>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus eius, eaque ea
-              dolore perferendis voluptate magnam possimus totam earum, officia repellat, ducimus
-              voluptatibus nam. Qui amet similique nisi accusantium eligendi?
+              Semarang Technopark memiliki berbagai program dan pengelolaan Inkubasi untuk
+              menghasilkan berbagai terobosan inovasi
             </div>
+            <span className="flex gap-5 pt-4">
+              <img src={ig} alt="instagram" />
+              <img src={twiter} alt="twiter" />
+              <img src={fb} alt="facebook" />
+            </span>
           </div>
-          <div className="w-1/5 flex flex-col ">
-            <span className="footer-title">Layanan</span>
+          <div className="w-1/5 lg:flex hidden flex-col ">
+            <span className="font-medium text-[24px] text-white">Layanan</span>
             <a className="link link-hover">Incubator Event</a>
             <a className="link link-hover">Pelatihan</a>
             <a className="link link-hover">Co-Working Space</a>
             <a className="link link-hover">Sewa Ala</a>
           </div>
-          <div className="w-1/5 flex flex-col">
-            <span className="footer-title">Profil STP</span>
+          <div className="w-1/5 lg:flex hidden flex-col">
+            <span className="font-medium text-[24px] text-white">Profil STP</span>
             <a className="link link-hover">Tentang</a>
             <a className="link link-hover">Visi & Misi Mentor</a>
             <a className="link link-hover">Mentor</a>
             <a className="link link-hover">Partners</a>
           </div>
-          <div className="w-1/4 flex flex-col">
-            <span className="footer-title">Call Us</span>
+          <div className="w-1/4 lg:flex hidden flex-col">
+            <span className="font-medium text-[24px] text-white">Call Us</span>
             <span className="flex gap-2 items-center ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

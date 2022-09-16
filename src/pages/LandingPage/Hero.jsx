@@ -6,10 +6,9 @@ const Hero = () => {
   return (
     <>
       <div className="hero min-h-screen ">
-        <div className="hero-content flex-col justify-end lg:flex-row-reverse text-white">
-          {/* <img src="https://placeimg.com/260/400/arch" className="max-w-sm rounded-lg shadow-2xl" /> */}
+        <div className="hero-content flex  justify-end lg:flex-row-reverse text-white ">
           <img src={lp} className="absolute right-[-100px]" alt="hero" />
-          <div className="w-1/3">
+          <div className="w-1/2 ">
             <h1 className="text-5xl font-bold">Semarang Technopark</h1>
             <p className="py-6">
               Semarang Technopark memiliki berbagai program dan pengelolaan Inkubasi untuk
