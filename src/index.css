@@ -18,6 +18,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
+.containers {
+  @apply px-[108px]
+}
+
+.contain {
+  @apply px-5
+}
 a[data-active="true"] {
   background-color: blue !important;
 }
