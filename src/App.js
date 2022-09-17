@@ -2,8 +2,9 @@ import "./App.css";
 import { Route, Routes } from "react-router-dom";
 
 import LandingPage from "./pages/LandingPage";
-import Dashboard from "./pages/Dashboard";
+import Dashboard from "./pages/Dashboard/Dashboard";
 import CoWorking from "./pages/CoWorking";
+import SewaAlat from "./pages/SewaAlat";
 import Login from "./pages/Auth/Login";
 import Register from "./pages/Auth/Register";
 
@@ -28,6 +29,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/co-working" element={<CoWorking />} />
+        <Route path="/sewa-alat" element={<SewaAlat />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/inkubasi" element={<Inkubasi />} />
         <Route path="/verifikasi" element={<Verifikasi />} />

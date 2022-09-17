@@ -6,7 +6,7 @@ import lokasi from '../../assets/images/lokasi.svg';
 const index = (props) => {
     return (
         <>
-            <div className="card w-full">
+            <div className="card w-full hover:-translate-y-2 duration-150">
                 <figure className="w-full">
                     <img
                         className="rounded-[12px] object-cover w-full"
