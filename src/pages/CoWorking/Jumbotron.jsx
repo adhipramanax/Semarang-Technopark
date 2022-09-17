@@ -1,22 +1,17 @@
 import React from "react";
 
-import office from "../../assets/images/office.svg";
-import find from "../../assets/images/find.svg";
-
-const Jumbotron = () => {
+const Jumbotron = (props) => {
   return (
     <>
-      <div className="container mx-auto">
-        <section className="w-1/2 flex flex-col gap-5">
+      <div className="px-5 xl:px-[108px] mx-auto">
           <div className="flex gap-3">
-            <img src={office} alt="office" />
-            <h1 className="text-white text-6xl font-bold">Co-Working</h1>
+            <img className="w-8 xl:w-11 lg:w-11" src={props.img} alt="office" />
+            <h1 className="text-white text-4xl xl:text-6xl lg:text-5xl font-bold">{props.judul}</h1>
           </div>
-          <p className="text-white text-base">
-            Ruang kerja baru dimana Semarang Tehcnopark menyediakan beberapa Co-Working Space.
+        <p className="text-white text-sm xl:text-base lg:text-base mt-5">
+            {props.desc}
           </p>
-        </section>
-        <div className="relative block w-96 py-5">
+        <div className="relative block w-96 py-5 mt-2 xl:mt-5 lg:mt-5">
           <span className="absolute top-8 left-0 flex items-center pl-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
