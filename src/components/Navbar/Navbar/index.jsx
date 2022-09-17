@@ -1,7 +1,6 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
-import NavbarMobile from "../NavbarMobile";
 import layanan1 from "../../../assets/images/layanan1.png";
 
 const index = (props) => {
@@ -142,7 +141,7 @@ const index = (props) => {
           <div class="hidden w-full md:block md:w-auto" id="navbar-default">
             <div className="flex justify-center gap-5 items-center">
               <ul className="flex justify-center gap-5 items-center">
-                <Link to="/" className="text-white">
+                <Link to="/" className="text-white ">
                   Home
                 </Link>
                 <Link to="/profile" className="text-white">
@@ -178,10 +177,10 @@ const index = (props) => {
                         </Link>
                       </li>
                       <li>
-                        <a>
+                        <Link to="/pelatihan">
                           <img className="w-14" src={layanan1} alt="layanan" />
                           Event & Pelatihan
-                        </a>
+                        </Link>
                       </li>
                     </div>
                   </ul>
