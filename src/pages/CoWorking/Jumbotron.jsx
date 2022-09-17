@@ -31,7 +31,7 @@ const Jumbotron = (props) => {
           <input
             type="text"
             name="cari"
-            placeholder="Cari Co-Working"
+            placeholder={`Cari ${props.judul}`}
             className="block w-full py-3 pl-12 pr-3 text-gray-700 placeholder-gray-400 bg-white shadow rounded-lg dark:bg-white dark:text-black dark:border-gray-700 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 invalid:border invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
           />
         </div>
