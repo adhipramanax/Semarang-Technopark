@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState } from "react";
 
 import Navbar from "../../../components/Navbar/Navbar";
@@ -6,11 +7,15 @@ import Input from "./input";
 import bgAuth from '../../../assets/images/bg-auth.png';
 
 const index = () => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [showPassword, setShowPassword] = useState(true)
+  const [showUlangPassword, setShowUlangPassword] = useState(true)
 
   const handlePassword = value => {
     setShowPassword(value)
+  }
+
+  const handleUlangPassword = value => {
+    setShowUlangPassword(value)
   }
 
   return (
@@ -20,7 +25,7 @@ const index = () => {
           <Navbar auth="/login" title="Masuk" />
           <div className="flex z-20 px-4 lg:px-12 xl:px-24 overflow-hidden">
             <Hero />
-            <Input password={showPassword} onUpdate={value => { handlePassword(value) }} />
+            <Input password={showPassword} ulangPassword={showUlangPassword} onUpdateP={value => { handlePassword(value) }} onUpdateUP={value => { handleUlangPassword(value) }} />
           </div>
         </div>
         {/* <img className="hidden xl:block 2xl:block sm:block lg:hidden z-10 top-[5.3rem]" src={bgAuth} alt="background" /> */}
