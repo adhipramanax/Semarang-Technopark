@@ -1,45 +1,147 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
-
 import layanan1 from "../../../assets/images/layanan1.png";
 
 const index = (props) => {
   return (
     <>
-      <nav class="bg-white border-gray-200 px-2 sm:px-24 py-2.5 rounded  bg-transparent ">
+      <nav class="bg-white border-gray-200 lg:px-2 sm:px-24 lg:py-2.5 rounded bg-transparent ">
         <div class="container flex flex-wrap justify-between items-center mx-auto">
-          <Link to="/" class="flex items-center text-white text-lg">
-            {/* <img src={logo} alt="logo semarang technopark" /> */}
+          <Link to="/" class="lg:flex items-center text-white text-lg hidden ">
             Semarang TechSnopark
           </Link>
-          <button
-            data-collapse-toggle="navbar-default"
-            type="button"
-            class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
-            aria-controls="navbar-default"
-            aria-expanded="false"
-          >
-            <span class="sr-only">Open main menu</span>
-            <svg
-              class="w-6 h-6"
-              aria-hidden="true"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </button>
+          {/* Mobile */}
+          <div className="drawer drawer-mobile lg:hidden drawer-end">
+            <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+            <div className="drawer-content flex justify-end ">
+              <label htmlFor="my-drawer-2" className="p-3 text-white lg:hidden ">
+                <svg
+                  class="w-6 h-6"
+                  aria-hidden="true"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </label>
+            </div>
+            <div className="drawer-side  ">
+              <label htmlFor="my-drawer-2" className="drawer-overlay items-end"></label>
+              <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content fixed  h-full">
+                <div className="flex justify-between  items-center mb-8 mt-7">
+                  <div className="text-[#D73737] font-bold ">Semarang Technopark</div>
+                  <label htmlFor="my-drawer-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                  </label>
+                </div>
+                <li>
+                  <Link to="/" className="btn-ghost hover:text-red-600">
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/profile" className="btn-ghost hover:text-red-600">
+                    Profile
+                  </Link>
+                </li>
+                <div tabIndex={0} className="collapse collapse-arrow ">
+                  <h1 className="collapse-title ">Layanan</h1>
+                  <div className="collapse-content pl-3">
+                    {/* <div className="block"> */}
+                    <Link
+                      to="/inkubasi"
+                      className="btn-ghost hover:text-red-600 pl-3 py-2 flex gap-2"
+                    >
+                      <img src={layanan1} alt="gambar" className="w-1/12" />
+                      Inkubasi STP
+                    </Link>
+                    {/* </div> */}
+                    <Link
+                      to="/sewa-alat"
+                      className="btn-ghost hover:text-red-600 pl-3 py-2 flex gap-2"
+                    >
+                      <img src={layanan1} alt="gambar" className="w-1/12" />
+                      <p>Sewa Alat</p>
+                    </Link>
+                    <Link
+                      to="/co-working"
+                      className="btn-ghost hover:text-red-600 pl-3 py-2 flex gap-2"
+                    >
+                      <img src={layanan1} alt="gambar" className="w-1/12" />
+                      Co-Working Space
+                    </Link>{" "}
+                    <Link
+                      to="/pelatihan"
+                      className="btn-ghost hover:text-red-600 pl-3 py-2 flex gap-2"
+                    >
+                      <img src={layanan1} alt="gambar" className="w-1/12" />
+                      Event & Pelatihan
+                    </Link>
+                    {/* <Link to="/sewa-alat" className="btn-ghost hover:text-red-600">
+                      Sewa Alat
+                    </Link>
+                    <Link to="/co-working" className="btn-ghost hover:text-red-600">
+                      Co-Working Space
+                    </Link>
+                    <Link to="/pelatihan" className="btn-ghost hover:text-red-600">
+                      Event & Pelatihan
+                    </Link> */}
+                    {/* <ul>
+                      <li>
+                        <Link to="/inkubasi" className="btn-ghost hover:text-red-600">
+                          Inkubasi STP
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/sewa-alat" className="btn-ghost hover:text-red-600">
+                          Sewa Alat
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/co-working" className="btn-ghost hover:text-red-600">
+                          Co-Working Space
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/pelatihan" className="btn-ghost hover:text-red-600">
+                          Event & Pelatihan
+                        </Link>
+                      </li>
+                    </ul> */}
+                  </div>
+                </div>
+                <li>
+                  <Link to="/profile" className="btn-ghost hover:text-red-600">
+                    Partner
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+          {/* end mobile */}
           <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            {/* flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 */}
             <div className="flex justify-center gap-5 items-center">
               <ul className="flex justify-center gap-5 items-center">
-                <Link to="/" className="text-white">
+                <Link to="/" className="text-white ">
                   Home
                 </Link>
                 <Link to="/profile" className="text-white">
@@ -75,10 +177,10 @@ const index = (props) => {
                         </Link>
                       </li>
                       <li>
-                        <a>
+                        <Link to="/pelatihan">
                           <img className="w-14" src={layanan1} alt="layanan" />
                           Event & Pelatihan
-                        </a>
+                        </Link>
                       </li>
                     </div>
                   </ul>
@@ -97,82 +199,6 @@ const index = (props) => {
           </div>
         </div>
       </nav>
-      {/* <div className="container mx-auto ">
-        <nav class="bg-transparent border-gray-200 px-2 sm:px-24 py-2.5 rounded dark:bg-gray-900">
-          <div class="container flex flex-wrap justify-between items-center mx-auto">
-            <a href="https://flowbite.com/" class="flex items-center">
-              <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-                Semarang Technopark
-              </span>
-            </a>
-            <button
-              data-collapse-toggle="navbar-default"
-              type="button"
-              class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-              aria-controls="navbar-default"
-              aria-expanded="false"
-            >
-              <span class="sr-only">Open main menu</span>
-              <svg
-                class="w-6 h-6"
-                aria-hidden="true"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-            </button>
-            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-              <ul class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                <li>
-                  <a
-                    href="#"
-                    class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
-                    aria-current="page"
-                  >
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                  >
-                    Profie
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                  >
-                    Layanan
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                  >
-                    Partners
-                  </a>
-                </li>
-              </ul>
-              <Link
-                to={props.auth}
-                class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm py-3 px-6 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
-              >
-                {props.title}
-              </Link>
-            </div>
-          </div>
-        </nav>
-      </div> */}
     </>
   );
 };

@@ -5,7 +5,7 @@ import fileImg from "../../../assets/images/amico.png";
 const FileUpload = () => {
   return (
     <>
-      <div className="bg-white mx-6 mt-6 flex flex-col items-center justify-center  py-9">
+      <div className="bg-white mx-6 mt-10 flex flex-col items-center justify-center  py-9">
         <div className="flex flex-col items-center justify-center w-1/2 gap-9">
           <img className="w-1/2" src={fileImg} alt="file" />
           <div className="text-center items-center flex flex-col gap-5">

@@ -16,6 +16,7 @@ import Proposal from "./pages/Dashboard/Proposal";
 import Aktifitas from "./pages/Dashboard/Aktifitas";
 import Mentoring from "./pages/Dashboard/Mentoring";
 import ProfileTenant from "./pages/Dashboard/ProfileTenant";
+import NavbarMobile from "./components/Navbar/NavbarMobile";
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
         <Route path="/dashboard/mentoring" element={<Mentoring />} />
         <Route path="/dashboard/profile-tenant" element={<ProfileTenant />} />
         {/*End dashboard user */}
+        <Route path="/nav" element={<NavbarMobile />} />
       </Routes>
     </>
   );
