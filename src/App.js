@@ -2,7 +2,8 @@ import "./App.css";
 import { Route, Routes } from "react-router-dom";
 
 import LandingPage from "./pages/LandingPage";
-import Dashboard from "./pages/Dashboard/Dashboard";
+import Dashboard from "./pages/Dashboard";
+import CoWorking from "./pages/CoWorking";
 import Login from "./pages/Auth/Login";
 import Register from "./pages/Auth/Register";
 
@@ -26,6 +27,7 @@ function App() {
         {/* Auth */}
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/co-working" element={<CoWorking />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/inkubasi" element={<Inkubasi />} />
         <Route path="/verifikasi" element={<Verifikasi />} />
