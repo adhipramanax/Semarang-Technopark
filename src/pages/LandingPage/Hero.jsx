@@ -7,7 +7,7 @@ const Hero = () => {
     <>
       <div className="hero min-h-screen ">
         <div className="hero-content flex  justify-end lg:flex-row-reverse text-white ">
-          {/* <img src={lp} className="absolute right-[-100px]" alt="hero" /> */}
+          <img src={lp} className="absolute right-[-100px]" alt="hero" />
           <div className="w-1/2 ">
             <h1 className="text-5xl font-bold">Semarang Technopark</h1>
             <p className="py-6">
