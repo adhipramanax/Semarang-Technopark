@@ -4,16 +4,16 @@ import inkubasi from "../../assets/images/inkubasi-hero.svg";
 const Hero = () => {
   return (
     <>
-      <div className="container mx-auto px-10 flex flex-col justify-center items-center py-18 lg:flex lg:flex-row  lg:justify-center lg:items-center lg:py-16">
+      <div className="h-full container my-auto mx-auto px-10 flex flex-col justify-center items-center py-18 lg:flex lg:flex-row  lg:justify-center lg:items-center lg:py-16">
         <div className="w-1/2  lg:flex lg:justify-start">
           <img className="hidden lg:block lg:w-[70%]" src={inkubasi} alt="" />
         </div>
-        <div className="lg:w-1/3 w-full">
+        <div className="lg:w-1/3 w-full flex flex-col justify-center items-center  lg:items-start">
           <p className="text-white font-bold text-4xl lg:text-5xl text-center py-10 leading-10 lg:px-0 lg:text-start lg:py-0 lg:h-full lg:leading-relaxed">
             Inkubasi Semarang Technopark
           </p>
           <img
-            className="block lg:hidden lg:w-full w-[]"
+            className="block lg:hidden lg:w-full w-[246px]"
             src={inkubasi}
             alt=""
           />

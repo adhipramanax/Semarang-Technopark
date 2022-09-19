@@ -8,13 +8,19 @@ const NavbarMobile = () => {
   function collapseFunc() {
     if (this.getAttribute("data-collapsed") == "false") {
       this.childNodes[1].setAttribute("style", "max-height: 500px");
-      this.childNodes[0].childNodes[1].setAttribute("style", "transform: rotate(180deg)");
+      this.childNodes[0].childNodes[1].setAttribute(
+        "style",
+        "transform: rotate(180deg)"
+      );
       this.setAttribute("data-collapsed", "true");
       return;
     }
 
     this.childNodes[1].setAttribute("style", "max-height: 0");
-    this.childNodes[0].childNodes[1].setAttribute("style", "transform: rotate(0)");
+    this.childNodes[0].childNodes[1].setAttribute(
+      "style",
+      "transform: rotate(0)"
+    );
     this.setAttribute("data-collapsed", "false");
   }
 
@@ -99,7 +105,11 @@ const NavbarMobile = () => {
                 Profile
               </Link>
             </li>
-            <li className="my-[10px] overflow-hidden  " ref={collapse} data-collapsed="false">
+            <li
+              className="my-[10px] overflow-hidden  "
+              ref={collapse}
+              data-collapsed="false"
+            >
               <div className=" hover:text-red-600 flex justify-between ">
                 Layanan
                 <svg

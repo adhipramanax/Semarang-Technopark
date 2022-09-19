@@ -1,35 +1,39 @@
 import React from "react";
-import Navbar from "../../components/Navbar/Navbar";
-import Button from "./Button";
-import Created from "./Created";
+import logo from "../../assets/images/bappeda-logo.png";
 
 const Hero = () => {
   return (
     <>
-      <div className="relative bg-[url('https://res.cloudinary.com/dna8dexwi/image/upload/v1662981768/semarang-technopark/bg-profile_ywzpvs.png')] h-[70vh] lg:h-screen bg-no-repeat bg-cover bg-center">
-        <Navbar auth="/register" title="Register" />
+      <div className="container h-full mx-auto w-full pt-2 flex flex-col justify-center items-center">
         <img
-          className="absolute w-[25%] z-0 translate-y-[100px] lg:translate-y-24  md:translate-y-[40%] sm:translate-y-36"
+          className="absolute w-[160px] md:w-[200px] lg:w-[220px] xl:w-[320px] -left-12 lg:left-0 top-40 lg:top-[280px] z-0 md:top-44 xl:top-56"
           src="https://res.cloudinary.com/dna8dexwi/image/upload/v1663010927/semarang-technopark/side_fgroeh.png"
           alt=""
         />
         <img
-          className="absolute w-[25%] z-0 translate-y-[100px]  lg:translate-y-24 right-0 md:translate-y-[40%] sm:translate-y-36"
+          className="absolute w-[110px] md:w-[160px] lg:w-[220px] xl:w-[300px] right-0 top-44 z-0 md:top-48 lg:top-[280px] xl:top-52"
           src="https://res.cloudinary.com/dna8dexwi/image/upload/v1663012615/semarang-technopark/right_rx8ogg.png"
           alt=""
         />
-        <div className="h-[60vh] lg:h-full w-full flex flex-col justify-center items-center z-40">
-          <h1 className="z-50 text-center text-4xl text-white font-bold leading-relaxed mb-2 lg:text-[60px] w-1/2 lg:w-full ">
+        <div className="absolute mt-10 h-full flex flex-col justify-center items-center ">
+          <h1 className="w-2/3 md:w-full lg:w-full text-white font-bold text-4xl lg:text-[64px] text-center leading-[54px]">
             Semarang Technopark
           </h1>
-          <p className="z-50 text-center text-white lg:w-[680px] w-[350px] sm:w-[350px]">
+          <p className="w-[326px] md:w-[520px] lg:w-[720px] text-white text-sm lg:text-base text-center my-5 lg:my-10">
             Semarang Technopark memiliki berbagai program dan pengelolaan
             Inkubasi untuk menghasilkan berbagai terobosan inovasi
           </p>
-          <br />
-          <Button />
-          <div className="flex flex-col justify-center items-center">
-            <Created />
+          <button className="bg-white rounded-xl text-[#CD0606] font-semibold w-[160px] py-[8px] mt-4 lg:mt-0">
+            About
+          </button>
+          <div className="hidden lg:block pt-20">
+            <p className="text-lg text-white font-semibold pb-3 text-center">
+              Created by:
+            </p>
+            <div className=" bg-white rounded-2xl lg:w-[500px] h-[120px] p-[20px] lg:flex lg:justify-evenly lg:items-center">
+              <img src={logo} alt="" />
+              <img src={logo} alt="" />
+            </div>
           </div>
         </div>
       </div>
