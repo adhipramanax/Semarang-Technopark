@@ -22,7 +22,7 @@ const index = () => {
             {/* <Detail />
             <DocPendukung />
             <Anggota /> */}
-            <EditProfile />
+            <EditProfile /> 
           </div>
         </div>
       </div>
