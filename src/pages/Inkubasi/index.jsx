@@ -18,7 +18,7 @@ const index = () => {
       </div>
       <div className="lg:bg-[url('https://res.cloudinary.com/dna8dexwi/image/upload/v1663053941/semarang-technopark/inkubasi-bg_psxrpd.png')] bg-[#F6F6F6] flex flex-col justify-center items-center p-10 py-14 ">
         <h1 className="lg:text-4xl font-bold text-2xl sm:text-3xl md:text-4xl">Apa Itu Inkubasi</h1>
-        <h1 className="lg:text-4xl font-bold text-red-600 mb-3 text-2xl sm:text-3xl md:text-4xl">
+        <h1 className="lg:text-4xl font-bold text-red-600 mb-3 text-xl sm:text-3xl md:text-4xl">
           Semarang Technopark
         </h1>
         <Collapse
