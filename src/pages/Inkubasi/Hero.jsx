@@ -4,7 +4,7 @@ import inkubasi from "../../assets/images/inkubasi-hero.svg";
 const Hero = () => {
   return (
     <>
-      <div className="h-full container my-auto mx-auto px-10 flex flex-col justify-center items-center py- lg:flex lg:flex-row  lg:justify-center lg:items-center lg:py-16">
+      <div className="h-full container my-auto mx-auto px-10 flex flex-col justify-center items-center py-8 lg:flex lg:flex-row  lg:justify-center lg:items-center lg:py-16">
         <div className="w-1/2  lg:flex lg:justify-start">
           <img className="hidden lg:block lg:w-[70%]" src={inkubasi} alt="" />
         </div>
