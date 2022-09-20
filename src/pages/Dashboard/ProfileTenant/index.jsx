@@ -5,6 +5,7 @@ import NavbarDashboard from "../../../components/Navbar/NavbarDashboard";
 import Detail from "./Detail";
 import DocPendukung from "./DocPendukung";
 import Anggota from "./Anggota";
+import EditProfile from './EditProfile'
 // import Proposal from "./Proposal";
 // import CardTenant from "./CardTenant";
 // import TableProposal from "./TableProposal";
@@ -18,9 +19,10 @@ const index = () => {
           <NavbarDashboard />
 
           <div className="flex flex-col gap-5 mx-6 mt-10">
-            <Detail />
+            {/* <Detail />
             <DocPendukung />
-            <Anggota />
+            <Anggota /> */}
+            <EditProfile />
           </div>
         </div>
       </div>
