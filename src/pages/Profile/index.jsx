@@ -21,34 +21,30 @@ const index = () => {
         <div className="leading-loose lg:w-1/2">
           <h5 className="text-[#D73737]">ABOUT</h5>
           <h1 className="text-2xl font-bold lg:text-4xl md:text-3xl">
-            Tujuan Berdirinya{" "}
-            <span className="text-[#CD0606]">Semarang Technopark</span>
+            Tujuan Berdirinya <span className="text-[#CD0606]">Semarang Technopark</span>
           </h1>
-          <p className="text-sm">
-            Tujuan utama pembuatan Semarang Technopark antaralain:
-          </p>
+          <p className="text-sm">Tujuan utama pembuatan Semarang Technopark antaralain:</p>
         </div>
         <div className="lg:w-1/2">
           <div className="flex items-center gap-3 py-3">
             <img src={stp} alt="" />
-            <p className="text-justify">
-              Merangsang dan mengelola arus pengetahuan dan teknologi di
-              universitas, lembaga litbang, dan industri yang berada di
-              lingkungan STP
+            <p className="sm:text-justify">
+              Merangsang dan mengelola arus pengetahuan dan teknologi di universitas, lembaga
+              litbang, dan industri yang berada di lingkungan STP
             </p>
           </div>
           <div className="flex items-center gap-3 py-3">
             <img src={inkubasi} alt="" />
-            <p className="text-justify">
-              Memfasilitasi penciptaan dan pertumbuhan perusahaan berbasis
-              inovasi melalui proses inkubasi dan spin off
+            <p className="sm:text-justify">
+              Memfasilitasi penciptaan dan pertumbuhan perusahaan berbasis inovasi melalui proses
+              inkubasi dan spin off
             </p>
           </div>
           <div className="flex items-center gap-3 py-3">
             <img src={fasilitas} alt="" />
-            <p className="text-justify">
-              menyediakan layanan peningkatan nilai tambah melalui penyediaan
-              ruang dan fasilitas pendukung berkualitas tinggi
+            <p className="sm:text-justify">
+              menyediakan layanan peningkatan nilai tambah melalui penyediaan ruang dan fasilitas
+              pendukung berkualitas tinggi
             </p>
           </div>
         </div>
