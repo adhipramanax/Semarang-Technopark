@@ -12,7 +12,7 @@ import mentor from "../../assets/images/mentor-inkubasi.png";
 const index = () => {
   return (
     <>
-      <div className="bg-[url('https://res.cloudinary.com/dhuvbrmgg/image/upload/v1662816138/Mini%20Project%20SEAL/bg-red.png')] h-full lg:h-screen bg-no-repeat-x bg-cover">
+      <div className="bg-[url('https://res.cloudinary.com/dhuvbrmgg/image/upload/v1662816138/Mini%20Project%20SEAL/bg-red.png')] h-[80vh] lg:h-screen bg-no-repeat-x bg-cover">
         <Navbar auth="/login" title="login" />
         <Hero />
       </div>

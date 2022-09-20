@@ -5,37 +5,29 @@ import lp from "../../assets/images/lp.png";
 const Hero = () => {
   return (
     <>
-      <div className="h-full grid grid-rows-2 lg:grid-cols-2 justify-items-center mt-10 gap-5 lg:h-[60vh] lg:px-14">
-        <div className="px-10 lg:row-span-2 lg:my-auto">
-          <h1 className="text-2xl lg:text-[64px] text-white font-semibold lg:leading-normal">
+      <section id="hero" className="h-full relative">
+        <div
+          role="header-image"
+          className="lg:overflow-hidden lg:right-[0] lg:bottom-[-119px] absolute mt-[50px]"
+        >
+          <img className="lg:translate-x-[151px]" src={lp} alt="HERO" />
+        </div>
+        <div
+          role="heading-left"
+          className="lg:bottom-[50%] lg:translate-y-[50%] bottom-[30px] absolute lg:left-[108px] mx-[30px] max-w-[447px]  text-white"
+        >
+          <h1 className="lg:text-[4.19em] text-2xl lg:leading-normal font-bold">
             Semarang Technopark
           </h1>
-          <p className="my-2 text-white text-sm lg:text-base lg:w-[447px]">
-            Semarang Technopark memiliki berbagai program dan pengelolaan
-            Inkubasi untuk menghasilkan berbagai terobosan inovasi
+          <p className="mt-[5px] mb-[15px]">
+            Semarang Technopark memiliki berbagai program dan pengelolaan Inkubasi untuk
+            menghasilkan berbagai terobosan inovasi
           </p>
-          <button className="btn text-[#CD0606] rounded-[16px] bg-white hover:text-white hover:bg-[#04A2FF]">
-            Lihat Program{" "}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M8.25 4.5l7.5 7.5-7.5 7.5"
-              />
-            </svg>
+          <button className="btn bg-white rounded-full text-[#CD0606] hover:bg-white mt-[10px] px-[34px]">
+            Lihat Program
           </button>
         </div>
-        <div className="order-first w-[376px] lg:w-[920px] lg:order-last lg:-translate-y-20 lg:translate-x-10">
-          <img src={lp} alt="" />
-        </div>
-      </div>
+      </section>
     </>
   );
 };
