@@ -1,9 +1,10 @@
 import React from "react";
 
-import Sidebar from "../../components/Sidebar";
-import NavbarDashboard from "../../components/Navbar/NavbarDashboard";
+import Sidebar from "../../../components/Sidebar";
+import NavbarDashboard from "../../../components/Navbar/NavbarDashboard";
 import Proposal from "./Proposal";
 import CardTenant from "./CardTenant";
+import TableProposal from "./TableProposal";
 
 const index = () => {
   return (
@@ -13,7 +14,10 @@ const index = () => {
         <div className="w-full">
           <NavbarDashboard />
           <div className="flex p-6 gap-6">
-            <Proposal />
+            <div className="w-full">
+              <Proposal />
+              <TableProposal />
+            </div>
             <CardTenant />
           </div>
         </div>

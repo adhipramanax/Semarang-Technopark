@@ -5,35 +5,33 @@ import lp from "../../assets/images/lp.png";
 const Hero = () => {
   return (
     <>
-      <div className="hero min-h-screen ">
-        <div className="hero-content flex  justify-end lg:flex-row-reverse text-white ">
-          <img src={lp} className="absolute right-[-100px]" alt="hero" />
-          <div className="w-1/2 ">
-            <h1 className="text-5xl font-bold">Semarang Technopark</h1>
-            <p className="py-6">
-              Semarang Technopark memiliki berbagai program dan pengelolaan Inkubasi untuk
-              menghasilkan berbagai terobosan inovasi
-            </p>
-            <button className="btn text-[#CD0606] rounded-[16px] bg-white hover:text-white hover:bg-[#04A2FF]">
-              Lihat Program{" "}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-6 h-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                />
-              </svg>
-            </button>
-          </div>
+      <section id="hero" className="h-full relative">
+        <div
+          role="header-image"
+          className="w-full md:justify-end md:flex lg:overflow-hidden lg:right-[0] lg:bottom-[-119px] absolute mt-[50px]"
+        >
+          <img
+            className="lg:translate-x-[151px] lg:h-screen lg:object-contain  md:w-[500px] lg:w-[700px] xl:w-[1050px]"
+            src={lp}
+            alt="HERO"
+          />
         </div>
-      </div>
+        <div
+          role="heading-left"
+          className="lg:bottom-[50%] lg:translate-y-[50%] bottom-[30px] absolute lg:left-[108px] mx-[30px] max-w-[447px]  text-white"
+        >
+          <h1 className="lg:text-[4.19em] text-2xl lg:leading-normal font-bold">
+            Semarang Technopark
+          </h1>
+          <p className="mt-[5px] mb-[15px]">
+            Semarang Technopark memiliki berbagai program dan pengelolaan Inkubasi untuk
+            menghasilkan berbagai terobosan inovasi
+          </p>
+          <button className="btn bg-white rounded-full text-[#CD0606] hover:bg-white mt-[10px] px-[34px]">
+            Lihat Program
+          </button>
+        </div>
+      </section>
     </>
   );
 };
