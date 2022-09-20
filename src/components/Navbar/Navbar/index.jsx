@@ -7,13 +7,16 @@ import NavbarMobile from "./NavbarMobile";
 const Index = (props) => {
   return (
     <>
-      <nav class="bg-white border-gray-200 lg:px-2 sm:px-24 lg:py-2.5 rounded bg-transparent absolute top-0 w-full z-50">
-        <div class="container flex flex-wrap justify-between items-center mx-auto">
-          <Link to="/" class="lg:flex items-center text-white text-lg hidden ">
-            Semarang TechSnopark
+      <nav class="py-3 bg-white border-gray-200 lg:px-20 sm:px-24 lg:py-2.5 rounded bg-transparent absolute top-0 w-full z-50">
+        <div class="container lg:flex lg:flex-wrap lg:justify-between lg:items-center sm:mx-0 mx-auto">
+          <Link
+            to="/"
+            class="lg:flex items-center w-[149px] lg:w-[230px] text-white font-bold px-5 sm:hidden"
+          >
+            Semarang Technopark
           </Link>
           <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <div className="flex justify-center gap-5 items-center">
+            <div className="flex justify-center gap-5 items-center md:">
               <ul className="flex justify-center gap-5 items-center">
                 <Link to="/" className="text-white ">
                   Home
@@ -65,7 +68,7 @@ const Index = (props) => {
               </ul>
               <Link
                 to={props.auth}
-                class="focus:outline-none text-[#CD0606] bg-white hover:bg-[#F08619] focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm py-3 px-6  hover:text-white"
+                class="focus:outline-none text-[#CD0606] bg-white hover:bg-[#F08619] focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm py-[6px] px-6  hover:text-white"
               >
                 {props.title}
               </Link>

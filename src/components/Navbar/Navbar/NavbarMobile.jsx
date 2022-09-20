@@ -1,5 +1,10 @@
 import React, { useRef, useEffect } from "react";
 
+import layanan1 from "../../../assets/images/layanan1.png";
+import layanan2 from "../../../assets/images/layanan2.png";
+import layanan3 from "../../../assets/images/layanan3.png";
+import layanan4 from "../../../assets/images/layanan4.png";
+
 import { Link } from "react-router-dom";
 
 const NavbarMobile = () => {
@@ -8,19 +13,13 @@ const NavbarMobile = () => {
   function collapseFunc() {
     if (this.getAttribute("data-collapsed") == "false") {
       this.childNodes[1].setAttribute("style", "max-height: 500px");
-      this.childNodes[0].childNodes[1].setAttribute(
-        "style",
-        "transform: rotate(180deg)"
-      );
+      this.childNodes[0].childNodes[1].setAttribute("style", "transform: rotate(180deg)");
       this.setAttribute("data-collapsed", "true");
       return;
     }
 
     this.childNodes[1].setAttribute("style", "max-height: 0");
-    this.childNodes[0].childNodes[1].setAttribute(
-      "style",
-      "transform: rotate(0)"
-    );
+    this.childNodes[0].childNodes[1].setAttribute("style", "transform: rotate(0)");
     this.setAttribute("data-collapsed", "false");
   }
 
@@ -59,7 +58,7 @@ const NavbarMobile = () => {
       {/* Mobile */}
       <div
         id="mobile-nav"
-        className="parent-hamburger lg:hidden fixed h-full right-0 z-[500]"
+        className="parent-hamburger md:hidden lg:hidden fixed h-full right-0 z-[500]"
         data-show="false"
       >
         <div className="h-[100vh] w-[100vw] bg-black opacity-[50%] absolute z-[501] translate-x-[-100%] invisible transition-all duration-300"></div>
@@ -96,21 +95,17 @@ const NavbarMobile = () => {
           </div>
           <ul className="block mt-[20px] text-black">
             <li className="my-[10px]">
-              <Link to="/" className="btn-ghost hover:text-red-600">
+              <Link to="/" className="btn-ghost hover:text-red-600 block p-2">
                 Home
               </Link>
             </li>
             <li className="my-[10px]">
-              <Link to="/profile" className="btn-ghost hover:text-red-600">
+              <Link to="/profile" className="btn-ghost hover:text-red-600 block p-2">
                 Profile
               </Link>
             </li>
-            <li
-              className="my-[10px] overflow-hidden  "
-              ref={collapse}
-              data-collapsed="false"
-            >
-              <div className=" hover:text-red-600 flex justify-between ">
+            <li className="my-[10px] overflow-hidden  " ref={collapse} data-collapsed="false">
+              <div className=" hover:text-red-600 flex justify-between p-2 ">
                 Layanan
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -129,12 +124,45 @@ const NavbarMobile = () => {
               </div>
               <ul className="max-h-[0] transition-all duration-300 flex flex-col gap-1">
                 <li>
-                  <Link to="">Test</Link>
+                  <Link
+                    to="/inkubasi"
+                    className="btn-ghost hover:text-red-600 pl-3 py-2 flex gap-2"
+                  >
+                    <img src={layanan1} alt="gambar" className="w-1/12" />
+                    Inkubasi STP
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/sewa-alat"
+                    className="btn-ghost hover:text-red-600 pl-3 py-2 flex gap-2"
+                  >
+                    <img src={layanan2} alt="gambar" className="w-1/12" />
+                    Sewa Alat
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/co-working"
+                    className="btn-ghost hover:text-red-600 pl-3 py-2 flex gap-2"
+                  >
+                    <img src={layanan3} alt="gambar" className="w-1/12" />
+                    Co-Working Space
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/pelatihan"
+                    className="btn-ghost hover:text-red-600 pl-3 py-2 flex gap-2 "
+                  >
+                    <img src={layanan4} alt="gambar" className="w-1/12" />
+                    Event & Pelatihan
+                  </Link>
                 </li>
               </ul>
             </li>
             <li className="my-[10px]">
-              <Link to="/profile" className="btn-ghost hover:text-red-600">
+              <Link to="/profile" className="btn-ghost hover:text-red-600 block p-2">
                 Partner
               </Link>
             </li>

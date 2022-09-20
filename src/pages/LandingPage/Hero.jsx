@@ -8,9 +8,13 @@ const Hero = () => {
       <section id="hero" className="h-full relative">
         <div
           role="header-image"
-          className="lg:overflow-hidden lg:right-[0] lg:bottom-[-119px] absolute mt-[50px]"
+          className="w-full md:justify-end md:flex lg:overflow-hidden lg:right-[0] lg:bottom-[-119px] absolute mt-[50px]"
         >
-          <img className="lg:translate-x-[151px]" src={lp} alt="HERO" />
+          <img
+            className="lg:translate-x-[151px] lg:h-screen lg:object-contain  md:w-[500px] lg:w-[700px] xl:w-[1050px]"
+            src={lp}
+            alt="HERO"
+          />
         </div>
         <div
           role="heading-left"
