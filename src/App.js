@@ -15,7 +15,8 @@ import Error from "./pages/Error";
 import Proposal from "./pages/Dashboard/Proposal";
 import Aktifitas from "./pages/Dashboard/Aktifitas";
 import Mentoring from "./pages/Dashboard/Mentoring";
-import ProfileTenant from "./pages/Dashboard/ProfileTenant";
+import {ProfileTenant, EditProfileTenant} from "./pages/Dashboard/ProfileTenant";
+// import EditProfileTenant from "./pages/Dashboard/ProfileTenant/EditProfileTenant";
 import NavbarMobile from "./components/Navbar/NavbarMobile";
 
 
@@ -42,6 +43,7 @@ function App() {
         <Route path="/dashboard/aktifitas" element={<Aktifitas />} />
         <Route path="/dashboard/mentoring" element={<Mentoring />} />
         <Route path="/dashboard/profile-tenant" element={<ProfileTenant />} />
+        <Route path="/dashboard/edit-profile-tenant" element={<EditProfileTenant />} />
         {/*End dashboard user */}
         <Route path="/nav" element={<NavbarMobile />} />
       </Routes>

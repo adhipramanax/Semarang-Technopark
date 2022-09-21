@@ -11,8 +11,8 @@ const index = () => {
     <>
       <div className="flex bg-[#D9D9D9]">
         <Sidebar />
-        <div className="w-full">
-          <NavbarDashboard />
+        <div className="w-full ml-64">
+          <NavbarDashboard judul="Aktivitas" />
           <div>
             {/* <!-- drawer init and toggle --> */}
             <div class="text-center">

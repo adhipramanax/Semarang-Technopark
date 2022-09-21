@@ -1,6 +1,6 @@
 import React from 'react'
 
-const EditProfile = () => {
+const EditProfileTenant = () => {
   return (
     <div className="w-full bg-white p-5">
       <h1 className="text-xl font-bold pb-5">Edit Profile Tenant</h1>
@@ -66,4 +66,4 @@ const EditProfile = () => {
   )
 }
 
-export default EditProfile
+export default EditProfileTenant

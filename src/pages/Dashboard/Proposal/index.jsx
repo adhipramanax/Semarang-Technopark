@@ -10,8 +10,8 @@ const index = () => {
     <>
       <div className="flex bg-[#D9D9D9]">
         <Sidebar />
-        <div className="w-full">
-          <NavbarDashboard />
+        <div className="w-full ml-64">
+          <NavbarDashboard judul="Proposal" />
           <div className="flex flex-col gap-5 mx-6 mt-10">
             {/* <FileUpload /> */}
             <EditProposal />

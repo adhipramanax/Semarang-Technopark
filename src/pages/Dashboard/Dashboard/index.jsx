@@ -11,8 +11,8 @@ const index = () => {
     <>
       <div className="flex bg-[#D9D9D9]">
         <Sidebar />
-        <div className="w-full">
-          <NavbarDashboard />
+        <div className="w-full ml-64">
+          <NavbarDashboard judul="Dashboard" />
           <div className="flex p-6 gap-6">
             <div className="w-full">
               <Proposal />
