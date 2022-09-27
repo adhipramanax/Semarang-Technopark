@@ -48,3 +48,12 @@ a[data-active="true"] {
 [data-only-image="true"] .carousel-image {
   width: 100% !important;
 }
+
+/* Toggle Active */
+.active {
+  @apply bg-merah text-white
+}
+
+.unactive {
+  @apply bg-white text-merah
+}

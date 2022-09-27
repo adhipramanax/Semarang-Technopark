@@ -16,7 +16,11 @@ import Proposal from "./pages/Dashboard/Proposal";
 import Aktifitas from "./pages/Dashboard/Aktifitas";
 import Mentoring from "./pages/Dashboard/Mentoring";
 import {ProfileTenant, EditProfileTenant} from "./pages/Dashboard/ProfileTenant";
-// import EditProfileTenant from "./pages/Dashboard/ProfileTenant/EditProfileTenant";
+import Mentor from './pages/Dashboard/Mentor'
+import Juri from './pages/Dashboard/Juri'
+import WorkingSpace from './pages/Dashboard/WorkingSpace'
+import Tenant from './pages/Dashboard/Tenant'
+import Alat from './pages/Dashboard/Alat'
 import NavbarMobile from "./components/Navbar/NavbarMobile";
 
 
@@ -44,6 +48,11 @@ function App() {
         <Route path="/dashboard/mentoring" element={<Mentoring />} />
         <Route path="/dashboard/profile-tenant" element={<ProfileTenant />} />
         <Route path="/dashboard/edit-profile-tenant" element={<EditProfileTenant />} />
+        <Route path="/dashboard/mentor" element={<Mentor />} />
+        <Route path="/dashboard/juri" element={<Juri />} />
+        <Route path="/dashboard/daftar-working-space" element={<WorkingSpace />} />
+        <Route path="/dashboard/tenant" element={<Tenant />} />
+        <Route path="/dashboard/daftar-alat" element={<Alat />} />
         {/*End dashboard user */}
         <Route path="/nav" element={<NavbarMobile />} />
       </Routes>
