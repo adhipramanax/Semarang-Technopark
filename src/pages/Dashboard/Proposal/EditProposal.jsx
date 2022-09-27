@@ -1,13 +1,64 @@
 import React from "react";
 
-import edit from "../../../assets/images/svg/edit-2.svg";
-import add from "../../../assets/images/svg/folder-add.svg";
-import trash from "../../../assets/images/svg/trash.svg";
+import Table from '../../../components/Table'
 
 const EditProposal = () => {
+  const tHead = [
+    {
+      judul: "No",
+      width: "w-auto"
+    },
+    {
+      judul: "Judul Proposal",
+      width: "w-1/2"
+    },
+    {
+      judul: "Status Proposal",
+      width: "w-1/12"
+    },
+    {
+      judul: "Aksi",
+      width: "w-auto"
+    }
+  ]
+
+  let tBody = [
+    {
+      no: 1,
+      judul: "Food StatUp Challange",
+      status: {
+        isi: "Uploaded",
+        warna: "info"
+      }
+    },
+    {
+      no: 2,
+      judul: "Food StatUp Challange",
+      status: {
+        isi: "On Review",
+        warna: "warning"
+      }
+    },
+    {
+      no: 3,
+      judul: "Food StatUp Challange",
+      status: {
+        isi: "Decline",
+        warna: "error"
+      }
+    },
+    {
+      no: 4,
+      judul: "Food StatUp Challange",
+      status: {
+        isi: "Accepted",
+        warna: "success"
+      }
+    },
+  ]
   return (
     <>
-      <div className="w-full bg-white  rounded ">
+      {/* <div className="w-full bg-white  rounded ">
         <div className="p-5">
           <div className="overflow-x-auto">
             <table className="table w-full">
@@ -44,7 +95,9 @@ const EditProposal = () => {
             </table>
           </div>
         </div>
-      </div>
+      </div> */}
+
+      <Table judul="Upload Proposal" link="/" tHead={tHead} tBody={tBody} />
     </>
   );
 };
