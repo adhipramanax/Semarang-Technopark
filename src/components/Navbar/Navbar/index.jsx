@@ -11,7 +11,7 @@ const Index = (props) => {
         <div class="container lg:flex lg:flex-wrap lg:justify-between lg:items-center  mx-auto">
           <Link
             to="/"
-            class="lg:flex items-center w-[149px] lg:w-[230px] text-white font-bold px-5 sm:hidden"
+            class="lg:flex items-center w-[149px] lg:w-[250px] text-white font-bold px-5 sm:hidden"
           >
             Semarang Technopark
           </Link>
