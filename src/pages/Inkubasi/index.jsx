@@ -12,13 +12,13 @@ import mentor from "../../assets/images/mentor-inkubasi.png";
 const index = () => {
   return (
     <>
-      <div className="bg-[url('https://res.cloudinary.com/dhuvbrmgg/image/upload/v1662816138/Mini%20Project%20SEAL/bg-red.png')] h-[80vh] lg:h-screen bg-no-repeat-x bg-cover">
+      <div className="bg-[url('https://res.cloudinary.com/dhuvbrmgg/image/upload/v1662816138/Mini%20Project%20SEAL/bg-red.png')] h-full lg:h-screen bg-no-repeat-x bg-cover">
         <Navbar auth="/login" title="login" />
         <Hero />
       </div>
       <div className="lg:bg-[url('https://res.cloudinary.com/dna8dexwi/image/upload/v1663053941/semarang-technopark/inkubasi-bg_psxrpd.png')] bg-[#F6F6F6] flex flex-col justify-center items-center p-10 py-14 ">
         <h1 className="lg:text-4xl font-bold text-2xl sm:text-3xl md:text-4xl">Apa Itu Inkubasi</h1>
-        <h1 className="lg:text-4xl font-bold text-red-600 mb-3 text-2xl sm:text-3xl md:text-4xl">
+        <h1 className="lg:text-4xl font-bold text-red-600 mb-3 text-xl sm:text-3xl md:text-4xl">
           Semarang Technopark
         </h1>
         <Collapse

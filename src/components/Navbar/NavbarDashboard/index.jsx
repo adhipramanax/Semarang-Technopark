@@ -2,13 +2,13 @@ import React from "react";
 
 import user from "../../../assets/images/user.png";
 
-const index = () => {
+const index = (props) => {
   return (
     <>
       <nav class="p-3 border-gray-200  bg-white">
         <div class="container flex flex-wrap justify-between items-center mx-auto">
           <a href="#" class="flex items-center">
-            <span class="self-center text-xl font-semibold whitespace-nowrap ">Dashboard</span>
+            <span class="self-center text-xl font-semibold whitespace-nowrap ">{props.judul}</span>
           </a>
           <button
             data-collapse-toggle="navbar-solid-bg"
