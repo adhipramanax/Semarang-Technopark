@@ -15,10 +15,13 @@ import Error from "./pages/Error";
 import Proposal from "./pages/Dashboard/Proposal";
 import Aktifitas from "./pages/Dashboard/Aktifitas";
 import Mentoring from "./pages/Dashboard/Mentoring";
+import AdminAlatAdd from "./pages/Dashboard/AdminAlatAdd";
+import AdminCoWorkingAdd from "./pages/Dashboard/AdminCoWorkingAdd";
+
+import ProfileTenant from "./pages/Dashboard/ProfileTenant";
 import {ProfileTenant, EditProfileTenant} from "./pages/Dashboard/ProfileTenant";
 // import EditProfileTenant from "./pages/Dashboard/ProfileTenant/EditProfileTenant";
 import NavbarMobile from "./components/Navbar/NavbarMobile";
-
 
 function App() {
   return (
@@ -43,6 +46,11 @@ function App() {
         <Route path="/dashboard/aktifitas" element={<Aktifitas />} />
         <Route path="/dashboard/mentoring" element={<Mentoring />} />
         <Route path="/dashboard/profile-tenant" element={<ProfileTenant />} />
+        <Route path="/dashboard/add-alat" element={<AdminAlatAdd />} />
+        <Route
+          path="/dashboard/add-coworking"
+          element={<AdminCoWorkingAdd />}
+        />
         <Route path="/dashboard/edit-profile-tenant" element={<EditProfileTenant />} />
         {/*End dashboard user */}
         <Route path="/nav" element={<NavbarMobile />} />
