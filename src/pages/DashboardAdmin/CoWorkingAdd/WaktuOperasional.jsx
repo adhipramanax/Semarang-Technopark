@@ -10,31 +10,15 @@ const WaktuOperasional = () => {
         <div className="px-[20px] py-[8px] flex justify-between items-center">
           <div>Jam Operasional</div>
           <div className="grid grid-cols-2 gap-2">
-            <input
-              type="text"
-              placeholder="Jam Buka"
-              className="input input-bordered w-[310px]"
-            />
-            <input
-              type="text"
-              placeholder="Jam Buka"
-              className="input input-bordered w-[310px]"
-            />
+            <input type="text" placeholder="Jam Buka" className="input input-bordered w-[310px]" />
+            <input type="text" placeholder="Jam Buka" className="input input-bordered w-[310px]" />
           </div>
         </div>
         <div className="px-[20px] py-[8px] flex justify-between items-center">
           <div>Hari Operasional</div>
           <div className="grid grid-cols-2 gap-2">
-            <input
-              type="text"
-              placeholder="Hari Buka"
-              className="input input-bordered w-[310px]"
-            />
-            <input
-              type="text"
-              placeholder="Hari Buka"
-              className="input input-bordered w-[310px]"
-            />
+            <input type="text" placeholder="Hari Buka" className="input input-bordered w-[310px]" />
+            <input type="text" placeholder="Hari Buka" className="input input-bordered w-[310px]" />
           </div>
         </div>
         <div className="flex ml-[197px]">

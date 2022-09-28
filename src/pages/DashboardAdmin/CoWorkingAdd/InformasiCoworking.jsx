@@ -1,7 +1,7 @@
 import React from "react";
 
-import Forms from "../../Dashboard/AdminAlatAdd/Forms";
-import FormTextArea from "../../Dashboard/AdminCoWorkingAdd/FormTextArea";
+import Forms from "../../DashboardAdmin/AlatAdd/Forms";
+import FormTextArea from "./FormTextArea";
 
 const informasiAlat = () => {
   return (

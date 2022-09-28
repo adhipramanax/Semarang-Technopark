@@ -1,6 +1,6 @@
 import React from "react";
 
-import FormsDouble from "../../Dashboard/AdminAlatAdd/FormsDouble";
+import FormsDouble from "../../DashboardAdmin/AlatAdd/FormsDouble";
 
 const BiayaSewa = () => {
   return (

@@ -27,9 +27,9 @@ const Hero = () => {
             Semarang Technopark memiliki berbagai program dan pengelolaan Inkubasi untuk
             menghasilkan berbagai terobosan inovasi
           </p>
-          <button className="btn bg-white rounded-full text-[#CD0606] hover:bg-white mt-[10px] px-[34px]">
+          <a className="btn bg-white rounded-xl text-[#CD0606] hover:bg-white mt-[10px] px-[34px] font-semibold border-none">
             Lihat Program
-          </button>
+          </a>
         </div>
       </section>
     </>
