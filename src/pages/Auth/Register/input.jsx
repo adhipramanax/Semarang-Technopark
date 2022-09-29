@@ -18,17 +18,22 @@ const input = (props) => {
         <h1 className="text-white text-center text-2xl xl:text-4xl font-bold mt-0 xl:mt-3 mb-3 lg:mt-1 lg:mb-3">
           Daftarkan Akun
         </h1>
-        <div className="flex flex-col items-center gap-4 py-4 xl:py-5 lg:py-4 px-6 bg-white rounded-[20px]">
+        <form className="flex flex-col items-center gap-4 py-4 xl:py-5 lg:py-4 px-6 bg-white rounded-[20px]">
           <div className="flex items-center w-full gap-2">
             <img className="w-5 xl:w-6 lg:w-5" src={email} alt="email" />
             <p className="text-sm xl:text-lg lg:text-base">Email</p>
           </div>
-          <input
-            className="w-full rounded-lg px-5 bg-[#F9F9F9]"
-            placeholder="Masukan Email"
-            type="text"
-            name="email"
-          />
+          <div className="w-full">
+            <input
+              className="w-full rounded-lg px-5 bg-[#F9F9F9] peer "
+              placeholder="Masukan Email"
+              type="email"
+              name="email"
+            />
+            <p class="mt-2 hidden peer-invalid:block text-pink-600 text-sm">
+              Email anda tidak valid.
+            </p>
+          </div>
           <div className="flex items-center w-full gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -61,6 +66,7 @@ const input = (props) => {
               className="block w-full rounded-lg pl-5 pr-10 bg-[#F9F9F9]"
               placeholder="Masukan Kata Sandi"
               type={props.password ? "password" : "text"}
+              pattern="^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,20}$"
               name="password"
             />
             <span className="absolute top-2.5 right-3 flex items-center pl-4">
@@ -113,6 +119,7 @@ const input = (props) => {
               className="block w-full rounded-lg pl-5 pr-10 bg-[#F9F9F9]"
               placeholder="Ulangi Kata Sandi"
               type={props.ulangPassword ? "password" : "text"}
+              pattern="^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,20}$"
               name="passwordUlang"
             />
             <span className="absolute top-2.5 right-3 flex items-center pl-4">
@@ -167,7 +174,7 @@ const input = (props) => {
               </span>
             </Link>
           </div>
-        </div>
+        </form>
       </div>
     </>
   );

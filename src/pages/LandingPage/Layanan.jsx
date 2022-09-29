@@ -30,7 +30,7 @@ const Layanan = () => {
   ];
   return (
     <>
-      <div className="bg-[#F6F6F6] lg:py-24 lg:my-20 py-4 ">
+      <div id="layanan" className="bg-[#F6F6F6] lg:py-24 lg:my-20 py-4 ">
         <div className="container mx-auto lg:px-6 lg:flex ">
           <div className="lg:w-1/2 w-full flex flex-col gap-3 lg:pr-8">
             <div className="flex gap-2 justify-center ">
