@@ -3,19 +3,19 @@ import React from "react";
 import Sidebar from "../../../components/Sidebar";
 import NavbarDashboard from "../../../components/Navbar/NavbarDashboard";
 
-import Title from "../../Dashboard/AdminAlatAdd/Title";
-import InformasiCoworking from "../../Dashboard/AdminCoWorkingAdd/InformasiCoworking";
-import BiayaSewa from "../../Dashboard/AdminAlatAdd/BiayaSewa";
-import DokumenPendukung from "../../Dashboard/AdminAlatAdd/DokumenPendukung";
-import Fasilitas from "../../Dashboard/AdminCoWorkingAdd/Fasilitas";
-import WaktuOperasional from "../../Dashboard/AdminCoWorkingAdd/WaktuOperasional";
+import Title from "../../DashboardAdmin/AlatAdd/Title";
+import InformasiCoworking from "./InformasiCoworking";
+import BiayaSewa from "../../DashboardAdmin/AlatAdd/BiayaSewa";
+import DokumenPendukung from "../../DashboardAdmin/AlatAdd/DokumenPendukung";
+import Fasilitas from "./Fasilitas";
+import WaktuOperasional from "./WaktuOperasional";
 
 const index = () => {
   return (
     <>
       <div className="relative flex bg-[#F9F9F9]">
         <Sidebar />
-        <div className="w-full">
+        <div className="w-full ml-64 p-5">
           <NavbarDashboard />
           <div className="flex flex-col gap-5 mx-6 mt-10">
             <Title title="Tambah Working Space" />
@@ -36,12 +36,14 @@ const index = () => {
         <div>
           <ul className="menu">
             <li className="bordered">
-              <a className="px-2 py-0 w-44 text-sm">Item 1</a>
+              <a className="px-2 py-0 w-44 text-sm" id="">
+                Item 1
+              </a>
             </li>
             <li className="bordered">
               <a className="px-2 py-0 w-44 text-sm">Item 1</a>
             </li>
-            <li>
+            <li className="border-l border-lime-500">
               <a className="px-2 py-0 w-44 text-sm">Item 1</a>
             </li>
           </ul>

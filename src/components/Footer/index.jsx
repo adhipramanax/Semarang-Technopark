@@ -3,6 +3,7 @@ import React from "react";
 import ig from "../../assets/images/ig.svg";
 import twiter from "../../assets/images/twiter.svg";
 import fb from "../../assets/images/fb.svg";
+import { Link } from "react-router-dom";
 
 const index = () => {
   return (
@@ -23,17 +24,33 @@ const index = () => {
           </div>
           <div className="w-1/5 lg:flex hidden flex-col ">
             <span className="font-medium text-[24px] text-white">Layanan</span>
-            <a className="link link-hover">Incubator Event</a>
-            <a className="link link-hover">Pelatihan</a>
-            <a className="link link-hover">Co-Working Space</a>
-            <a className="link link-hover">Sewa Ala</a>
+            <a href="/inkubasi" className="link link-hover">
+              Incubator Event
+            </a>
+            <a href="/co-working" className="link link-hover">
+              Co-Working Space
+            </a>
+            <a href="/sewa-alat" className="link link-hover">
+              Sewa Alat
+            </a>
+            <a href="/pelatihan" className="link link-hover">
+              Pelatihan
+            </a>
           </div>
           <div className="w-1/5 lg:flex hidden flex-col">
             <span className="font-medium text-[24px] text-white">Profil STP</span>
-            <a className="link link-hover">Tentang</a>
-            <a className="link link-hover">Visi & Misi Mentor</a>
-            <a className="link link-hover">Mentor</a>
-            <a className="link link-hover">Partners</a>
+            <a href="/" className="link link-hover">
+              Tentang
+            </a>
+            <a href="/" className="link link-hover">
+              Visi & Misi Mentor
+            </a>
+            <a href="/" className="link link-hover">
+              Mentor
+            </a>
+            <a href="/" className="link link-hover ">
+              Partners
+            </a>
           </div>
           <div className="w-1/4 lg:flex hidden flex-col">
             <span className="font-medium text-[24px] text-white">Call Us</span>

@@ -13,7 +13,7 @@ const index = () => {
   return (
     <>
       <div className="bg-[url('https://res.cloudinary.com/dhuvbrmgg/image/upload/v1662816138/Mini%20Project%20SEAL/bg-red.png')] h-full lg:h-screen bg-no-repeat-x bg-cover">
-        <Navbar auth="/login" title="login" />
+        <Navbar auth="/login" title="Login" />
         <Hero />
       </div>
       <div className="lg:bg-[url('https://res.cloudinary.com/dna8dexwi/image/upload/v1663053941/semarang-technopark/inkubasi-bg_psxrpd.png')] bg-[#F6F6F6] flex flex-col justify-center items-center p-10 py-14 ">
