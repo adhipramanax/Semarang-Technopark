@@ -14,7 +14,7 @@ const index = () => {
   return (
     <>
       <div className="bg-[url('https://res.cloudinary.com/dna8dexwi/image/upload/v1662981768/semarang-technopark/bg-profile_ywzpvs.png')] h-[70vh] lg:h-screen bg-no-repeat bg-cover">
-        <Navbar auth="/login" title="Login" />
+        <Navbar auth="/login" title="Masuk" />
         <Hero />
       </div>
       <section
