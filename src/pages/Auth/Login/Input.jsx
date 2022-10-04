@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import toast, { Toaster } from 'react-hot-toast';
+import toast, { Toaster } from "react-hot-toast";
 import imgEmail from "../../../assets/images/sms.svg";
 import imgPassword from "../../../assets/images/password.svg";
 import axios from "axios";
@@ -51,16 +51,15 @@ const Input = (props) => {
           secure: true,
           // domain: "www.stp.com",
         });
-        toast.success('Successfully created!');
+        toast.success("Successfully created!");
 
         setTimeout(() => {
           navigate("/");
-        }, 1000)
-
+        }, 1000);
       })
       .catch((err) => {
         // alert("Password salah");
-        toast.error('This is an error!');
+        toast.error("This is an error!");
 
         button.innerHTML = `Masuk`;
         button.removeAttribute("disabled");
@@ -70,7 +69,7 @@ const Input = (props) => {
   return (
     <>
       <div className="w-full h-screen xl:w-[35%] xl:mx-0 lg:w-[40%] lg:mx-0 flex flex-col justify-center">
-        <Toaster/>
+        <Toaster />
         <h1 className="text-white text-center text-2xl xl:text-4xl font-bold mt-2 xl:mt-12 mb-5 lg:mt-9 lg:mb-5">
           Masuk ke Akun
         </h1>
