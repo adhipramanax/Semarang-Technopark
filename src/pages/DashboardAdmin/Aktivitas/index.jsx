@@ -9,7 +9,7 @@ const index = () => {
       <div className="flex bg-[#D9D9D9]">
         <Sidebar />
         <div className="w-full ml-64">
-          <NavbarDashboard judul="Dashboard Admin" />
+          <NavbarDashboard judul="Aktivitas" />
           <div className="flex flex-col gap-5 mx-6 mt-10">{/* <AkunTenant /> */}</div>
         </div>
       </div>
