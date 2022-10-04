@@ -27,6 +27,7 @@ import WorkingSpace from "./pages/DashboardAdmin/WorkingSpace";
 import Tenant from "./pages/DashboardAdmin/Tenant";
 import Alat from "./pages/DashboardAdmin/Alat";
 import NavbarMobile from "./components/Navbar/NavbarMobile";
+import AdminAktivitas from "./pages/DashboardAdmin/Aktivitas";
 
 function App() {
   return (
@@ -53,6 +54,7 @@ function App() {
         <Route path="/dashboard/profile-tenant" element={<ProfileTenant />} />
         {/*End dashboard user */}
         {/* dashboard admin */}
+        <Route path="/admin/dashboard" element={<AdminDashboard />} />
         <Route path="/admin/add-alat" element={<AdminAlatAdd />} />
         <Route path="/admin/add-coworking" element={<AdminCoWorkingAdd />} />
         <Route path="/admin/edit-profile-tenant" element={<EditProfileTenant />} />
@@ -61,6 +63,8 @@ function App() {
         <Route path="/admin/daftar-working-space" element={<WorkingSpace />} />
         <Route path="/admin/tenant" element={<Tenant />} />
         <Route path="/admin/daftar-alat" element={<Alat />} />
+        <Route path="/admin/aktivitas" element={<AdminAktivitas />} />
+
         {/*End dashboard user */}
         <Route path="/nav" element={<NavbarMobile />} />
       </Routes>
