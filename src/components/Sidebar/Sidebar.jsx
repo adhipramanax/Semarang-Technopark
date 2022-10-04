@@ -9,7 +9,7 @@ const Sidebar = () => {
   const [data, setData] = React.useState([]);
 
   React.useEffect(() => {
-    let AC = "User";
+    let AC = "admin";
     for (const key of Object.keys(AL)) {
       if (AC.toLowerCase() === key.toLowerCase()) {
         setData(AL[key]);

@@ -13,19 +13,19 @@ import Inkubasi from "./pages/Inkubasi";
 import Verifikasi from "./pages/Auth/Verifikasi";
 import Error from "./pages/Error";
 import Proposal from "./pages/Dashboard/Proposal";
-import Aktifitas from "./pages/Dashboard/Aktifitas";
+import Aktivitas from "./pages/Dashboard/Aktivitas";
 import Mentoring from "./pages/Dashboard/Mentoring";
 import AdminAlatAdd from "./pages/DashboardAdmin/AlatAdd";
 import AdminCoWorkingAdd from "./pages/DashboardAdmin/CoWorkingAdd";
 import AdminDashboard from "./pages/DashboardAdmin/Dashboard";
 
 import ProfileTenant from "./pages/Dashboard/ProfileTenant";
-import {ProfileTenant, EditProfileTenant} from "./pages/Dashboard/ProfileTenant";
-import Mentor from './pages/Dashboard/Mentor'
-import Juri from './pages/Dashboard/Juri'
-import WorkingSpace from './pages/Dashboard/WorkingSpace'
-import Tenant from './pages/Dashboard/Tenant'
-import Alat from './pages/Dashboard/Alat'
+import EditProfileTenant from "./pages/Dashboard/ProfileTenant";
+import Mentor from "./pages/DashboardAdmin/Mentor";
+import Juri from "./pages/DashboardAdmin/Juri";
+import WorkingSpace from "./pages/DashboardAdmin/WorkingSpace";
+import Tenant from "./pages/DashboardAdmin/Tenant";
+import Alat from "./pages/DashboardAdmin/Alat";
 import NavbarMobile from "./components/Navbar/NavbarMobile";
 
 function App() {
@@ -48,19 +48,19 @@ function App() {
         {/* dashboard user */}
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/dashboard/proposal" element={<Proposal />} />
-        <Route path="/dashboard/aktifitas" element={<Aktifitas />} />
+        <Route path="/dashboard/aktivitas" element={<Aktivitas />} />
         <Route path="/dashboard/mentoring" element={<Mentoring />} />
         <Route path="/dashboard/profile-tenant" element={<ProfileTenant />} />
         {/*End dashboard user */}
         {/* dashboard admin */}
-        <Route path="/dashboard/add-alat" element={<AdminAlatAdd />} />
-        <Route path="/dashboard/add-coworking" element={<AdminCoWorkingAdd />} />
-        <Route path="/dashboard/edit-profile-tenant" element={<EditProfileTenant />} />
-        <Route path="/dashboard/mentor" element={<Mentor />} />
-        <Route path="/dashboard/juri" element={<Juri />} />
-        <Route path="/dashboard/daftar-working-space" element={<WorkingSpace />} />
-        <Route path="/dashboard/tenant" element={<Tenant />} />
-        <Route path="/dashboard/daftar-alat" element={<Alat />} />
+        <Route path="/admin/add-alat" element={<AdminAlatAdd />} />
+        <Route path="/admin/add-coworking" element={<AdminCoWorkingAdd />} />
+        <Route path="/admin/edit-profile-tenant" element={<EditProfileTenant />} />
+        <Route path="/admin/mentor" element={<Mentor />} />
+        <Route path="/admin/juri" element={<Juri />} />
+        <Route path="/admin/daftar-working-space" element={<WorkingSpace />} />
+        <Route path="/admin/tenant" element={<Tenant />} />
+        <Route path="/admin/daftar-alat" element={<Alat />} />
         {/*End dashboard user */}
         <Route path="/nav" element={<NavbarMobile />} />
       </Routes>

@@ -30,7 +30,7 @@ const dash = [
   },
   {
     title: "Aktivitas",
-    route: "/dashboard/aktifitas",
+    route: "/dashboard/aktivitas",
     icon: (
       <svg
         className="w-6 h-6 transition text-gray-500 duration-75 group-hover:text-white"
