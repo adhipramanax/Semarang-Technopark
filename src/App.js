@@ -20,7 +20,7 @@ import AdminCoWorkingAdd from "./pages/DashboardAdmin/CoWorkingAdd";
 import AdminDashboard from "./pages/DashboardAdmin/Dashboard";
 
 import ProfileTenant from "./pages/Dashboard/ProfileTenant";
-import EditProfileTenant from "./pages/Dashboard/ProfileTenant";
+import EditProfileTenant from "./pages/Dashboard/ProfileTenant/EditProfile";
 import Mentor from "./pages/DashboardAdmin/Mentor";
 import Juri from "./pages/DashboardAdmin/Juri";
 import WorkingSpace from "./pages/DashboardAdmin/WorkingSpace";
@@ -52,6 +52,8 @@ function App() {
         <Route path="/dashboard/aktivitas" element={<Aktivitas />} />
         <Route path="/dashboard/mentoring" element={<Mentoring />} />
         <Route path="/dashboard/profile-tenant" element={<ProfileTenant />} />
+        <Route path="/dashboard/edit-profile-tenant" element={<EditProfileTenant />} />
+
         {/*End dashboard user */}
         {/* dashboard admin */}
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
