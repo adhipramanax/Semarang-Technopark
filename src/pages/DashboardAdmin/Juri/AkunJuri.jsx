@@ -39,36 +39,11 @@ const AkunJuri = () => {
             status: {
                 isi: "Active",
                 warna: "success"
-            }
-        },
-        {
-            no: 1,
-            judul: "Cecep Bagus",
-            userid: "Bagus123",
-            password: "juri123",
-            status: {
-                isi: "Active",
-                warna: "success"
-            }
-        },
-        {
-            no: 1,
-            judul: "Cecep Bagus",
-            userid: "Bagus123",
-            password: "juri123",
-            status: {
-                isi: "Active",
-                warna: "success"
-            }
-        },
-        {
-            no: 1,
-            judul: "Cecep Bagus",
-            userid: "Bagus123",
-            password: "juri123",
-            status: {
-                isi: "Active",
-                warna: "success"
+            },
+            aksi: {
+                edit: "/admin/edit-juri",
+                detail: "/admin/detail-juri",
+                hapus: "/admin/hapus-juri",
             }
         },
     ]

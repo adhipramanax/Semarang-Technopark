@@ -39,6 +39,11 @@ const ManagementAlat = () => {
                 warna: "success"
             },
             pemilik: "Brahmasta Bagus",
+            aksi: {
+                edit: "/admin/edit-alat",
+                detail: "/admin/detail-alat",
+                hapus: "/admin/hapus-alat",
+            }
         },
     ]
     return (

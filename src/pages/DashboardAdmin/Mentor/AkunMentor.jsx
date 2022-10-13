@@ -29,30 +29,11 @@ const AkunMentor = () => {
             status: {
                 isi: "Active",
                 warna: "success"
-            }
-        },
-        {
-            no: 1,
-            judul: "Cecep Bagus",
-            status: {
-                isi: "Active",
-                warna: "success"
-            }
-        },
-        {
-            no: 1,
-            judul: "Cecep Bagus",
-            status: {
-                isi: "Active",
-                warna: "success"
-            }
-        },
-        {
-            no: 1,
-            judul: "Cecep Bagus",
-            status: {
-                isi: "Active",
-                warna: "success"
+            },
+            aksi: {
+                edit: "/admin/edit-mentor",
+                detail: "/admin/detail-mentor",
+                hapus: "/admin/hapus-mentor",
             }
         },
     ]

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import edit from "../../assets/images/svg/edit-2.svg";
@@ -93,6 +93,28 @@ const index = (props) => {
             )
         }
     }
+
+    const aksis = aksi => {
+        if (aksi !== undefined) {
+            return (
+                <>
+                    <td>
+                        <div className="flex gap-2 justify-center">
+                            <Link to={aksi.edit} className="bg-[#6EBC14] rounded p-1">
+                                <img src={edit} alt="icon" />
+                            </Link>
+                            <Link to={aksi.detail} className="bg-[#5CB3E4] rounded p-1">
+                                <img src={add} alt="icon" />
+                            </Link>
+                            <Link to={aksi.hapus} className="bg-[#E16868] rounded p-1">
+                                <img src={trash} alt="icon" />
+                            </Link>
+                        </div>
+                    </td>
+                </>
+            )
+        }
+    }
     return (
         <>
             <div className="flex justify-between">
@@ -124,7 +146,12 @@ const index = (props) => {
                             <tr>
                                 {props.tHead.map((head) => {
                                     return (
-                                        <th className={`text-base ${head.width} font-medium tracking-tight text-neutral capitalize`}>{head.judul}</th>
+                                        <>
+                                            <th className={`text-base ${head.width} font-medium tracking-tight text-neutral capitalize`}>{head.judul}</th>
+                                            {/* {head.judul === "aksi" &&
+                                                setaksies("aksi")
+                                            } */}
+                                        </>
                                     )
                                 })}
                             </tr>
@@ -137,19 +164,7 @@ const index = (props) => {
                                         <td className="whitespace-pre-wrap">{body.judul}</td>
                                         {check(body.userid, body.password, body.alamat, body.kapasitas, body.bidang, body.ketua, body.noseri, body.pemilik)}
                                         {statuss(body.status)}
-                                        <td>
-                                            <div className="flex gap-2 justify-center">
-                                                <button className="bg-[#6EBC14] rounded p-1">
-                                                    <img src={edit} alt="icon" />
-                                                </button>
-                                                <button className="bg-[#5CB3E4] rounded p-1">
-                                                    <img src={add} alt="icon" />
-                                                </button>
-                                                <button className="bg-[#E16868] rounded p-1">
-                                                    <img src={trash} alt="icon" />
-                                                </button>
-                                            </div>
-                                        </td>
+                                        {aksis(body.aksi)}
                                     </tr>
                                 )
                             })}
