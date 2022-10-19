@@ -1,9 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Setting = () => {
   return (
     <>
-      <div className="flex items-center p-5 mb-5 text-base font-normal text-gray-900 rounded-lg ">
+      <Link
+        to="/setting"
+        className="flex items-center p-5 mb-5 text-base font-normal text-gray-900 rounded-lg "
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -17,7 +21,7 @@ const Setting = () => {
           />
         </svg>
         <h1 className="ml-3">Setting</h1>
-      </div>
+      </Link>
     </>
   );
 };

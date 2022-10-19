@@ -19,6 +19,8 @@ import AdminAlatAdd from "./pages/DashboardAdmin/AlatAdd";
 import AdminCoWorkingAdd from "./pages/DashboardAdmin/CoWorkingAdd";
 import AdminDashboard from "./pages/DashboardAdmin/Dashboard";
 
+import Setting from "./pages/Setting/";
+
 import ProfileTenant from "./pages/Dashboard/ProfileTenant";
 import EditProfileTenant from "./pages/Dashboard/ProfileTenant/EditProfile";
 import Mentor from "./pages/DashboardAdmin/Mentor";
@@ -69,6 +71,7 @@ function App() {
 
         {/*End dashboard user */}
         <Route path="/nav" element={<NavbarMobile />} />
+        <Route path="/setting" element={<Setting />} />
       </Routes>
     </>
   );
