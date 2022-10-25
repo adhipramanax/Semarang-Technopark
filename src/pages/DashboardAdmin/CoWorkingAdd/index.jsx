@@ -17,7 +17,7 @@ const index = () => {
         <Sidebar />
         <div className="w-full ml-64 p-5">
           <NavbarDashboard />
-          <div className="flex flex-col gap-5 mx-6 mt-10">
+          <div className="flex flex-col gap-5 mx-6">
             <Title title="Tambah Working Space" />
             <InformasiCoworking />
             <WaktuOperasional />
