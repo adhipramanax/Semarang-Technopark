@@ -81,7 +81,7 @@ const Index = () => {
 
   return (
     <>
-      <div className="flex bg-[#D9D9D9]">
+      <div className="flex bg-[#f9f9f9]">
         <Sidebar />
         <div className="w-full ml-64">
           <NavbarDashboard judul="Dashboard Admin" />
