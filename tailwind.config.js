@@ -14,9 +14,17 @@ module.exports = {
         "biru": "#04A2FF",
         "merah": "#EE1E14",
         "hitam": "#2F3133",
-        "gray": "#BEBEBE"
+        "gray": "#BEBEBE",
+        "info": "#5CB3E4",
+        "warning": "#F6B675",
+        "error": "#E16868",
+        "success": "#6EBC14",
+        "neutral": "#605D62",
       }
     },
   },
   plugins: [require("daisyui")],
+  safelist: [{
+    pattern: /(bg|text|border-b)-(hijau|primary|secondary|biru|merah|gray|info|warning|error|success|neutral)/
+  }]
 };

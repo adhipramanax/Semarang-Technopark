@@ -1,32 +1,99 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import email from "../../../assets/images/sms.svg";
-import password from "../../../assets/images/password.svg";
+import { Link, useNavigate } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
+import imgEmail from "../../../assets/images/sms.svg";
+import imgPassword from "../../../assets/images/password.svg";
+import axios from "axios";
+import Cookies from "universal-cookie";
 
-const input = (props) => {
+import loading from "../../../assets/images/svg/loading.svg";
+
+const Input = (props) => {
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
+  const navigate = useNavigate();
+
   const changeEye = () => {
     props.onUpdate(props.password ? false : true);
+  };
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    // Loading
+    let button = document.querySelector("button[role='button-login']");
+
+    button.innerHTML = `<img src=${loading} alt="" style="height: 100%; opacity: 0.3" />`;
+    button.setAttribute("disabled", true);
+
+    let bodyForm = new FormData();
+
+    bodyForm.append("email", email);
+    bodyForm.append("password", password);
+
+    axios({
+      method: "POST",
+      url: "https://we-are-cors-free.herokuapp.com/https://semarangtechnopark.herokuapp.com/stp/auth/login",
+      data: bodyForm,
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    })
+      .then((res) => {
+        let token = res.data.access_token;
+        let expires = res.data.expires_in;
+
+        // TODO: Ini nanti dari backend
+        const cookies = new Cookies();
+
+        cookies.set("jwt_token", token, {
+          expires: new Date(new Date().getTime() + expires * 1000),
+          path: "/",
+          // httpOnly: true,
+          secure: true,
+          // domain: "www.stp.com",
+        });
+        toast.success("Successfully created!");
+
+        setTimeout(() => {
+          navigate("/");
+        }, 1000);
+      })
+      .catch((err) => {
+        // alert("Password salah");
+        toast.error("This is an error!");
+
+        button.innerHTML = `Masuk`;
+        button.removeAttribute("disabled");
+      });
   };
 
   return (
     <>
       <div className="w-full h-screen xl:w-[35%] xl:mx-0 lg:w-[40%] lg:mx-0 flex flex-col justify-center">
+        <Toaster />
         <h1 className="text-white text-center text-2xl xl:text-4xl font-bold mt-2 xl:mt-12 mb-5 lg:mt-9 lg:mb-5">
           Masuk ke Akun
         </h1>
-        <div className="flex flex-col items-center gap-4 py-8 px-6 bg-white rounded-[20px]">
+        <form className="flex flex-col items-center gap-4 py-8 px-6 bg-white rounded-[20px]">
           <div className="flex items-center w-full gap-2">
-            <img className="w-5 xl:w-6 lg:w-6" src={email} alt="email" />
+            <img className="w-5 xl:w-6 lg:w-6" src={imgEmail} alt="email" />
             <p className="text-sm xl:text-lg lg:text-lg">Email</p>
           </div>
-          <input
-            className="w-full rounded-lg px-5 bg-[#F9F9F9]"
-            placeholder="Masukan Email"
-            type="text"
-            name="email"
-          />
+          <div className="w-full">
+            <input
+              className="w-full rounded-lg px-5 bg-[#F9F9F9] peer "
+              placeholder="Masukan Email"
+              type="email"
+              name="email"
+              onInput={(e) => {
+                setEmail(e.target.value);
+              }}
+            />
+            <p class="mt-2 hidden peer-invalid:block text-pink-600 text-sm">
+              Email anda tidak valid.
+            </p>
+          </div>
           <div className="flex items-center w-full gap-2">
-            <img className="w-5 xl:w-6 lg:w-6" src={password} alt="password" />
+            <img className="w-5 xl:w-6 lg:w-6" src={imgPassword} alt="password" />
             <p className="text-sm xl:text-lg lg:text-lg">Kata Sandi</p>
           </div>
           <div className="w-full relative block">
@@ -34,7 +101,11 @@ const input = (props) => {
               className="block w-full rounded-lg pl-5 pr-10 bg-[#F9F9F9]"
               placeholder="Masukan Kata Sandi"
               type={props.password ? "password" : "text"}
+              pattern="^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,20}$"
               name="password"
+              onInput={(e) => {
+                setPassword(e.target.value);
+              }}
             />
             <span className="absolute top-2.5 right-3 flex items-center pl-4">
               {props.password ? (
@@ -92,7 +163,11 @@ const input = (props) => {
               Lupa Password?
             </Link>
           </div>
-          <button className="btn rounded-[16px] bg-[#04A2FF] w-full h-[40px] xl:h-[55px] lg:h-[55px] text-white border-0 hover:bg-blue-700 tracking-wide mt-1 xl:mt-5 lg:mt-5">
+          <button
+            onClick={handleLogin}
+            role="button-login"
+            className="btn rounded-[16px] bg-[#04A2FF] w-full h-[40px] xl:h-[55px] lg:h-[55px] text-white border-0 hover:bg-blue-700 tracking-wide mt-1 xl:mt-5 lg:mt-5"
+          >
             Masuk
           </button>
           <div className="text-sm xl:text-base lg:text-base mt-1 xl:mt-3 lg:mt-3 flex gap-1">
@@ -103,10 +178,10 @@ const input = (props) => {
               </span>
             </Link>
           </div>
-        </div>
+        </form>
       </div>
     </>
   );
 };
 
-export default input;
+export default Input;

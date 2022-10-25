@@ -8,13 +8,13 @@ import EditProposal from "./EditProposal";
 const index = () => {
   return (
     <>
-      <div className="flex bg-[#D9D9D9]">
+      <div className="flex bg-[#F9F9F9]">
         <Sidebar />
-        <div className="w-full">
-          <NavbarDashboard />
-          <div className="flex flex-col gap-5 mx-6 mt-10">
-            {/* <FileUpload /> */}
-            <EditProposal />
+        <div className="w-full ml-64">
+          <NavbarDashboard judul="Proposal" />
+          <div className="flex p-6 gap-6  h-[92vh] mt-20">
+            <FileUpload />
+            {/* <EditProposal /> */}
           </div>
         </div>
       </div>
