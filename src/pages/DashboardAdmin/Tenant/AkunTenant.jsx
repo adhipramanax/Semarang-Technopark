@@ -10,7 +10,7 @@ const AkunTenant = () => {
         },
         {
             judul: "Nama Tenant",
-            width: "w-[20%]"
+            width: "w-[30%]"
         },
         {
             judul: "Bidang",
@@ -28,10 +28,6 @@ const AkunTenant = () => {
             judul: "Status",
             width: "w-auto"
         },
-        {
-            judul: "Aksi",
-            width: "w-[20%]"
-        }
     ]
 
     let tBody = [

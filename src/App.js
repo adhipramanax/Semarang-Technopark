@@ -30,6 +30,8 @@ import Tenant from "./pages/DashboardAdmin/Tenant";
 import Alat from "./pages/DashboardAdmin/Alat";
 import NavbarMobile from "./components/Navbar/NavbarMobile";
 import AdminAktivitas from "./pages/DashboardAdmin/Aktivitas";
+import DetailWorkingSpace from "./pages/DashboardAdmin/WorkingSpace/DetailWorkingSpace";
+import DetailAlat from "./pages/DashboardAdmin/Alat/DetailAlat";
 
 function App() {
   return (
@@ -68,6 +70,8 @@ function App() {
         <Route path="/admin/tenant" element={<Tenant />} />
         <Route path="/admin/daftar-alat" element={<Alat />} />
         <Route path="/admin/aktivitas" element={<AdminAktivitas />} />
+        <Route path="/admin/detail-working-space" element={<DetailWorkingSpace />} />
+        <Route path="/admin/detail-alat" element={<DetailAlat />} />
 
         {/*End dashboard user */}
         <Route path="/nav" element={<NavbarMobile />} />
