@@ -13,7 +13,7 @@ const Carousel = () => {
     {
       imageUrl:
         "https://res.cloudinary.com/dhuvbrmgg/image/upload/v1663092366/Mini%20Project%20SEAL/pelatihan.png",
-      title: "Panji",
+      title: "Amazon Web Service (AWS)",
       description:
         "Food Startup Challenge sendiri merupakan program inkubasi bisnis yang dikemas melalui kompetisi kewirausahaan yang memberikan kesempatan kepada kaum millenial untuk mewujudkan dan .............",
       date: "23 September 2022",
@@ -21,7 +21,7 @@ const Carousel = () => {
     {
       imageUrl:
         "https://res.cloudinary.com/dhuvbrmgg/image/upload/v1663092367/Mini%20Project%20SEAL/seminar1.jpg",
-      title: "Thomi",
+      title: " Webex dan Zoom Meetings",
       description:
         "Food Startup Challenge sendiri merupakan program inkubasi bisnis yang dikemas melalui kompetisi kewirausahaan yang memberikan kesempatan kepada kaum millenial untuk mewujudkan dan .............",
       date: "23 September 2022",
@@ -29,7 +29,7 @@ const Carousel = () => {
     {
       imageUrl:
         "https://res.cloudinary.com/dhuvbrmgg/image/upload/v1662194083/Mini%20Project%20SEAL/bg1.png",
-      title: "Thuma",
+      title: "Pelatihan Design Thinking",
       description:
         "Food Startup Challenge sendiri merupakan program inkubasi bisnis yang dikemas melalui kompetisi kewirausahaan yang memberikan kesempatan kepada kaum millenial untuk mewujudkan dan .............",
       date: "23 September 2022",

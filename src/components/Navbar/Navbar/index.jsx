@@ -25,22 +25,42 @@ const Index = (props) => {
                   Profile
                 </Link>
                 <div className="dropdown dropdown-hover dropdown-end">
-                  <label tabIndex={0} className=" text-white ">
+                  <label tabIndex={0} className=" text-white flex  items-center gap-1">
                     Layanan
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-4 h-4"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                      />
+                    </svg>
                   </label>
                   <ul
                     tabIndex={0}
-                    className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-[400px] flex flex-row flex-wrap "
+                    className="dropdown-content menu p-2 shadow bg-base-100  rounded-box w-[400px] flex flex-row flex-wrap"
                   >
                     <div className="flex">
                       <li>
-                        <Link to="/inkubasi">
+                        <Link
+                          to="/inkubasi"
+                          className="btn btn-ghost h-full bg-white focus:text-black"
+                        >
                           <img className="w-14" src={layanan1} alt="layanan" />
                           Inkubasi STP
                         </Link>
                       </li>
                       <li>
-                        <Link to="/sewa-alat">
+                        <Link
+                          to="/sewa-alat"
+                          className="btn btn-ghost h-full bg-white focus:text-black flex"
+                        >
                           <img className="w-14" src={layanan1} alt="layanan" />
                           Sewa Alat
                         </Link>
@@ -48,21 +68,24 @@ const Index = (props) => {
                     </div>
                     <div className="flex">
                       <li>
-                        <Link to="co-working">
+                        <Link
+                          to="/co-working"
+                          className="btn btn-ghost  bg-white focus:text-black h-full flex justify-start"
+                        >
                           <img className="w-14" src={layanan1} alt="layanan" />
-                          Co-Working Space
+                          <p className="w-1/3">Co-Working Space</p>
                         </Link>
                       </li>
-                      <li>
-                        <Link to="/pelatihan">
-                          <img className="w-14" src={layanan1} alt="layanan" />
+                      <li className="disabled">
+                        <Link to="" className="">
+                          <img className="w-14 " src={layanan1} alt="layanan" />
                           Event & Pelatihan
                         </Link>
                       </li>
                     </div>
                   </ul>
                 </div>
-                <Link to="/" className="text-white">
+                <Link to="/" className="text-white disabled">
                   Partners
                 </Link>
               </ul>

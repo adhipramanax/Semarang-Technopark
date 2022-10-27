@@ -16,7 +16,7 @@ const index = () => {
   return (
     <>
       <div class="bg-[url('https://res.cloudinary.com/dhuvbrmgg/image/upload/v1662816138/Mini%20Project%20SEAL/bg-red.png')] bg-no-repeat-x bg-cover">
-        <Navbar auth="/login" title="Login" />
+        <Navbar auth="/login" title="Masuk" />
         <Jumbotron
           judul="Sewa Alat"
           desc="Semarang Technopark Menyediakan sewa alat untuk kebutuhan para talent dan tenant."

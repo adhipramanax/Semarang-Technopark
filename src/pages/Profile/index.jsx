@@ -14,10 +14,13 @@ const index = () => {
   return (
     <>
       <div className="bg-[url('https://res.cloudinary.com/dna8dexwi/image/upload/v1662981768/semarang-technopark/bg-profile_ywzpvs.png')] h-[70vh] lg:h-screen bg-no-repeat bg-cover">
-        <Navbar auth="/login" title="Login" />
+        <Navbar auth="/login" title="Masuk" />
         <Hero />
       </div>
-      <section className="p-8 lg:py-16 lg:px-28 lg:flex lg:w-full lg:justify-between lg:items-center md:flex md:w-full md:justify-between md:items-center">
+      <section
+        id="about"
+        className=" p-8 lg:py-16 lg:px-28 lg:flex lg:w-full lg:justify-between lg:items-center md:flex md:w-full md:justify-between md:items-center"
+      >
         <div className="leading-loose lg:w-1/2">
           <h5 className="text-[#D73737]">ABOUT</h5>
           <h1 className="text-2xl font-bold lg:text-4xl md:text-3xl">
