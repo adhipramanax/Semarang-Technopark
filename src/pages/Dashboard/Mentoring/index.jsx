@@ -12,7 +12,7 @@ const index = () => {
     <>
       <div className="flex bg-[#F9F9F9]">
         <Sidebar />
-        <div className="w-full ml-64 h-[100vh]">
+        <div className="w-full side h-[100vh]">
           <NavbarDashboard judul="Mentoring" />
           <Maintenance />
         </div>

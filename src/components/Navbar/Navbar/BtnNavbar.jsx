@@ -1,11 +1,27 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import userContext from "../../../context/userContext";
+import Cookies from "universal-cookie";
 
 const BtnNavbar = () => {
+  const { changeUser } = useContext(userContext);
+  const navigate = useNavigate();
+
+  const logout = () => {
+    const cookies = new Cookies();
+
+    changeUser(null);
+    cookies.remove("jwt_token");
+    navigate("/");
+  };
+
   return (
     <>
       <div class="dropdown dropdown-content dropdown-end  ">
-        <label tabindex="0" class=" m-1 bg-transparent h-full flex items-center gap-1">
+        <label
+          tabindex="0"
+          class=" m-1 bg-transparent h-full flex items-center gap-1"
+        >
           Verdian Galang
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -15,7 +31,11 @@ const BtnNavbar = () => {
             stroke="currentColor"
             class="w-6 h-6"
           >
-            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+            />
           </svg>
         </label>
 
@@ -24,7 +44,10 @@ const BtnNavbar = () => {
           class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 mt-6 "
         >
           <li className="border-solid focus:bg-black">
-            <a className="btn btn-ghost h-full bg-white active:text-black justify-start">
+            <button
+              onClick={() => logout()}
+              className="btn btn-ghost h-full bg-white active:text-black justify-start"
+            >
               <svg
                 width="24"
                 height="24"
@@ -55,10 +78,13 @@ const BtnNavbar = () => {
                 />
               </svg>
               <p>Logout</p>
-            </a>
+            </button>
           </li>
           <li>
-            <Link to="/" className="btn btn-ghost h-full bg-white active:text-black justify-start">
+            <Link
+              to="/"
+              className="btn btn-ghost h-full bg-white active:text-black justify-start"
+            >
               <svg
                 width="24"
                 height="24"
