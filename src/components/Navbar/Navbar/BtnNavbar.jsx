@@ -4,8 +4,10 @@ import userContext from "../../../context/userContext";
 import Cookies from "universal-cookie";
 
 const BtnNavbar = () => {
-  const { changeUser } = useContext(userContext);
+  const { user, changeUser } = useContext(userContext);
   const navigate = useNavigate();
+
+  // console.log(user.name);
 
   const logout = () => {
     const cookies = new Cookies();
@@ -22,7 +24,7 @@ const BtnNavbar = () => {
           tabindex="0"
           class=" m-1 bg-transparent h-full flex items-center gap-1"
         >
-          Verdian Galang
+          {user.name}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

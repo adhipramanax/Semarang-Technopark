@@ -54,8 +54,9 @@ function App() {
 
       changeUser({
         id: decoded.iat,
-        name: decoded.name,
+        name: decoded.user.name,
       });
+      console.log(decoded);
     }
     catch(err) {
       changeUser(null);
@@ -64,9 +65,14 @@ function App() {
 
   }, []);
 
+  const contextValue = {
+    user,
+    changeUser
+  }
+
   return (
     <>
-      <userContext.Provider value={{user, changeUser}} >
+      <userContext.Provider value={contextValue} >
         <BrowserRouter>
           <Routes>
             {/* Page */}
