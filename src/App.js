@@ -56,7 +56,6 @@ function App() {
         id: decoded.iat,
         name: decoded.user.name,
       });
-      console.log(decoded);
     }
     catch(err) {
       changeUser(null);

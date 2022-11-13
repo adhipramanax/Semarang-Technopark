@@ -60,7 +60,7 @@ const Input = (props) => {
         var decoded = jwt_decode(token);
         changeUser({
           id: decoded.iat,
-          name: decoded.name,
+          name: decoded.user.name,
         });
 
         setTimeout(() => {
@@ -115,7 +115,6 @@ const Input = (props) => {
               className="block w-full rounded-lg pl-5 pr-10 bg-[#F9F9F9]"
               placeholder="Masukan Kata Sandi"
               type={props.password ? "password" : "text"}
-              pattern="^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,20}$"
               name="password"
               onInput={(e) => {
                 setPassword(e.target.value);
