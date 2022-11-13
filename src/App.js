@@ -35,18 +35,17 @@ import AdminAktivitas from "./pages/DashboardAdmin/Aktivitas";
 import DetailWorkingSpace from "./pages/DashboardAdmin/WorkingSpace/DetailWorkingSpace";
 import DetailAlat from "./pages/DashboardAdmin/Alat/DetailAlat";
 import userContext from "./context/userContext";
-import Cookies from 'universal-cookie'; 
+import Cookies from "universal-cookie";
 
 const cookies = new Cookies();
-
 
 function App() {
   const [user, changeUser] = useState({});
 
   useEffect(() => {
     // Ambil dari cookie, cek apabila ada jwtnya
-    
-    const jwt_token = cookies.get('jwt_token');
+
+    const jwt_token = cookies.get("jwt_token");
 
     // Apabila ada jwtnya maka ambil dan decode jwtnya
     try {
@@ -55,23 +54,22 @@ function App() {
       changeUser({
         id: decoded.iat,
         name: decoded.user.name,
+        email: decoded.user.email,
       });
-    }
-    catch(err) {
+    } catch (err) {
       changeUser(null);
     }
     // Setelah di decode, panggil fungsi changeUser() dan ganti dengan isi dari jwtnya
-
   }, []);
 
   const contextValue = {
     user,
-    changeUser
-  }
+    changeUser,
+  };
 
   return (
     <>
-      <userContext.Provider value={contextValue} >
+      <userContext.Provider value={contextValue}>
         <BrowserRouter>
           <Routes>
             {/* Page */}
