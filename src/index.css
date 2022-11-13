@@ -15,15 +15,16 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 .containers {
-  @apply px-[108px]
+  @apply px-[108px];
 }
 
 .contain {
-  @apply px-5
+  @apply px-5;
 }
 a[data-active="true"] {
   background-color: blue !important;
@@ -51,29 +52,30 @@ a[data-active="true"] {
 
 /* Toggle Active */
 .active {
-  @apply bg-merah text-white
+  @apply bg-merah text-white;
 }
 
 .unactive {
-  @apply bg-white text-merah
+  @apply bg-white text-merah;
 }
 
-#style-2::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	border-radius: 10px;
-	background-color: #F5F5F5;
+#style-2::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
 }
 
-#style-2::-webkit-scrollbar
-{
-	height: 6px;
-	background-color: #F5F5F5;
+#style-2::-webkit-scrollbar {
+  height: 6px;
+  background-color: #f5f5f5;
 }
 
-#style-2::-webkit-scrollbar-thumb
-{
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: #D62929;
+#style-2::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #d62929;
 }
+
+/* .wrap {
+  width: calc(100% - 16rem);
+} */
