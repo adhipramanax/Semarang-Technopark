@@ -62,13 +62,13 @@ const Input = (props) => {
   return (
     <>
       <div className="w-full h-screen xl:w-[35%] xl:mx-0 lg:w-[50%] lg:mx-0 flex flex-col justify-center">
-        <h1 className="text-white text-center text-2xl xl:text-4xl font-bold mt-0 xl:mt-3 mb-3 lg:mt-1 lg:mb-3">
+        <h1 className="text-white text-center text-2xl xl:text-4xl font-bold mt-0 xl:mt-10 mb-3 lg:mt-1 lg:mb-3">
           Daftarkan Akun
         </h1>
-        <form className="flex flex-col items-center gap-4 py-4 xl:py-5 lg:py-4 px-6 bg-white rounded-[20px]">
+        <form className="flex flex-col items-center gap-3 py-4 xl:py-5 lg:py-4 px-6 bg-white rounded-[20px]">
           <div className="flex items-center w-full gap-2">
-            <img className="w-5 xl:w-6 lg:w-5" src={imgEmail} alt="email" />
-            <p className="text-sm xl:text-lg lg:text-base">Email</p>
+            <img className="w-5 xl:w-5 lg:w-5" src={imgEmail} alt="email" />
+            <p className="text-sm xl:text-md lg:text-base">Email</p>
           </div>
           <div className="w-full">
             <input
@@ -91,7 +91,7 @@ const Input = (props) => {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="white"
-              className="w-5 h-5 xl:w-6 xl:h-6 lg:w-5 lg:h-6"
+              className="w-5 h-5 xl:w-5 xl:h-5 lg:w-5 lg:h-6"
             >
               <path
                 strokeLinecap="round"
@@ -99,7 +99,7 @@ const Input = (props) => {
                 d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
               />
             </svg>
-            <p className="text-sm xl:text-lg lg:text-base">Nama</p>
+            <p className="text-sm xl:text-md lg:text-base">Nama</p>
           </div>
           <input
             className="w-full rounded-lg px-5 bg-[#F9F9F9]"
@@ -111,8 +111,42 @@ const Input = (props) => {
             }}
           />
           <div className="flex items-center w-full gap-2">
-            <img className="w-5 xl:w-6 lg:w-5" src={imgPassword} alt="password" />
-            <p className="text-sm xl:text-lg lg:text-base">Kata Sandi</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#F08619"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="white"
+              className="w-5 h-5 xl:w-5 xl:h-5 lg:w-5 lg:h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+              />
+            </svg>
+            <p className="text-sm xl:text-md lg:text-base">Jenis Akun</p>
+          </div>
+          {/* <input
+            className="w-full"
+            placeholder="Masukan Nama Anda"
+            type="text"
+            name="nama"
+            // onInput={(e) => {
+            //   setName(e.target.value);
+            // }}
+          /> */}
+          <select className="w-full py-2 rounded-lg px-5 bg-[#F9F9F9] text-inherit">
+            <option disabled selected>Pilih role</option>
+            <option>Admin</option>
+            <option>Mentor</option>
+            <option>Tenant</option>
+            <option>Juri</option>
+            <option>User</option>
+          </select>
+          <div className="flex items-center w-full gap-2">
+            <img className="w-5 xl:w-5 lg:w-5" src={imgPassword} alt="password" />
+            <p className="text-sm xl:text-md lg:text-base">Kata Sandi</p>
           </div>
           <div className="w-full relative block">
             <input
@@ -167,8 +201,8 @@ const Input = (props) => {
             </span>
           </div>
           <div className="flex items-center w-full gap-2">
-            <img className="w-5 xl:w-6 lg:w-5" src={imgPassword} alt="password" />
-            <p className="text-sm xl:text-lg lg:text-base">Ulangi Kata Sandi</p>
+            <img className="w-5 xl:w-5 lg:w-5" src={imgPassword} alt="password" />
+            <p className="text-sm xl:text-md lg:text-base">Ulangi Kata Sandi</p>
           </div>
           <div className="w-full relative block">
             <input
@@ -225,11 +259,11 @@ const Input = (props) => {
           <button
             onClick={handleRegister}
             role="button-register"
-            className="btn rounded-[16px] bg-[#04A2FF] w-full h-[3px] xl:h-[55px] lg:h-[45px] text-white border-0 hover:bg-blue-700 tracking-wide"
+            className="btn rounded-[16px] bg-[#04A2FF] w-full h-[3px] xl:h-[50px] lg:h-[45px] text-white border-0 hover:bg-blue-700 tracking-wide"
           >
             Daftar
           </button>
-          <div className="text-sm xl:text-base lg:text-sm mt-0 xl:mt-3 lg:mt-0 flex gap-1">
+          <div className="text-sm xl:text-base lg:text-sm mt-2 xl:mt-0 lg:mt-0 flex gap-1">
             Sudah Punya Akun?
             <Link to="/login">
               <span className="text-[#F08619] text-sm xl:text-base lg:text-sm hover:underline">
