@@ -85,7 +85,7 @@ const Index = () => {
         <Sidebar />
         <div className="w-full ml-64">
           <NavbarDashboard judul="Dashboard Admin" />
-          <div className="flex gap-5 mx-6 mt-10 rounded-lg">
+          <div className="flex gap-5 mx-6 mt-20 rounded-lg">
             <div className="w-[60%] rounded-lg">
               <div className="flex gap-4 flex-nowrap snap-x overflow-x-scroll snap-mandatory scroll-pl-12 no-scrollbar">
                 <div className={`bg-white flex flex-col rounded-lg justify-center items-center border-b-[10px] border-b-[#CD0606] px-2 gap-2 text-center py-8 snap-center snap-always`}>

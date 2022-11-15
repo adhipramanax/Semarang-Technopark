@@ -32,6 +32,7 @@ import NavbarMobile from "./components/Navbar/NavbarMobile";
 import AdminAktivitas from "./pages/DashboardAdmin/Aktivitas";
 import DetailWorkingSpace from "./pages/DashboardAdmin/WorkingSpace/DetailWorkingSpace";
 import DetailAlat from "./pages/DashboardAdmin/Alat/DetailAlat";
+import Pelatihan from "./pages/DashboardAdmin/Pelatihan";
 
 function App() {
   return (
@@ -72,6 +73,7 @@ function App() {
         <Route path="/admin/aktivitas" element={<AdminAktivitas />} />
         <Route path="/admin/detail-working-space" element={<DetailWorkingSpace />} />
         <Route path="/admin/detail-alat" element={<DetailAlat />} />
+        <Route path="/admin/pelatihan" element={<Pelatihan />} />
 
         {/*End dashboard user */}
         <Route path="/nav" element={<NavbarMobile />} />
