@@ -33,6 +33,7 @@ import AdminAktivitas from "./pages/DashboardAdmin/Aktivitas";
 import DetailTenant from "./pages/DashboardAdmin/DetailTenant";
 import DetailWorkingSpace from "./pages/DashboardAdmin/WorkingSpace/DetailWorkingSpace";
 import DetailAlat from "./pages/DashboardAdmin/Alat/DetailAlat";
+import DetailPelatihan from "./pages/DashboardAdmin/Pelatihan/DetailPelatihan";
 import Pelatihan from "./pages/DashboardAdmin/Pelatihan";
 
 function App() {
@@ -84,6 +85,7 @@ function App() {
           element={<DetailWorkingSpace />}
         />
         <Route path="/admin/detail-alat" element={<DetailAlat />} />
+        <Route path="/admin/detail-pelatihan" element={<DetailPelatihan />} />
         <Route path="/admin/pelatihan" element={<Pelatihan />} />
 
         {/*End dashboard user */}
