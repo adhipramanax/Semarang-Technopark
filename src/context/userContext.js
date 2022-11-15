@@ -1,7 +1,7 @@
 import { createContext } from "react";
 
 // Create context untuk menyimpan data state dari user.
-const user = createContext();
+const userContext = createContext();
 
 // Export context agar bisa diimport di file lain.
-export default user;
+export default userContext;

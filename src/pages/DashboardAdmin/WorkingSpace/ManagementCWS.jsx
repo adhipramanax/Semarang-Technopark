@@ -45,7 +45,7 @@ const ManagementCWS = () => {
     ]
     return (
         <>
-            <Table judul="Tambah Working Space" link="/" tHead={tHead} tBody={tBody} />
+            <Table judul="Tambah Working Space" link="/admin/tambah-coworking" tHead={tHead} tBody={tBody} />
         </>
     )
 }

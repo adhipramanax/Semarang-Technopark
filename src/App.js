@@ -36,11 +36,13 @@ import DetailWorkingSpace from "./pages/DashboardAdmin/WorkingSpace/DetailWorkin
 import DetailAlat from "./pages/DashboardAdmin/Alat/DetailAlat";
 import userContext from "./context/userContext";
 import Cookies from "universal-cookie";
+import TestSideBar from "./components/Sidebar/TestSideBar";
 
 const cookies = new Cookies();
 
 function App() {
   const [user, changeUser] = useState({});
+  const [hide, setHide] = useState(false)
 
   useEffect(() => {
     // Ambil dari cookie, cek apabila ada jwtnya
@@ -65,6 +67,8 @@ function App() {
   const contextValue = {
     user,
     changeUser,
+    hide,
+    setHide
   };
 
   return (
@@ -102,14 +106,10 @@ function App() {
             {/*End dashboard user */}
             {/* dashboard admin */}
             <Route path="/admin/dashboard" element={<AdminDashboard />} />
-            <Route path="/admin/add-alat" element={<AdminAlatAdd />} />
+            <Route path="/admin/tambah-alat" element={<AdminAlatAdd />} />
             <Route
-              path="/admin/add-coworking"
+              path="/admin/tambah-coworking"
               element={<AdminCoWorkingAdd />}
-            />
-            <Route
-              path="/admin/edit-profile-tenant"
-              element={<EditProfileTenant />}
             />
             <Route path="/admin/mentor" element={<Mentor />} />
             <Route path="/admin/juri" element={<Juri />} />
@@ -125,6 +125,7 @@ function App() {
               element={<DetailWorkingSpace />}
             />
             <Route path="/admin/detail-alat" element={<DetailAlat />} />
+            <Route path="/admin/test" element={<TestSideBar />} />
 
             {/*End dashboard user */}
             <Route path="/nav" element={<NavbarMobile />} />

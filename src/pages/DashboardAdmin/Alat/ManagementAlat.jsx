@@ -48,7 +48,7 @@ const ManagementAlat = () => {
     ]
     return (
         <>
-            <Table judul="Tambah Alat" link="/" tHead={tHead} tBody={tBody} />
+            <Table judul="Tambah Alat" link="/admin/tambah-alat" tHead={tHead} tBody={tBody} />
         </>
     )
 }
