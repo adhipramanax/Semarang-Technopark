@@ -2,6 +2,8 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import jwt_decode from "jwt-decode";
+import userContext from "./context/userContext";
+import Cookies from "universal-cookie";
 
 import LandingPage from "./pages/LandingPage";
 import Dashboard from "./pages/Dashboard/Dashboard";
@@ -20,6 +22,7 @@ import Mentoring from "./pages/Dashboard/Mentoring";
 import AdminAlatAdd from "./pages/DashboardAdmin/AlatAdd";
 import AdminCoWorkingAdd from "./pages/DashboardAdmin/CoWorkingAdd";
 import AdminDashboard from "./pages/DashboardAdmin/Dashboard";
+import AdminInkubasi from "./pages/DashboardAdmin/Inkubasi";
 
 import Setting from "./pages/Setting/";
 
@@ -32,18 +35,17 @@ import Tenant from "./pages/DashboardAdmin/Tenant";
 import Alat from "./pages/DashboardAdmin/Alat";
 import NavbarMobile from "./components/Navbar/NavbarMobile";
 import AdminAktivitas from "./pages/DashboardAdmin/Aktivitas";
+import DetailTenant from "./pages/DashboardAdmin/DetailTenant";
 import DetailWorkingSpace from "./pages/DashboardAdmin/WorkingSpace/DetailWorkingSpace";
 import DetailAlat from "./pages/DashboardAdmin/Alat/DetailAlat";
-import AdminInkubasi from "./pages/DashboardAdmin/Inkubasi";
-import userContext from "./context/userContext";
-import Cookies from "universal-cookie";
-import TestSideBar from "./components/Sidebar/TestSideBar";
+import DetailPelatihan from "./pages/DashboardAdmin/Pelatihan/DetailPelatihan";
+import Pelatihan from "./pages/DashboardAdmin/Pelatihan";
 
 const cookies = new Cookies();
 
 function App() {
   const [user, changeUser] = useState({});
-  const [hide, setHide] = useState(false)
+  const [hide, setHide] = useState(false);
 
   useEffect(() => {
     // Ambil dari cookie, cek apabila ada jwtnya
@@ -69,7 +71,7 @@ function App() {
     user,
     changeUser,
     hide,
-    setHide
+    setHide,
   };
 
   return (
@@ -107,10 +109,14 @@ function App() {
             {/*End dashboard user */}
             {/* dashboard admin */}
             <Route path="/admin/dashboard" element={<AdminDashboard />} />
-            <Route path="/admin/tambah-alat" element={<AdminAlatAdd />} />
+            <Route path="/admin/add-alat" element={<AdminAlatAdd />} />
             <Route
-              path="/admin/tambah-coworking"
+              path="/admin/add-coworking"
               element={<AdminCoWorkingAdd />}
+            />
+            <Route
+              path="/admin/edit-profile-tenant"
+              element={<EditProfileTenant />}
             />
             <Route path="/admin/mentor" element={<Mentor />} />
             <Route path="/admin/juri" element={<Juri />} />
@@ -118,7 +124,6 @@ function App() {
               path="/admin/daftar-working-space"
               element={<WorkingSpace />}
             />
-            <Route path="/admin/inkubasi" element={<AdminInkubasi />} />
             <Route path="/admin/tenant" element={<Tenant />} />
             <Route path="/admin/daftar-alat" element={<Alat />} />
             <Route path="/admin/aktivitas" element={<AdminAktivitas />} />
@@ -127,8 +132,12 @@ function App() {
               element={<DetailWorkingSpace />}
             />
             <Route path="/admin/detail-alat" element={<DetailAlat />} />
-            <Route path="/admin/test" element={<TestSideBar />} />
-
+            <Route
+              path="/admin/detail-pelatihan"
+              element={<DetailPelatihan />}
+            />
+            <Route path="/admin/pelatihan" element={<Pelatihan />} />
+            <Route path="/admin/inkubasi" element={<AdminInkubasi />} />
             {/*End dashboard user */}
             <Route path="/nav" element={<NavbarMobile />} />
             <Route path="/setting" element={<Setting />} />

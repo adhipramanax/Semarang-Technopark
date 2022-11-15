@@ -103,6 +103,44 @@ const Input = (props) => {
             </p>
           </div>
           <div className="flex items-center w-full gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#F08619"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="white"
+              className="w-5 h-5 xl:w-6 xl:h-6 lg:w-5 lg:h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+              />
+            </svg>
+            <p className="text-sm xl:text-lg lg:text-lg">Jenis Akun</p>
+          </div>
+          <div className="w-full">
+            {/* <input
+              className="w-full rounded-lg px-5 bg-[#F9F9F9] peer "
+              placeholder="Masukan Email"
+              type="email"
+              name="email"
+              onInput={(e) => {
+                setEmail(e.target.value);
+              }}
+            /> */}
+            <select className="w-full py-2 rounded-lg px-5 bg-[#F9F9F9] text-inherit">
+              <option disabled selected>
+                Pilih role
+              </option>
+              <option>Admin</option>
+              <option>Mentor</option>
+              <option>Tenant</option>
+              <option>Juri</option>
+              <option>User</option>
+            </select>
+          </div>
+          <div className="flex items-center w-full gap-2">
             <img
               className="w-5 xl:w-6 lg:w-6"
               src={imgPassword}
