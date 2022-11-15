@@ -34,6 +34,7 @@ import NavbarMobile from "./components/Navbar/NavbarMobile";
 import AdminAktivitas from "./pages/DashboardAdmin/Aktivitas";
 import DetailWorkingSpace from "./pages/DashboardAdmin/WorkingSpace/DetailWorkingSpace";
 import DetailAlat from "./pages/DashboardAdmin/Alat/DetailAlat";
+import AdminInkubasi from "./pages/DashboardAdmin/Inkubasi";
 import userContext from "./context/userContext";
 import Cookies from "universal-cookie";
 import TestSideBar from "./components/Sidebar/TestSideBar";
@@ -117,6 +118,7 @@ function App() {
               path="/admin/daftar-working-space"
               element={<WorkingSpace />}
             />
+            <Route path="/admin/inkubasi" element={<AdminInkubasi />} />
             <Route path="/admin/tenant" element={<Tenant />} />
             <Route path="/admin/daftar-alat" element={<Alat />} />
             <Route path="/admin/aktivitas" element={<AdminAktivitas />} />
