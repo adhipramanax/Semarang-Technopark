@@ -8,6 +8,7 @@ import Pelatihan from '../../../assets/images/pelatihan.png'
 import Fasilitas from './Fasilitas';
 import Operasional from './Operasional';
 import HargaSewa from './HargaSewa';
+import Wrapper from '../../../components/Wrapper/Wrapper';
 
 const DetailWorkingSpace = () => {
     const [Gambar, setGambar] = useState()
@@ -97,9 +98,10 @@ const DetailWorkingSpace = () => {
         <>
             <div className="flex bg-[#D9D9D9]">
                 <Sidebar />
-                <div className="w-full ml-64">
+                <Wrapper>
+                    {/* <div className="w-full ml-64"> */}
                     <NavbarDashboard judul="Management Working Space" />
-                    <div className="flex flex-col gap-5 pb-10 mx-6 mt-10">
+                    <div className="flex flex-col gap-5 pb-10 mx-6 mt-20">
                         <div className="w-full bg-white py-5 px-3 font-medium text-base rounded">
                             <h1 className="flex gap-2">
                                 <Link to="/admin/daftar-working-space" className="flex gap-2">
@@ -145,7 +147,8 @@ const DetailWorkingSpace = () => {
                             <button className="btn flex text-white bg-merah border-red-500 rounded-md gap-2 items-center">Edit Data</button>
                         </div>
                     </div>
-                </div>
+                    {/* </div> */}
+                </Wrapper>
             </div>
         </>
     )

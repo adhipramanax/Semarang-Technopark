@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 import imgEmail from "../../../assets/images/sms.svg";
@@ -7,11 +7,14 @@ import axios from "axios";
 import Cookies from "universal-cookie";
 
 import loading from "../../../assets/images/svg/loading.svg";
+import userContext from "../../../context/userContext";
+import jwt_decode from "jwt-decode";
 
 const Input = (props) => {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const navigate = useNavigate();
+  const { changeUser } = useContext(userContext);
 
   const changeEye = () => {
     props.onUpdate(props.password ? false : true);
@@ -51,7 +54,14 @@ const Input = (props) => {
           secure: true,
           // domain: "www.stp.com",
         });
-        toast.success("Successfully created!");
+
+        toast.success("Berhasil Masuk");
+
+        var decoded = jwt_decode(token);
+        changeUser({
+          id: decoded.iat,
+          name: decoded.user.name,
+        });
 
         setTimeout(() => {
           navigate("/");
@@ -59,7 +69,7 @@ const Input = (props) => {
       })
       .catch((err) => {
         // alert("Password salah");
-        toast.error("This is an error!");
+        toast.error("Ulangi, data anda tidak valid");
 
         button.innerHTML = `Masuk`;
         button.removeAttribute("disabled");
@@ -120,7 +130,9 @@ const Input = (props) => {
               }}
             /> */}
             <select className="w-full py-2 rounded-lg px-5 bg-[#F9F9F9] text-inherit">
-              <option disabled selected>Pilih role</option>
+              <option disabled selected>
+                Pilih role
+              </option>
               <option>Admin</option>
               <option>Mentor</option>
               <option>Tenant</option>
@@ -129,7 +141,11 @@ const Input = (props) => {
             </select>
           </div>
           <div className="flex items-center w-full gap-2">
-            <img className="w-5 xl:w-6 lg:w-6" src={imgPassword} alt="password" />
+            <img
+              className="w-5 xl:w-6 lg:w-6"
+              src={imgPassword}
+              alt="password"
+            />
             <p className="text-sm xl:text-lg lg:text-lg">Kata Sandi</p>
           </div>
           <div className="w-full relative block">
@@ -137,7 +153,6 @@ const Input = (props) => {
               className="block w-full rounded-lg pl-5 pr-10 bg-[#F9F9F9]"
               placeholder="Masukan Kata Sandi"
               type={props.password ? "password" : "text"}
-              pattern="^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,20}$"
               name="password"
               onInput={(e) => {
                 setPassword(e.target.value);
@@ -186,8 +201,16 @@ const Input = (props) => {
           </div>
           <div className="flex justify-between w-full">
             <div className="gap-2 flex items-center">
-              <input type="checkbox" class="checked:bg-[#F08619] rounded" id="ingat" name="ingat" />
-              <label htmlFor="ingat" className="text-sm xl:text-base lg:text-base cursor-pointer">
+              <input
+                type="checkbox"
+                class="checked:bg-[#F08619] rounded"
+                id="ingat"
+                name="ingat"
+              />
+              <label
+                htmlFor="ingat"
+                className="text-sm xl:text-base lg:text-base cursor-pointer"
+              >
                 {" "}
                 Ingat Saya
               </label>

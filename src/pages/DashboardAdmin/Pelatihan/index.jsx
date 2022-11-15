@@ -5,19 +5,21 @@ import NavbarDashboard from "../../../components/Navbar/NavbarDashboard";
 import DaftarPelatihan from "./DaftarPelatihan";
 import PelatihanAktif from "./PelatihanAktif";
 import RiwayatPelatihan from "./Riwayatpelatihan";
+import Wrapper from "../../../components/Wrapper/Wrapper";
 
 const Index = () => {
   return (
     <div className="flex bg-[#F9F9F9] h-screen">
       <Sidebar />
-      <div className="w-full ml-64">
+      <Wrapper>
         <NavbarDashboard judul="Management Juri" />
+
         <div className="flex flex-col gap-5 mx-6 mt-20">
           <DaftarPelatihan judul="Tambah Pelatihan" link="/" />
           <PelatihanAktif />
           <RiwayatPelatihan />
         </div>
-      </div>
+      </Wrapper>
     </div>
   );
 };

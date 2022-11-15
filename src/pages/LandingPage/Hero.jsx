@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 
 import lp from "../../assets/images/lp.png";
 
@@ -24,8 +24,8 @@ const Hero = () => {
             Semarang Technopark
           </h1>
           <p className="mt-[5px] mb-[15px]">
-            Semarang Technopark memiliki berbagai program dan pengelolaan Inkubasi untuk
-            menghasilkan berbagai terobosan inovasi
+            Semarang Technopark memiliki berbagai program dan pengelolaan
+            Inkubasi untuk menghasilkan berbagai terobosan inovasi
           </p>
           <a
             href="#layanan"

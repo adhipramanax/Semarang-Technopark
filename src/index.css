@@ -76,6 +76,6 @@ a[data-active="true"] {
   background-color: #d62929;
 }
 
-/* .wrap {
-  width: calc(100% - 16rem);
-} */
+.side {
+  margin-left: 16rem;
+}
