@@ -55,7 +55,7 @@ const Input = (props) => {
           // domain: "www.stp.com",
         });
 
-        toast.success("Successfully created!");
+        toast.success("Berhasil Masuk");
 
         var decoded = jwt_decode(token);
         changeUser({
@@ -69,7 +69,7 @@ const Input = (props) => {
       })
       .catch((err) => {
         // alert("Password salah");
-        toast.error("This is an error!");
+        toast.error("Ulangi, data anda tidak valid");
 
         button.innerHTML = `Masuk`;
         button.removeAttribute("disabled");

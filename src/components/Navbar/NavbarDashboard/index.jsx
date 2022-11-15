@@ -69,7 +69,7 @@ const Index = (props) => {
                 tabindex="0"
                 class=" m-1 bg-transparent h-full flex items-center gap-1"
               >
-                Verdian Galang
+                {user.name}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
