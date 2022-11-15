@@ -26,7 +26,10 @@ const Detail = () => {
               <div className="bg-[#F9CFA3] rounded py-2 text-[#90500F]">Food Start Up</div>
             </div>
           </div>
-          <Link to="/dashboard/edit-profile-tenant" className="flex bg-[#CD0606] p-3 gap-2 rounded text-white ">
+          <Link
+            to="/dashboard/edit-profile-tenant"
+            className="flex bg-[#CD0606] p-3 gap-2 rounded text-white "
+          >
             <img src={edit} alt="icon edit" />
             Edit Profile
           </Link>

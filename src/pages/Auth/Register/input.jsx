@@ -1,9 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import email from "../../../assets/images/sms.svg";
-import password from "../../../assets/images/password.svg";
+import { Link, useNavigate } from "react-router-dom";
+import imgEmail from "../../../assets/images/sms.svg";
+import imgPassword from "../../../assets/images/password.svg";
+import toast, { Toaster } from "react-hot-toast";
+import axios from "axios";
+import Cookies from "universal-cookie";
+import loading from "../../../assets/images/svg/loading.svg";
 
-const input = (props) => {
+const Input = (props) => {
+  const [name, setName] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
+  const [confirmPassword, setConfirmPassword] = React.useState("");
+  const navigate = useNavigate();
+
   const changeEyeP = () => {
     props.onUpdateP(props.password ? false : true);
   };
@@ -12,6 +22,43 @@ const input = (props) => {
     props.onUpdateUP(props.ulangPassword ? false : true);
   };
 
+  const handleRegister = (e) => {
+    e.preventDefault();
+
+    let button = document.querySelector("button[role='button-register']");
+    button.innerHTML = `<img src=${loading} alt="" style="height: 100%; opacity: 0.3" />`;
+    button.setAttribute("disabled", true);
+
+    let bodyForm = new FormData();
+
+    bodyForm.append("name", name);
+    bodyForm.append("email", email);
+    bodyForm.append("password", password);
+    bodyForm.append("password_confirmation", confirmPassword);
+
+    axios({
+      method: "POST",
+      url: "https://we-are-cors-free.herokuapp.com/https://semarangtechnopark.herokuapp.com/stp/auth/signup",
+      data: bodyForm,
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+    })
+      .then((res) => {
+        setTimeout(() => {
+          navigate("/verifikasi");
+        }, 1000);
+        console.log(bodyForm);
+      })
+      .catch((err) => {
+        // alert("Password salah");
+        toast.error("This is an error!");
+        console.log(bodyForm);
+
+        button.innerHTML = `Masuk`;
+        button.removeAttribute("disabled");
+      });
+  };
   return (
     <>
       <div className="w-full h-screen xl:w-[35%] xl:mx-0 lg:w-[50%] lg:mx-0 flex flex-col justify-center">
@@ -20,7 +67,7 @@ const input = (props) => {
         </h1>
         <form className="flex flex-col items-center gap-4 py-4 xl:py-5 lg:py-4 px-6 bg-white rounded-[20px]">
           <div className="flex items-center w-full gap-2">
-            <img className="w-5 xl:w-6 lg:w-5" src={email} alt="email" />
+            <img className="w-5 xl:w-6 lg:w-5" src={imgEmail} alt="email" />
             <p className="text-sm xl:text-lg lg:text-base">Email</p>
           </div>
           <div className="w-full">
@@ -29,6 +76,9 @@ const input = (props) => {
               placeholder="Masukan Email"
               type="email"
               name="email"
+              onInput={(e) => {
+                setEmail(e.target.value);
+              }}
             />
             <p class="mt-2 hidden peer-invalid:block text-pink-600 text-sm">
               Email anda tidak valid.
@@ -56,9 +106,12 @@ const input = (props) => {
             placeholder="Masukan Nama Anda"
             type="text"
             name="nama"
+            onInput={(e) => {
+              setName(e.target.value);
+            }}
           />
           <div className="flex items-center w-full gap-2">
-            <img className="w-5 xl:w-6 lg:w-5" src={password} alt="password" />
+            <img className="w-5 xl:w-6 lg:w-5" src={imgPassword} alt="password" />
             <p className="text-sm xl:text-lg lg:text-base">Kata Sandi</p>
           </div>
           <div className="w-full relative block">
@@ -68,6 +121,9 @@ const input = (props) => {
               type={props.password ? "password" : "text"}
               pattern="^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,20}$"
               name="password"
+              onInput={(e) => {
+                setPassword(e.target.value);
+              }}
             />
             <span className="absolute top-2.5 right-3 flex items-center pl-4">
               {props.password ? (
@@ -111,7 +167,7 @@ const input = (props) => {
             </span>
           </div>
           <div className="flex items-center w-full gap-2">
-            <img className="w-5 xl:w-6 lg:w-5" src={password} alt="password" />
+            <img className="w-5 xl:w-6 lg:w-5" src={imgPassword} alt="password" />
             <p className="text-sm xl:text-lg lg:text-base">Ulangi Kata Sandi</p>
           </div>
           <div className="w-full relative block">
@@ -121,6 +177,9 @@ const input = (props) => {
               type={props.ulangPassword ? "password" : "text"}
               pattern="^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,20}$"
               name="passwordUlang"
+              onInput={(e) => {
+                setConfirmPassword(e.target.value);
+              }}
             />
             <span className="absolute top-2.5 right-3 flex items-center pl-4">
               {props.ulangPassword ? (
@@ -163,7 +222,11 @@ const input = (props) => {
               )}
             </span>
           </div>
-          <button className="btn rounded-[16px] bg-[#04A2FF] w-full h-[3px] xl:h-[55px] lg:h-[45px] text-white border-0 hover:bg-blue-700 tracking-wide">
+          <button
+            onClick={handleRegister}
+            role="button-register"
+            className="btn rounded-[16px] bg-[#04A2FF] w-full h-[3px] xl:h-[55px] lg:h-[45px] text-white border-0 hover:bg-blue-700 tracking-wide"
+          >
             Daftar
           </button>
           <div className="text-sm xl:text-base lg:text-sm mt-0 xl:mt-3 lg:mt-0 flex gap-1">
@@ -180,4 +243,4 @@ const input = (props) => {
   );
 };
 
-export default input;
+export default Input;

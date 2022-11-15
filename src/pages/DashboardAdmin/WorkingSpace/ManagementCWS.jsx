@@ -36,6 +36,11 @@ const ManagementCWS = () => {
             judul: "IBC Semarang",
             alamat: "Jl. Semarang no 70",
             kapasitas: "120",
+            aksi: {
+                edit: "/admin/edit-working-space",
+                detail: "/admin/detail-working-space",
+                hapus: "/admin/hapus-working-space",
+            }
         },
     ]
     return (

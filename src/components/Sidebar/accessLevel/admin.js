@@ -87,7 +87,7 @@ const admin = [
     ),
   },
   {
-    title: "Co-Wordking",
+    title: "Co-Working",
     route: "/admin/daftar-working-space",
     icon: (
       <svg

@@ -6,7 +6,7 @@ import NavbarDashboard from "../../../components/Navbar/NavbarDashboard";
 const index = () => {
   return (
     <>
-      <div className="flex bg-[#D9D9D9]">
+      <div className="flex bg-[#F9F9F9]">
         <Sidebar />
         <div className="w-full ml-64">
           <NavbarDashboard judul="Aktivitas" />
