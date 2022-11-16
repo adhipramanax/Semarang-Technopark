@@ -4,18 +4,8 @@ import userContext from "../../../context/userContext";
 import Cookies from "universal-cookie";
 
 const BtnNavbar = () => {
-  const { user, setUser } = useContext(userContext);
+  const { user, logout } = useContext(userContext);
   const navigate = useNavigate();
-
-  // console.log(user.name);
-
-  const logout = () => {
-    const cookies = new Cookies();
-
-    setUser(null);
-    cookies.remove("jwt_token");
-    navigate("/");
-  };
 
   return (
     <>

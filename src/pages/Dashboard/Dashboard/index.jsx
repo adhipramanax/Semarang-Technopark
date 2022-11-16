@@ -8,11 +8,10 @@ import TableProposal from "./TableProposal";
 import userContext from "../../../context/userContext";
 
 const Index = () => {
-  const { user, setUser } = useContext(userContext);
+  const { user } = useContext(userContext);
 
   return (
     <>
-      <h1>{user.name}</h1>
       <div className="flex bg-[#F9F9F9]">
         <Sidebar />
         <div className="w-full side">

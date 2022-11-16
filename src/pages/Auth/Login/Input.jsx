@@ -4,17 +4,15 @@ import toast, { Toaster } from "react-hot-toast";
 import imgEmail from "../../../assets/images/sms.svg";
 import imgPassword from "../../../assets/images/password.svg";
 import axios from "axios";
-import Cookies from "universal-cookie";
 
 import loading from "../../../assets/images/svg/loading.svg";
 import userContext from "../../../context/userContext";
-import jwt_decode from "jwt-decode";
 
 const Input = (props) => {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const navigate = useNavigate();
-  const { setUser } = useContext(userContext);
+  const { login } = useContext(userContext);
 
   const changeEye = () => {
     props.onUpdate(props.password ? false : true);
@@ -44,24 +42,9 @@ const Input = (props) => {
         let token = res.data.access_token;
         let expires = res.data.expires_in;
 
-        // TODO: Ini nanti dari backend
-        const cookies = new Cookies();
-
-        cookies.set("jwt_token", token, {
-          expires: new Date(new Date().getTime() + expires * 1000),
-          path: "/",
-          // httpOnly: true,
-          secure: true,
-          // domain: "www.stp.com",
-        });
+        login(token, new Date(new Date().getTime() + expires * 1000));
 
         toast.success("Berhasil Masuk");
-
-        var decoded = jwt_decode(token);
-        setUser({
-          id: decoded.iat,
-          name: decoded.user.name,
-        });
 
         setTimeout(() => {
           navigate("/");
