@@ -11,7 +11,7 @@ const Sidebar = () => {
   const { hide, setHide } = useContext(userContext);
 
   React.useEffect(() => {
-    let AC = "admin";
+    let AC = "juri";
     for (const key of Object.keys(AL)) {
       if (AC.toLowerCase() === key.toLowerCase()) {
         setData(AL[key]);
