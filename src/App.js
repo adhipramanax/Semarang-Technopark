@@ -42,8 +42,11 @@ import DetailPelatihan from "./pages/DashboardAdmin/Pelatihan/DetailPelatihan";
 import Pelatihan from "./pages/DashboardAdmin/Pelatihan";
 
 // import dashboard tenant
-import TenantMentoring from './pages/DashboardTenant/Mentoring'
-import DetailMentoring from './pages/DashboardTenant/DetailMentoring'
+import TenantMentoring from "./pages/DashboardTenant/Mentoring";
+import DetailMentoring from "./pages/DashboardTenant/DetailMentoring";
+// Import dashboard juri
+import CalonTenant from "./pages/DashboardJuri/CalonTenant";
+import PenilaianTenant from "./pages/DashboardJuri/PenilaianTenant";
 
 const cookies = new Cookies();
 
@@ -140,14 +143,26 @@ function App() {
               path="/admin/detail-pelatihan"
               element={<DetailPelatihan />}
             />
+            <Route path="/admin/detail-tenant" element={<DetailTenant />} />
             <Route path="/admin/pelatihan" element={<Pelatihan />} />
             <Route path="/admin/inkubasi" element={<AdminInkubasi />} />
-            {/*End dashboard user */}
+            {/*End dashboard admin */}
 
-            {/* dashboard tenant */}  
+            {/* dashboard tenant */}
             <Route path="/tenant/mentoring" element={<TenantMentoring />} />
-            <Route path="/tenant/detail-mentoring" element={<DetailMentoring />} />
+            <Route
+              path="/tenant/detail-mentoring"
+              element={<DetailMentoring />}
+            />
             {/*End dashboard tenant */}
+
+            {/* dashboard juri */}
+            <Route path="/juri/calon-tenant" element={<CalonTenant />} />
+            <Route
+              path="/juri/penilaian-tenant"
+              element={<PenilaianTenant />}
+            />
+            {/*End dashboard juri */}
 
             <Route path="/nav" element={<NavbarMobile />} />
             <Route path="/setting" element={<Setting />} />
