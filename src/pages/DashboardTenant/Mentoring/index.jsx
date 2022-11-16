@@ -1,8 +1,10 @@
-import React from 'react'
+import React from "react";
 
 import Sidebar from "../../../components/Sidebar";
 import NavbarDashboard from "../../../components/Navbar/NavbarDashboard";
 import Wrapper from "../../../components/Wrapper/Wrapper";
+import RiwayatMentoring from "./RiwayatMentoring";
+import UpcomingMentoring from "./UpcomingMentoring";
 
 const index = () => {
   return (
@@ -12,12 +14,13 @@ const index = () => {
         <Wrapper>
           <NavbarDashboard judul="Management Mentoring" />
           <div className="flex flex-col gap-5 mx-6 mt-20">
-            Hello
+            <UpcomingMentoring />
+            <RiwayatMentoring />
           </div>
         </Wrapper>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default index
+export default index;
