@@ -11,7 +11,7 @@ const Sidebar = () => {
   const { hide, setHide } = useContext(userContext);
 
   React.useEffect(() => {
-    let AC = "admin";
+    let AC = "tenant";
     for (const key of Object.keys(AL)) {
       if (AC.toLowerCase() === key.toLowerCase()) {
         setData(AL[key]);
@@ -31,7 +31,7 @@ const Sidebar = () => {
     <SidebarTemplate>
       {data.map((data) => {
         return (
-          <li>
+          <li className="pb-2">
             <Link
               to={data.route}
               class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-[#CD0606] group hover:text-white"

@@ -19,7 +19,7 @@ module.exports = {
         "warning": "#F6B675",
         "error": "#E16868",
         "success": "#6EBC14",
-        "neutral": "#605D62",
+        "neutral": "#79767B",
       }
     },
   },
