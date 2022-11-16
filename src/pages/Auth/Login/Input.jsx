@@ -14,7 +14,7 @@ const Input = (props) => {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const navigate = useNavigate();
-  const { changeUser } = useContext(userContext);
+  const { setUser } = useContext(userContext);
 
   const changeEye = () => {
     props.onUpdate(props.password ? false : true);
@@ -58,7 +58,7 @@ const Input = (props) => {
         toast.success("Berhasil Masuk");
 
         var decoded = jwt_decode(token);
-        changeUser({
+        setUser({
           id: decoded.iat,
           name: decoded.user.name,
         });

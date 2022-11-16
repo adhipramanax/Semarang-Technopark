@@ -10,7 +10,7 @@ import Card from "./Card";
 import userContext from "../../context/userContext";
 
 const Index = () => {
-  const { user, changeUser } = useContext(userContext);
+  const { user, setUser } = useContext(userContext);
 
   return (
     <>

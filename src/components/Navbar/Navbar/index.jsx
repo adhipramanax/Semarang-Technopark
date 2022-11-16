@@ -7,7 +7,7 @@ import BtnNavbar from "./BtnNavbar";
 import userContext from "../../../context/userContext";
 
 const Index = (props) => {
-  const { user, changeUser } = useContext(userContext);
+  const { user, setUser } = useContext(userContext);
 
   return (
     <>

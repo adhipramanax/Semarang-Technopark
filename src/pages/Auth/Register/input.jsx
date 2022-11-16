@@ -33,6 +33,7 @@ const Input = (props) => {
 
     bodyForm.append("name", name);
     bodyForm.append("email", email);
+    // bodyForm.append("")
     bodyForm.append("password", password);
     bodyForm.append("password_confirmation", confirmPassword);
 
@@ -46,7 +47,11 @@ const Input = (props) => {
     })
       .then((res) => {
         setTimeout(() => {
-          navigate("/verifikasi");
+          navigate("/verifikasi", {
+            state: {
+              email,
+            },
+          });
         }, 1000);
         console.log(bodyForm);
       })
@@ -137,7 +142,9 @@ const Input = (props) => {
             // }}
           /> */}
           <select className="w-full py-2 rounded-lg px-5 bg-[#F9F9F9] text-inherit">
-            <option disabled selected>Pilih role</option>
+            <option disabled selected>
+              Pilih role
+            </option>
             <option>Admin</option>
             <option>Mentor</option>
             <option>Tenant</option>
@@ -145,7 +152,11 @@ const Input = (props) => {
             <option>User</option>
           </select>
           <div className="flex items-center w-full gap-2">
-            <img className="w-5 xl:w-5 lg:w-5" src={imgPassword} alt="password" />
+            <img
+              className="w-5 xl:w-5 lg:w-5"
+              src={imgPassword}
+              alt="password"
+            />
             <p className="text-sm xl:text-md lg:text-base">Kata Sandi</p>
           </div>
           <div className="w-full relative block">
@@ -201,7 +212,11 @@ const Input = (props) => {
             </span>
           </div>
           <div className="flex items-center w-full gap-2">
-            <img className="w-5 xl:w-5 lg:w-5" src={imgPassword} alt="password" />
+            <img
+              className="w-5 xl:w-5 lg:w-5"
+              src={imgPassword}
+              alt="password"
+            />
             <p className="text-sm xl:text-md lg:text-base">Ulangi Kata Sandi</p>
           </div>
           <div className="w-full relative block">

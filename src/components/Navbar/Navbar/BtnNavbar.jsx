@@ -4,7 +4,7 @@ import userContext from "../../../context/userContext";
 import Cookies from "universal-cookie";
 
 const BtnNavbar = () => {
-  const { user, changeUser } = useContext(userContext);
+  const { user, setUser } = useContext(userContext);
   const navigate = useNavigate();
 
   // console.log(user.name);
@@ -12,7 +12,7 @@ const BtnNavbar = () => {
   const logout = () => {
     const cookies = new Cookies();
 
-    changeUser(null);
+    setUser(null);
     cookies.remove("jwt_token");
     navigate("/");
   };
@@ -60,7 +60,7 @@ const BtnNavbar = () => {
         >
           <li>
             <Link
-              to="/"
+              to="/dashboard"
               className="btn btn-ghost h-full bg-white active:text-black justify-start"
             >
               <svg
@@ -76,7 +76,7 @@ const BtnNavbar = () => {
                 />
               </svg>
 
-              <p>Home Page</p>
+              <p>Dashboard</p>
             </Link>
           </li>
           <li>
