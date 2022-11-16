@@ -1,7 +1,9 @@
 import React from 'react'
+
 import Sidebar from '../../../components/Sidebar/Sidebar'
 import Wrapper from '../../../components/Wrapper/Wrapper'
 import NavbarDashboard from "../../../components/Navbar/NavbarDashboard";
+import ManagementTenant from './ManagementTenant';
 
 const index = () => {
   return (
@@ -10,7 +12,7 @@ const index = () => {
       <Wrapper>
         <NavbarDashboard judul="Management Tenant" />
         <div className="flex flex-col gap-5 mx-6 mt-20">
-          Hello
+          <ManagementTenant />
         </div>
       </Wrapper>
     </div>
