@@ -11,7 +11,7 @@ const Sidebar = () => {
   const { hide, setHide } = useContext(userContext);
 
   React.useEffect(() => {
-    let AC = "juri";
+    let AC = "admin";
     for (const key of Object.keys(AL)) {
       if (AC.toLowerCase() === key.toLowerCase()) {
         setData(AL[key]);
@@ -20,13 +20,12 @@ const Sidebar = () => {
   }, [data]);
 
   const handleOver = () => {
-    hide ? setHide(false) : setHide(true)
-  }
+    hide ? setHide(false) : setHide(true);
+  };
   const handleOut = () => {
-    hide ? setHide(true) : setHide(false)
-  }
+    hide ? setHide(true) : setHide(false);
+  };
   console.log(hide);
-
 
   return (
     <SidebarTemplate>
@@ -36,10 +35,11 @@ const Sidebar = () => {
             <Link
               to={data.route}
               class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-[#CD0606] group hover:text-white"
-              
             >
               <span onMouseEnter={handleOver}>{data.icon}</span>
-              <span class="ml-3 truncate" onMouseLeave={handleOut}>{data.title}</span>
+              <span class="ml-3 truncate" onMouseLeave={handleOut}>
+                {data.title}
+              </span>
             </Link>
           </li>
         );

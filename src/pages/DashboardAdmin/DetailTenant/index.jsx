@@ -7,20 +7,21 @@ import Detail from "./Detail";
 import TenantPoints from "./TenantPoints";
 
 import Modal from "../../../components/Modal/Modal";
+import Wrapper from "../../../components/Wrapper/Wrapper";
 
 const index = () => {
   return (
     <>
-      <div className="flex bg-[#F9F9F9] h-screen">
+      <div className="flex bg-[#F9F9F9] h-screen ">
         <Sidebar />
-        <div className="w-full ml-64">
+        <Wrapper>
           <NavbarDashboard judul="Management Tenant" />
-          <div className="flex flex-col gap-5 mx-6 mt-10">
+          <div className="flex flex-col gap-5 mx-6 mt-20">
             <Detail />
             <TenantPoints />
           </div>
           <Modal />
-        </div>
+        </Wrapper>
       </div>
     </>
   );
