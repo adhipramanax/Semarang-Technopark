@@ -11,7 +11,7 @@ const index = () => {
       <Wrapper>
         <NavbarDashboard judul="Penilaian Tenant" />
         <div className="flex flex-col gap-5 mx-6 mt-20">
-          Hello
+          Hello tambah
         </div>
       </Wrapper>
     </div>
