@@ -2,29 +2,17 @@ import { data } from "autoprefixer";
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Card = () => {
+const UpcomingMentoring = () => {
   const data = [
-    {
-      judul: "Pelatihan Design Grafis",
-    },
-    {
-      judul: "Pelatihan Design Grafis",
-    },
-    {
-      judul: "Pelatihan Design Grafis",
-    },
-    {
-      judul: "Pelatihan Design Grafis",
-    },
-    {
-      judul: "Pelatihan Design Grafis",
-    },
     {
       judul: "Pelatihan Design Grafis",
     },
   ];
   return (
     <>
+      <div className="flex justify-between">
+        <h1 className="text-xl font-bold">Upcoming Mentoring</h1>
+      </div>
       <div className="flex gap-6">
         {data.map((d) => {
           return (
@@ -42,7 +30,7 @@ const Card = () => {
               <div className="px-3 pt-2 text-left ">
                 <h2 className="card-title text-base">{d.judul}</h2>
                 <p className="text-xs">Cecep Bagus Suryadinata KA, S.Kom</p>
-                <p className="text-xs pt-6">23 Oktober 2022</p>
+                <p className="text-xs py-6 text-[#D73737]">23 Oktober 2022</p>
               </div>
             </Link>
           );
@@ -52,4 +40,4 @@ const Card = () => {
   );
 };
 
-export default Card;
+export default UpcomingMentoring;
