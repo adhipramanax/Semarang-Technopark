@@ -19,27 +19,18 @@ const Sidebar = () => {
     }
   }, [data]);
 
-  const handleOver = () => {
-    hide ? setHide(false) : setHide(true)
-  }
-  const handleOut = () => {
-    hide ? setHide(true) : setHide(false)
-  }
-  console.log(hide);
-
-
   return (
     <SidebarTemplate>
       {data.map((data) => {
         return (
-          <li>
+          <li className="pb-2">
             <Link
               to={data.route}
               class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-[#CD0606] group hover:text-white"
               
             >
-              <span onMouseEnter={handleOver}>{data.icon}</span>
-              <span class="ml-3 truncate" onMouseLeave={handleOut}>{data.title}</span>
+              <span onMouseOver={() => setHide(false)}>{data.icon}</span>
+              <span class="ml-3 truncate">{data.title}</span>
             </Link>
           </li>
         );
