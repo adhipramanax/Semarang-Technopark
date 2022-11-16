@@ -41,6 +41,10 @@ import DetailAlat from "./pages/DashboardAdmin/Alat/DetailAlat";
 import DetailPelatihan from "./pages/DashboardAdmin/Pelatihan/DetailPelatihan";
 import Pelatihan from "./pages/DashboardAdmin/Pelatihan";
 
+// Import dashboard juri
+import CalonTenant from "./pages/DashboardJuri/CalonTenant";
+import PenilaianTenant from "./pages/DashboardJuri/PenilaianTenant";
+
 const cookies = new Cookies();
 
 function App() {
@@ -136,9 +140,19 @@ function App() {
               path="/admin/detail-pelatihan"
               element={<DetailPelatihan />}
             />
+            <Route path="/admin/detail-tenant" element={<DetailTenant />} />
             <Route path="/admin/pelatihan" element={<Pelatihan />} />
             <Route path="/admin/inkubasi" element={<AdminInkubasi />} />
-            {/*End dashboard user */}
+            {/*End dashboard admin */}
+
+            {/* dashboard juri */}
+            <Route path="/juri/calon-tenant" element={<CalonTenant />} />
+            <Route
+              path="/juri/penilaian-tenant"
+              element={<PenilaianTenant />}
+            />
+            {/*End dashboard juri */}
+
             <Route path="/nav" element={<NavbarMobile />} />
             <Route path="/setting" element={<Setting />} />
           </Routes>
