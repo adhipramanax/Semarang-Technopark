@@ -5,10 +5,10 @@ const TambahPenilaian = () => {
     <div>
       <div className="bg-white w-full flex justify-center p-5 flex-col items-center">
         <figure>
-          <img cas src={imgCreate} alt="" />
+          <img src={imgCreate} alt="" />
         </figure>
         <p className="mt-5 font-medium">Anda belum melakukan penilaian </p>
-        <button className="btn bg-[#CD0606] mt-3">
+        <button className="btn flex gap-1 bg-[#CD0606] mt-3">
           <svg
             width="24"
             height="25"

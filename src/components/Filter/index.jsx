@@ -7,18 +7,6 @@ const index = (props) => {
                 <div className="mt-5 xl:mt-11 lg:mt-11">
                     <h1 className="font-medium text-xs xl:text-xl lg:text-xl">Tipe Sewa</h1>
                     <div className="hidden xl:block h-[3px] w-[98%] mx-auto bg-[#D9D9D9] mt-3"></div>
-                    {/* {props.data.map(value => {
-                        console.log(value)
-                        value.tipeSewa.map(tipe => {
-                            console.log(tipe)
-                            return (
-                                <div className="flex items-center gap-2 mt-3">
-                                    <input type="checkbox" class="checked:bg-[#D9D9D9] rounded bg-white" name="jam" id="jam" />
-                                    <label className="label cursor-pointer text-xs xl:text-base lg:text-base font-normal" htmlFor="jam">{tipe}</label>
-                                </div>
-                            )
-                        })
-                    })} */}
                     {props.tipeSewa.map((tipe) => {
                         return (
                             <div className="flex items-center gap-2 mt-3">

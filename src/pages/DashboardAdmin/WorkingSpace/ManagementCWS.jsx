@@ -146,7 +146,7 @@ const ManagementCWS = () => {
     <>
       <Table
         judul="Tambah Working Space"
-        link="/admin/tambah-coworking"
+        link="/admin/add-coworking"
         tHead={tHead}
         tBody={tBody}
       />

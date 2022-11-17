@@ -14,7 +14,6 @@ const Index = () => {
 
   return (
     <>
-      {/* <h1>{user.name}</h1> */}
       <div class="bg-[url('https://res.cloudinary.com/dhuvbrmgg/image/upload/v1662816138/Mini%20Project%20SEAL/bg-red.png')] h-[600px] lg:h-[794px] bg-no-repeat-x bg-cover">
         <Navbar auth="/login" title="Masuk" />
         <Hero />

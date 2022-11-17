@@ -3,19 +3,17 @@ import React from "react";
 import Sidebar from "../../../components/Sidebar";
 import NavbarDashboard from "../../../components/Navbar/NavbarDashboard";
 import Maintenance from "../../../components/Maintenance";
-// import Proposal from "./Proposal";
-// import CardTenant from "./CardTenant";
-// import TableProposal from "./TableProposal";
+import Wrapper from "../../../components/Wrapper/Wrapper";
 
 const index = () => {
   return (
     <>
       <div className="flex bg-[#F9F9F9]">
         <Sidebar />
-        <div className="w-full side h-[100vh]">
+        <Wrapper>
           <NavbarDashboard judul="Mentoring" />
           <Maintenance />
-        </div>
+        </Wrapper>
       </div>
     </>
   );

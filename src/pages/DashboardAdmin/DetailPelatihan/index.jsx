@@ -3,18 +3,19 @@ import Sidebar from "../../../components/Sidebar";
 import NavbarDashboard from "../../../components/Navbar/NavbarDashboard";
 import { Link } from 'react-router-dom';
 import IBC from '../../../assets/images/ibc.png'
+import Wrapper from '../../../components/Wrapper/Wrapper';
 
-const DetailPelatihan = () => {
+const Index = () => {
   return (
     <>
       <div className="flex bg-[#D9D9D9]">
         <Sidebar />
-        <div className="w-full ml-64">
-          <NavbarDashboard judul="Management Alat" />
+        <Wrapper>
+          <NavbarDashboard judul="Management Pelatihan" />
           <div className="flex flex-col gap-5 pb-10 mx-6 mt-20">
             <div className="w-full bg-white py-5 px-3 font-medium text-base rounded">
               <h1 className="flex gap-2">
-                <Link to="/admin/daftar-pelatihan" className="flex gap-2">
+                <Link to="/admin/pelatihan" className="flex gap-2">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M14.9998 19.9201L8.47984 13.4001C7.70984 12.6301 7.70984 11.3701 8.47984 10.6001L14.9998 4.08008" stroke="#1C1B1E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
@@ -109,10 +110,10 @@ const DetailPelatihan = () => {
               </div>
             </div>
           </div>
-        </div>
+        </Wrapper>
       </div>
     </>
   )
 }
 
-export default DetailPelatihan
+export default Index

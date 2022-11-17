@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import Navbar from "../../../components/Navbar/Navbar";
 import Hero from '../../../components/Hero/HeroAuth'
 import Input from "./input";
-import bgAuth from '../../../assets/images/bg-auth.png';
 
 const index = () => {
   const [showPassword, setShowPassword] = useState(true)

@@ -1,7 +1,10 @@
-import React, { useRef, useEffect, useContext, useState } from "react";
+import React, { useContext } from "react";
 
 import { Link } from "react-router-dom";
 import layanan1 from "../../../assets/images/layanan1.png";
+import layanan2 from "../../../assets/images/layanan2.png";
+import layanan3 from "../../../assets/images/layanan3.png";
+import layanan4 from "../../../assets/images/layanan4.png";
 import NavbarMobile from "./NavbarMobile";
 import BtnNavbar from "./BtnNavbar";
 import userContext from "../../../context/userContext";
@@ -68,7 +71,7 @@ const Index = (props) => {
                           to="/sewa-alat"
                           className="btn btn-ghost h-full bg-white focus:text-black flex"
                         >
-                          <img className="w-14" src={layanan1} alt="layanan" />
+                          <img className="w-14" src={layanan2} alt="layanan" />
                           Sewa Alat
                         </Link>
                       </li>
@@ -79,13 +82,13 @@ const Index = (props) => {
                           to="/co-working"
                           className="btn btn-ghost  bg-white focus:text-black h-full flex justify-start"
                         >
-                          <img className="w-14" src={layanan1} alt="layanan" />
+                          <img className="w-14" src={layanan3} alt="layanan" />
                           <p className="w-1/3">Co-Working Space</p>
                         </Link>
                       </li>
                       <li className="disabled">
                         <Link to="" className="">
-                          <img className="w-14 " src={layanan1} alt="layanan" />
+                          <img className="w-14 " src={layanan4} alt="layanan" />
                           Event & Pelatihan
                         </Link>
                       </li>

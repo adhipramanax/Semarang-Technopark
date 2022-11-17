@@ -5,25 +5,14 @@ import NavbarDashboard from "../../../components/Navbar/NavbarDashboard";
 import { Link } from 'react-router-dom';
 import IBC from '../../../assets/images/ibc.png'
 import Pelatihan from '../../../assets/images/pelatihan.png'
-import Fasilitas from './Fasilitas';
-import Operasional from './Operasional';
-import HargaSewa from './HargaSewa';
+import Fasilitas from '../WorkingSpace/Fasilitas';
+import Operasional from '../WorkingSpace/Operasional';
+import HargaSewa from '../WorkingSpace/HargaSewa';
 import Wrapper from '../../../components/Wrapper/Wrapper';
 
-const DetailWorkingSpace = () => {
+const Index = () => {
     const [Gambar, setGambar] = useState()
     const ref = useRef([])
-
-    // console.log(ref.current.src);
-
-    // let image = document.querySelectorAll('.img')
-    // image.forEach((img) => {
-    //     img.addEventListener("click",
-    //     function () {
-    //         // console.log(img.src);
-    //         setGambar(img.src)
-    //     });
-    // })
 
     useEffect(() => {
         // console.log(ref.current.children[0]);
@@ -154,4 +143,4 @@ const DetailWorkingSpace = () => {
     )
 }
 
-export default DetailWorkingSpace
+export default Index

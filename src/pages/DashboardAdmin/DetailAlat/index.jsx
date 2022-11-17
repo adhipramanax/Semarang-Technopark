@@ -5,10 +5,10 @@ import NavbarDashboard from "../../../components/Navbar/NavbarDashboard";
 import { Link } from 'react-router-dom';
 import IBC from '../../../assets/images/ibc.png'
 import Pelatihan from '../../../assets/images/pelatihan.png'
-import HargaSewa from './HargaSewa';
+import HargaSewa from '../Alat/HargaSewa';
 import Wrapper from '../../../components/Wrapper/Wrapper';
 
-const DetailAlat = () => {
+const Index = () => {
     const [Gambar, setGambar] = useState()
     const ref = useRef([])
 
@@ -82,11 +82,9 @@ const DetailAlat = () => {
                         </div>
                     </div>
                 </Wrapper>
-                {/* <div className="w-full ml-64"> */}
-                {/* </div> */}
             </div>
         </>
     )
 }
 
-export default DetailAlat
+export default Index
