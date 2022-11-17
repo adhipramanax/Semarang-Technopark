@@ -17,7 +17,6 @@ const index = () => {
       <div className="relative flex bg-[#F9F9F9]">
         <Sidebar />
         <Wrapper>
-          {/* <div className="w-full ml-64 p-5"> */}
           <NavbarDashboard judul="Tambah Coworking Space" />
             <div className="flex flex-col gap-5 mx-6">
               <Title title="Tambah Working Space" />
@@ -32,7 +31,6 @@ const index = () => {
                 </button>
               </div>
             </div>
-          {/* </div> */}
         </Wrapper>
       </div>
       <div className="absolute top-[88px] right-10 w-40">

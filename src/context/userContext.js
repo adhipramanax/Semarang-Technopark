@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Cookies from "universal-cookie";
-import jwtDecode from "jwt-decode";
+import jwt_decode from "jwt-decode";
 
 const cookies = new Cookies();
 
@@ -14,7 +14,7 @@ export const UserProvider = (props) => {
     const token = cookies.get("jwt_token");
 
     if (token) {
-      const decoded = jwtDecode(token);
+      const decoded = jwt_decode(token);
       return {
         id: decoded.sub,
         ...decoded.user,
@@ -23,20 +23,23 @@ export const UserProvider = (props) => {
 
     return null;
   });
+  const [hide, setHide] = useState(false)
   const navigate = useNavigate();
 
   const login = (token, expired_in) => {
-    const decoded = jwtDecode(token);
+    let decoded = jwt_decode(token);
+    console.log(decoded);
 
     cookies.set("jwt_token", token, {
       path: "/",
       expires: expired_in,
     });
 
-    setUser({
-      id: decoded.sub,
-      ...decoded.user,
-    });
+
+    // setUser({
+    //   id: decoded.sub,
+    //   ...decoded.user,
+    // });
   };
 
   const logout = () => {
@@ -46,7 +49,7 @@ export const UserProvider = (props) => {
   };
 
   return (
-    <UserContext.Provider value={{ user, login, logout }}>
+    <UserContext.Provider value={{ user, login, logout, setHide }}>
       {props.children}
     </UserContext.Provider>
   );

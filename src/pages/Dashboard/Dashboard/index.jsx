@@ -6,6 +6,7 @@ import Proposal from "./Proposal";
 import CardTenant from "./CardTenant";
 import TableProposal from "./TableProposal";
 import userContext from "../../../context/userContext";
+import Wrapper from "../../../components/Wrapper/Wrapper";
 
 const Index = () => {
   const { user } = useContext(userContext);
@@ -14,7 +15,7 @@ const Index = () => {
     <>
       <div className="flex bg-[#F9F9F9]">
         <Sidebar />
-        <div className="w-full side">
+        <Wrapper>
           <NavbarDashboard judul="Dashboard" />
           <div className="flex p-6 gap-6 mt-20">
             <div className="w-full ">
@@ -23,7 +24,7 @@ const Index = () => {
             </div>
             <CardTenant />
           </div>
-        </div>
+        </Wrapper>
       </div>
     </>
   );

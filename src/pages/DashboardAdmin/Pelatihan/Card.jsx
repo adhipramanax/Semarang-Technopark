@@ -1,4 +1,3 @@
-import { data } from "autoprefixer";
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -36,7 +35,7 @@ const Card = () => {
                 <img
                   src="https://placeimg.com/400/225/arch"
                   alt="Shoes"
-                  className="w-44 h-44 object-cover rounded"
+                  className=" h-44 object-cover rounded"
                 />
               </figure>
               <div className="px-3 pt-2 text-left ">

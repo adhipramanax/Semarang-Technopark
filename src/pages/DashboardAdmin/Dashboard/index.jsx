@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import Sidebar from "../../../components/Sidebar";
 import NavbarDashboard from "../../../components/Navbar/NavbarDashboard";
-import CanvasJSReact from "./canvasjs.react";
+import CanvasJSReact from "../../../assets/js/canvasjs.react";
 import { useEffect } from "react";
 import Event from "./Event";
 import Wrapper from "../../../components/Wrapper/Wrapper";

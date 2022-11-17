@@ -12,8 +12,7 @@ const Index = () => {
     <div className="flex bg-[#F9F9F9] h-screen">
       <Sidebar />
       <Wrapper>
-        <NavbarDashboard judul="Management Juri" />
-
+        <NavbarDashboard judul="Management Pelatihan" />
         <div className="flex flex-col gap-5 mx-6 mt-20">
           <DaftarPelatihan judul="Tambah Pelatihan" link="/" />
           <PelatihanAktif />

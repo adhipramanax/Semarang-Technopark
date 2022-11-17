@@ -1,8 +1,6 @@
 import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
-import imgEmail from "../../../assets/images/sms.svg";
-import imgPassword from "../../../assets/images/password.svg";
 import axios from "axios";
 
 import loading from "../../../assets/images/svg/loading.svg";
@@ -42,6 +40,7 @@ const Input = (props) => {
         let token = res.data.access_token;
         let expires = res.data.expires_in;
 
+        console.log(token);
         login(token, new Date(new Date().getTime() + expires * 1000));
 
         toast.success("Berhasil Masuk");
@@ -68,7 +67,9 @@ const Input = (props) => {
         </h1>
         <form className="flex flex-col items-center gap-4 py-8 px-6 bg-white rounded-[20px]">
           <div className="flex items-center w-full gap-2">
-            <img className="w-5 xl:w-6 lg:w-6" src={imgEmail} alt="email" />
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17 3.5H7C4 3.5 2 5 2 8.5V15.5C2 19 4 20.5 7 20.5H17C20 20.5 22 19 22 15.5V8.5C22 5 20 3.5 17 3.5ZM17.47 9.59L14.34 12.09C13.68 12.62 12.84 12.88 12 12.88C11.16 12.88 10.31 12.62 9.66 12.09L6.53 9.59C6.21 9.33 6.16 8.85 6.41 8.53C6.67 8.21 7.14 8.15 7.46 8.41L10.59 10.91C11.35 11.52 12.64 11.52 13.4 10.91L16.53 8.41C16.85 8.15 17.33 8.2 17.58 8.53C17.84 8.85 17.79 9.33 17.47 9.59Z" fill="#F08619" />
+            </svg>
             <p className="text-sm xl:text-lg lg:text-lg">Email</p>
           </div>
           <div className="w-full">
@@ -124,11 +125,9 @@ const Input = (props) => {
             </select>
           </div>
           <div className="flex items-center w-full gap-2">
-            <img
-              className="w-5 xl:w-6 lg:w-6"
-              src={imgPassword}
-              alt="password"
-            />
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.5 7.33332H18.3333C18.5764 7.33332 18.8096 7.4299 18.9815 7.60181C19.1534 7.77372 19.25 8.00688 19.25 8.24999V19.25C19.25 19.4931 19.1534 19.7263 18.9815 19.8982C18.8096 20.0701 18.5764 20.1667 18.3333 20.1667H3.66667C3.42355 20.1667 3.19039 20.0701 3.01849 19.8982C2.84658 19.7263 2.75 19.4931 2.75 19.25V8.24999C2.75 8.00688 2.84658 7.77372 3.01849 7.60181C3.19039 7.4299 3.42355 7.33332 3.66667 7.33332H5.5V6.41666C5.5 4.95797 6.07946 3.55902 7.11091 2.52757C8.14236 1.49612 9.54131 0.916656 11 0.916656C12.4587 0.916656 13.8576 1.49612 14.8891 2.52757C15.9205 3.55902 16.5 4.95797 16.5 6.41666V7.33332ZM14.6667 7.33332V6.41666C14.6667 5.4442 14.2804 4.51156 13.5927 3.82393C12.9051 3.1363 11.9725 2.74999 11 2.74999C10.0275 2.74999 9.09491 3.1363 8.40728 3.82393C7.71964 4.51156 7.33333 5.4442 7.33333 6.41666V7.33332H14.6667ZM10.0833 12.8333V14.6667H11.9167V12.8333H10.0833ZM6.41667 12.8333V14.6667H8.25V12.8333H6.41667ZM13.75 12.8333V14.6667H15.5833V12.8333H13.75Z" fill="#F08619" />
+            </svg>
             <p className="text-sm xl:text-lg lg:text-lg">Kata Sandi</p>
           </div>
           <div className="w-full relative block">

@@ -69,38 +69,6 @@ const TenantPoints = () => {
           </table>
         </div>
       </div>
-      {/* <div className="w-full bg-white  rounded ">
-        <div className="p-5">
-          <div className="overflow-x-auto">
-            <table className="table-auto w-full">
-              <thead className="">
-                <th>No</th>
-                <th>Nama Juri</th>
-                <th>Point1</th>
-                <th>Point2</th>
-                <th>Point3</th>
-                <th>Point4</th>
-                <th>Point5</th>
-                <th>Point6</th>
-              </thead>
-              <tbody>
-                <tr className="text-center">
-                  <td>1</td>
-                  <td className="w-[250px]">
-                    Cak Mus arifin bla bla balasjdsawbddna dhdv h
-                  </td>
-                  <td>86</td>
-                  <td>84</td>
-                  <td>90</td>
-                  <td>92</td>
-                  <td>89</td>
-                  <td>80</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div> */}
     </>
   );
 };
