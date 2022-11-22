@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Navbar from "../../../components/Navbar/Navbar";
 import Hero from "../../../components/Hero/HeroAuth";
 import Input from "./Input";
-import bgAuth from "../../../assets/images/bg-auth.png";
 
 const index = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks

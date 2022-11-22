@@ -1,6 +1,45 @@
 import React from "react";
 
 const TableProposal = () => {
+  // make me data from API
+  const data = [
+    {
+      no: 1,
+      judul: "Quality Control Specialist",
+    },
+    {
+      no: 2,
+      judul: "Quality Control Specialist",
+    },
+    {
+      no: 3,
+      judul: "Quality Control Specialist",
+    },
+    {
+      no: 4,
+      judul: "Quality Control Specialist",
+    },
+    {
+      no: 5,
+      judul: "Quality Control Specialist",
+    },
+    {
+      no: 6,
+      judul: "Quality Control Specialist",
+    },
+    {
+      no: 7,
+      judul: "Quality Control Specialist",
+    },
+    {
+      no: 8,
+      judul: "Quality Control Specialist",
+    },
+    {
+      no: 9,
+      judul: "Quality Control Specialist",
+    },
+  ];
   return (
     <>
       <div className="overflow-x-auto">
@@ -13,27 +52,19 @@ const TableProposal = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th>1</th>
-              <td>Quality Control Specialist</td>
-              <td>
-                <div className="border-solid bg-[#F6B675] text-center text-white">On Review</div>
-              </td>
-            </tr>
-            <tr>
-              <th>2</th>
-              <td>Desktop Support Technician</td>
-              <td>
-                <div className="border-solid bg-[#F6B675] text-center text-white">On Review</div>
-              </td>
-            </tr>
-            <tr>
-              <th>3</th>
-              <td>Tax Accountant</td>
-              <td>
-                <div className="border-solid bg-[#F6B675] text-center text-white">On Review</div>
-              </td>
-            </tr>
+            {data.map((d) => {
+              return (
+                <tr>
+                  <th>{d.no}</th>
+                  <td>{d.judul}</td>
+                  <td>
+                    <div className="border-solid bg-[#F6B675] text-center text-white">
+                      On Review
+                    </div>
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>
