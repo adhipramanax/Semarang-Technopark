@@ -1,10 +1,17 @@
-import React, { useRef, useEffect } from "react";
+import React, { useContext } from "react";
 
 import { Link } from "react-router-dom";
 import layanan1 from "../../../assets/images/layanan1.png";
+import layanan2 from "../../../assets/images/layanan2.png";
+import layanan3 from "../../../assets/images/layanan3.png";
+import layanan4 from "../../../assets/images/layanan4.png";
 import NavbarMobile from "./NavbarMobile";
+import BtnNavbar from "./BtnNavbar";
+import userContext from "../../../context/userContext";
 
 const Index = (props) => {
+  const { user, changeUser } = useContext(userContext);
+
   return (
     <>
       <nav class="py-3 bg-white border-gray-200 lg:px-20 sm:px-24 lg:py-2.5 rounded bg-transparent absolute top-0 w-full z-50">
@@ -25,7 +32,10 @@ const Index = (props) => {
                   Profile
                 </Link>
                 <div className="dropdown dropdown-hover dropdown-end">
-                  <label tabIndex={0} className=" text-white flex  items-center gap-1">
+                  <label
+                    tabIndex={0}
+                    className=" text-white flex  items-center gap-1"
+                  >
                     Layanan
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +71,7 @@ const Index = (props) => {
                           to="/sewa-alat"
                           className="btn btn-ghost h-full bg-white focus:text-black flex"
                         >
-                          <img className="w-14" src={layanan1} alt="layanan" />
+                          <img className="w-14" src={layanan2} alt="layanan" />
                           Sewa Alat
                         </Link>
                       </li>
@@ -72,13 +82,13 @@ const Index = (props) => {
                           to="/co-working"
                           className="btn btn-ghost  bg-white focus:text-black h-full flex justify-start"
                         >
-                          <img className="w-14" src={layanan1} alt="layanan" />
+                          <img className="w-14" src={layanan3} alt="layanan" />
                           <p className="w-1/3">Co-Working Space</p>
                         </Link>
                       </li>
                       <li className="disabled">
                         <Link to="" className="">
-                          <img className="w-14 " src={layanan1} alt="layanan" />
+                          <img className="w-14 " src={layanan4} alt="layanan" />
                           Event & Pelatihan
                         </Link>
                       </li>
@@ -89,12 +99,20 @@ const Index = (props) => {
                   Partners
                 </Link>
               </ul>
-              <Link
-                to={props.auth}
-                class="focus:outline-none text-[#CD0606] bg-white hover:bg-[#F08619] focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm py-[6px] px-6  hover:text-white"
-              >
-                {props.title}
-              </Link>
+              {(() => {
+                if (user !== null) {
+                  return <BtnNavbar />;
+                } else {
+                  return (
+                    <Link
+                      to={props.auth}
+                      class="focus:outline-none text-[#CD0606] bg-white hover:bg-[#F08619] focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm py-[6px] px-6  hover:text-white"
+                    >
+                      {props.title}
+                    </Link>
+                  );
+                }
+              })()}
             </div>
           </div>
         </div>

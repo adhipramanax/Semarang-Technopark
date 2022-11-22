@@ -9,28 +9,29 @@ import BiayaSewa from "../../DashboardAdmin/AlatAdd/BiayaSewa";
 import DokumenPendukung from "../../DashboardAdmin/AlatAdd/DokumenPendukung";
 import Fasilitas from "./Fasilitas";
 import WaktuOperasional from "./WaktuOperasional";
+import Wrapper from "../../../components/Wrapper/Wrapper";
 
 const index = () => {
   return (
     <>
       <div className="relative flex bg-[#F9F9F9]">
         <Sidebar />
-        <div className="w-full ml-64 p-5">
-          <NavbarDashboard />
-          <div className="flex flex-col gap-5 mx-6">
-            <Title title="Tambah Working Space" />
-            <InformasiCoworking />
-            <WaktuOperasional />
-            <BiayaSewa />
-            <Fasilitas />
-            <DokumenPendukung />
-            <div className="w-[888px] flex justify-end">
-              <button className="btn btn-error border-none justify-self-end bg-[#CD0606] w-[127px] px-4 py-3 mb-3 text-white rounded-[4px]">
-                Tambahkan
-              </button>
+        <Wrapper>
+          <NavbarDashboard judul="Tambah Coworking Space" />
+            <div className="flex flex-col gap-5 mx-6">
+              <Title title="Tambah Working Space" />
+              <InformasiCoworking />
+              <WaktuOperasional />
+              <BiayaSewa />
+              <Fasilitas />
+              <DokumenPendukung />
+              <div className="w-[888px] flex justify-end">
+                <button className="btn btn-error border-none justify-self-end bg-[#CD0606] w-[127px] px-4 py-3 mb-3 text-white rounded-[4px]">
+                  Tambahkan
+                </button>
+              </div>
             </div>
-          </div>
-        </div>
+        </Wrapper>
       </div>
       <div className="absolute top-[88px] right-10 w-40">
         <div>

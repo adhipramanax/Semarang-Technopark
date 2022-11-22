@@ -5,13 +5,14 @@ import NavbarDashboard from "../../../components/Navbar/NavbarDashboard";
 import Proposal from "./Proposal";
 import CardTenant from "./CardTenant";
 import TableProposal from "./TableProposal";
+import Wrapper from "../../../components/Wrapper/Wrapper";
 
 const index = () => {
   return (
     <>
       <div className="flex bg-[#F9F9F9]">
         <Sidebar />
-        <div className="w-full ml-64">
+        <Wrapper>
           <NavbarDashboard judul="Dashboard" />
           <div className="flex p-6 gap-6 mt-20">
             <div className="w-full ">
@@ -20,7 +21,7 @@ const index = () => {
             </div>
             <CardTenant />
           </div>
-        </div>
+        </Wrapper>
       </div>
     </>
   );

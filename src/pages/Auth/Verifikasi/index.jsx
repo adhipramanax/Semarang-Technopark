@@ -3,7 +3,6 @@ import React from "react";
 import Navbar from "../../../components/Navbar/Navbar";
 import Hero from "../../../components/Hero/HeroAuth";
 import Verifikasi from "./verifikasi";
-import bgAuth from "../../../assets/images/bg-auth.png";
 
 const index = () => {
   return (
