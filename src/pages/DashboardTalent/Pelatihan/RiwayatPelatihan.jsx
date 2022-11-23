@@ -1,9 +1,8 @@
-import { data } from "autoprefixer";
 import React from "react";
 import { Link } from "react-router-dom";
 import imgSample from "../../../assets/images/sample.png";
 
-const RiwayatMentoring = () => {
+const RiwayatPelatihan = () => {
   const data = [
     {
       judul: "Pelatihan Design Grafis",
@@ -27,14 +26,14 @@ const RiwayatMentoring = () => {
   return (
     <>
       <div className="flex justify-between">
-        <h1 className="text-xl font-bold">Riwayat Mentoring</h1>
+        <h1 className="text-xl font-bold">Riwayat Pelatihan</h1>
         <button className="text-[#D73737] text-base">Lihat Semua</button>
       </div>
       <div className="flex gap-6">
         {data.map((d) => {
           return (
             <Link
-              to="/tenant/detail-mentoring"
+              to="/talent/detail-pelatihan"
               className="card w-56 bg-base-100 "
             >
               <figure className="px-3 pt-3 ">
@@ -83,4 +82,4 @@ const RiwayatMentoring = () => {
   );
 };
 
-export default RiwayatMentoring;
+export default RiwayatPelatihan;

@@ -46,6 +46,15 @@ import DetailPelatihan from "./pages/DashboardAdmin/DetailPelatihan";
 import TenantMentoring from "./pages/DashboardTenant/Mentoring";
 import DetailMentoring from "./pages/DashboardTenant/DetailMentoring";
 
+// import dashboard talent
+import DashboardTalent from './pages/DashboardTalent/Dashboard'
+import PelatihanTalent from './pages/DashboardTalent/Pelatihan'
+import DetailPelatihanTalent from "./pages/DashboardTalent/DetailPelatihan";
+import SewaCoworkingTalent from './pages/DashboardTalent/SewaCoworking'
+import SewaAlatTalent from './pages/DashboardTalent/SewaAlat'
+import ProfileTenantTalent from './pages/DashboardTalent/ProfileTenant'
+import ProfileTalentTalent from './pages/DashboardTalent/ProfileTalent'
+
 // Import dashboard juri
 import CalonTenant from "./pages/DashboardJuri/CalonTenant";
 import PenilaianTenant from "./pages/DashboardJuri/PenilaianTenant";
@@ -152,6 +161,16 @@ function App() {
               element={<DetailMentoring />}
             />
             {/*End dashboard tenant */}
+
+            {/* dashboard talent */}
+            <Route path="/talent/dashboard" element={<DashboardTalent />} />
+            <Route path="/talent/pelatihan" element={<PelatihanTalent />} />
+            <Route path="/talent/detail-pelatihan" element={<DetailPelatihanTalent />} />
+            <Route path="/talent/sewa-coworking" element={<SewaCoworkingTalent />} />
+            <Route path="/talent/sewa-alat" element={<SewaAlatTalent />} />
+            <Route path="/talent/profile-tenant" element={<ProfileTenantTalent />} />
+            <Route path="/talent/profile-talent" element={<ProfileTalentTalent />} />
+            {/*End dashboard talent */}
 
             {/* dashboard juri */}
             <Route path="/juri/calon-tenant" element={<CalonTenant />} />

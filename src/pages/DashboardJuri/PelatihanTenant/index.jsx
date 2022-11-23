@@ -3,7 +3,7 @@ import Sidebar from "../../../components/Sidebar/Sidebar";
 import Wrapper from "../../../components/Wrapper/Wrapper";
 import NavbarDashboard from "../../../components/Navbar/NavbarDashboard";
 
-const index = () => {
+const Index = () => {
   return (
     <div className="flex bg-[#F9F9F9]">
       <Sidebar />
@@ -15,4 +15,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

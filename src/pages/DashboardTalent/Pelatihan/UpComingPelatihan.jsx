@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const UpcomingMentoring = () => {
+const UpComingPelatihan = () => {
   const data = [
     {
       judul: "Pelatihan Design Grafis",
@@ -10,13 +10,13 @@ const UpcomingMentoring = () => {
   return (
     <>
       <div className="flex justify-between">
-        <h1 className="text-xl font-bold">Upcoming Mentoring</h1>
+        <h1 className="text-xl font-bold">Upcoming Pelatihan</h1>
       </div>
       <div className="flex gap-6">
         {data.map((d) => {
           return (
             <Link
-              to="/tenant/detail-mentoring"
+              to="/talent/detail-pelatihan"
               className="card w-56 bg-base-100 "
             >
               <figure className="px-3 pt-3 ">
@@ -39,4 +39,4 @@ const UpcomingMentoring = () => {
   );
 };
 
-export default UpcomingMentoring;
+export default UpComingPelatihan;
