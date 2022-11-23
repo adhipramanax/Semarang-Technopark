@@ -105,14 +105,7 @@ function App() {
             <Route path="/dashboard/proposal" element={<Proposal />} />
             <Route path="/dashboard/aktivitas" element={<Aktivitas />} />
             <Route path="/dashboard/mentoring" element={<Mentoring />} />
-            <Route
-              path="/dashboard/profile-tenant"
-              element={<ProfileTenant />}
-            />
-            <Route
-              path="/dashboard/edit-profile-tenant"
-              element={<EditProfileTenant />}
-            />
+
             {/*End dashboard user */}
 
             {/* dashboard admin */}
@@ -150,6 +143,11 @@ function App() {
             <Route
               path="/tenant/detail-mentoring"
               element={<DetailMentoring />}
+            />
+            <Route path="/tenant/profile-tenant" element={<ProfileTenant />} />
+            <Route
+              path="/tenant/edit-profile-tenant"
+              element={<EditProfileTenant />}
             />
             {/*End dashboard tenant */}
 

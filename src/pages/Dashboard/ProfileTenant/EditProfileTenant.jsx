@@ -174,7 +174,7 @@ const EditProfileTenant = () => {
           </div>
           <div className="w-[70%] flex justify-end mt-10">
             <Link
-              to="/dashboard/profile-tenant"
+              to="/tenant/profile-tenant"
               className="btn bg-transparent flex text-red-500 border-red-500 rounded-md gap-2 items-center mr-2 hover:bg-merah hover:text-white group"
             >
               Kembali
