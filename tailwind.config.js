@@ -48,4 +48,7 @@ module.exports = {
     themes: false,
   },
   plugins: [require('daisyui')],
+  safelist: [{
+    pattern: /(bg|text|border-b)-(hijau|primary|secondary|biru|merah|gray|info|warning|error|success|neutral)/
+  }]
 };
