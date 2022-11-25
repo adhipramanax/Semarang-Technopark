@@ -43,6 +43,7 @@ import Pelatihan from "./pages/DashboardAdmin/Pelatihan";
 import DetailPelatihan from "./pages/DashboardAdmin/DetailPelatihan";
 
 // import dashboard tenant
+import DashboardTenant from "./pages/DashboardTenant/Dashboard";
 import TenantMentoring from "./pages/DashboardTenant/Mentoring";
 import DetailMentoring from "./pages/DashboardTenant/DetailMentoring";
 
@@ -146,6 +147,7 @@ function App() {
             {/*End dashboard admin */}
 
             {/* dashboard tenant */}
+            <Route path="/tenant/dashboard" element={<DashboardTenant />} />
             <Route path="/tenant/mentoring" element={<TenantMentoring />} />
             <Route
               path="/tenant/detail-mentoring"
