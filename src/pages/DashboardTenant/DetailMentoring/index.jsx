@@ -13,7 +13,7 @@ import Penugasan from './Penugasan';
 import PenugasanKosong from './PenugasanKosong';
 import BelumPresensi from './BelumPresensi';
 
-const index = () => {
+const Index = () => {
   return (
     <>
       <div className="flex bg-[#F9F9F9]">
@@ -69,4 +69,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index
