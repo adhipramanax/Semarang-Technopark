@@ -21,14 +21,13 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import Proposal from "./pages/Dashboard/Proposal";
 import Aktivitas from "./pages/Dashboard/Aktivitas";
 import Mentoring from "./pages/Dashboard/Mentoring";
-import ProfileTenant from "./pages/Dashboard/ProfileTenant";
-import EditProfileTenant from "./pages/Dashboard/ProfileTenant/EditProfile";
 
 // Dashboard Admin
 import AdminAlatAdd from "./pages/DashboardAdmin/AlatAdd";
 import AdminCoWorkingAdd from "./pages/DashboardAdmin/CoWorkingAdd";
 import AdminDashboard from "./pages/DashboardAdmin/Dashboard";
 import AdminInkubasi from "./pages/DashboardAdmin/Inkubasi";
+import UserManagement from "./pages/DashboardAdmin/UserManagement";
 import Mentor from "./pages/DashboardAdmin/Mentor";
 import Juri from "./pages/DashboardAdmin/Juri";
 import Tenant from "./pages/DashboardAdmin/Tenant";
@@ -43,9 +42,13 @@ import DetailPelatihan from "./pages/DashboardAdmin/DetailPelatihan";
 
 // import dashboard tenant
 import DashboardTenant from "./pages/DashboardTenant/Dashboard";
-import TenantMentoring from "./pages/DashboardTenant/Mentoring";
-import DetailMentoring from "./pages/DashboardTenant/DetailMentoring";
+import ProposalTenant from "./pages/DashboardTenant/Proposal";
+import MentoringTenant from "./pages/DashboardTenant/Mentoring";
+import DetailMentoringTenant from "./pages/DashboardTenant/DetailMentoring";
 import SewaCoworkingTenant from "./pages/DashboardTenant/SewaCoworking";
+import SewaAlatTenant from "./pages/DashboardTenant/SewaAlat";
+import ProfileTenant from "./pages/DashboardTenant/ProfileTenant";
+import EditProfileTenant from "./pages/DashboardTenant/EditProfileTenant";
 
 // import dashboard talent
 import DashboardTalent from "./pages/DashboardTalent/Dashboard";
@@ -59,6 +62,12 @@ import ProfileTalentTalent from "./pages/DashboardTalent/ProfileTalent";
 // Import dashboard juri
 import CalonTenant from "./pages/DashboardJuri/CalonTenant";
 import PenilaianTenant from "./pages/DashboardJuri/PenilaianTenant";
+
+// Import dashboard mentor
+import DashboardMentor from "./pages/DashboardMentor/Dashboard";
+import MentoringMentor from "./pages/DashboardMentor/Mentoring";
+import PelatihanMentor from "./pages/DashboardMentor/Pelatihan";
+import ProfileMentor from "./pages/DashboardMentor/Profile";
 
 const cookies = new Cookies();
 
@@ -125,6 +134,7 @@ function App() {
               path="/admin/add-coworking"
               element={<AdminCoWorkingAdd />}
             />
+            <Route path="/admin/user-management" element={<UserManagement />} />
             <Route path="/admin/mentor" element={<Mentor />} />
             <Route path="/admin/juri" element={<Juri />} />
             <Route
@@ -150,11 +160,17 @@ function App() {
 
             {/* dashboard tenant */}
             <Route path="/tenant/dashboard" element={<DashboardTenant />} />
-            <Route path="/tenant/mentoring" element={<TenantMentoring />} />
+            <Route path="/tenant/proposal" element={<ProposalTenant />} />
+            <Route path="/tenant/mentoring" element={<MentoringTenant />} />
             <Route
               path="/tenant/detail-mentoring"
-              element={<DetailMentoring />}
+              element={<DetailMentoringTenant />}
             />
+            <Route
+              path="/tenant/sewa-coworking"
+              element={<SewaCoworkingTenant />}
+            />
+            <Route path="/tenant/sewa-alat" element={<SewaAlatTenant />} />
             <Route path="/tenant/profile-tenant" element={<ProfileTenant />} />
             <Route
               path="/tenant/edit-profile-tenant"
@@ -195,6 +211,13 @@ function App() {
               element={<PenilaianTenant />}
             />
             {/*End dashboard juri */}
+
+            {/* dashboard mentor */}
+            <Route path="/mentor/dashboard" element={<DashboardMentor />} />
+            <Route path="/mentor/pelatihan" element={<PelatihanMentor />} />
+            <Route path="/mentor/mentoring" element={<MentoringMentor />} />
+            <Route path="/mentor/profile" element={<ProfileMentor />} />
+            {/*End dashboard mentor */}
 
             <Route path="/setting" element={<Setting />} />
           </Routes>
