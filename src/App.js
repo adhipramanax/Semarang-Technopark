@@ -8,6 +8,8 @@ import Cookies from "universal-cookie";
 import LandingPage from "./pages/LandingPage";
 import CoWorking from "./pages/CoWorking";
 import SewaAlat from "./pages/SewaAlat";
+import Pelatihan from "./pages/Pelatihan";
+import DetailPelatihan from "./pages/DetailPelatihan";
 import Login from "./pages/Auth/Login";
 import Register from "./pages/Auth/Register";
 import Setting from "./pages/Setting/";
@@ -37,8 +39,8 @@ import AdminAktivitas from "./pages/DashboardAdmin/Aktivitas";
 import DetailTenant from "./pages/DashboardAdmin/DetailTenant";
 import WorkingSpace from "./pages/DashboardAdmin/WorkingSpace";
 import DetailWorkingSpace from "./pages/DashboardAdmin/DetailWorkingSpace";
-import Pelatihan from "./pages/DashboardAdmin/Pelatihan";
-import DetailPelatihan from "./pages/DashboardAdmin/DetailPelatihan";
+import AdminPelatihan from "./pages/DashboardAdmin/Pelatihan";
+import AdminDetailPelatihan from "./pages/DashboardAdmin/DetailPelatihan";
 
 // import dashboard tenant
 import DashboardTenant from "./pages/DashboardTenant/Dashboard";
@@ -113,6 +115,8 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/co-working" element={<CoWorking />} />
             <Route path="/sewa-alat" element={<SewaAlat />} />
+            <Route path="/pelatihan" element={<Pelatihan />} />
+            <Route path="/detail-pelatihan" element={<DetailPelatihan />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/inkubasi" element={<Inkubasi />} />
             <Route path="/verifikasi" element={<Verifikasi />} />
@@ -151,10 +155,10 @@ function App() {
             <Route path="/admin/detail-alat" element={<DetailAlat />} />
             <Route
               path="/admin/detail-pelatihan"
-              element={<DetailPelatihan />}
+              element={<AdminDetailPelatihan />}
             />
             <Route path="/admin/detail-tenant" element={<DetailTenant />} />
-            <Route path="/admin/pelatihan" element={<Pelatihan />} />
+            <Route path="/admin/pelatihan" element={<AdminPelatihan />} />
             <Route path="/admin/inkubasi" element={<AdminInkubasi />} />
             {/*End dashboard admin */}
 
