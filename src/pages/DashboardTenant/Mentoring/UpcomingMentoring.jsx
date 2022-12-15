@@ -1,4 +1,3 @@
-import { data } from "autoprefixer";
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -17,7 +16,7 @@ const UpcomingMentoring = () => {
         {data.map((d) => {
           return (
             <Link
-              to="/admin/detail-pelatihan"
+              to="/tenant/detail-mentoring"
               className="card w-56 bg-base-100 "
             >
               <figure className="px-3 pt-3 ">

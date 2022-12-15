@@ -34,7 +34,7 @@ const RiwayatMentoring = () => {
         {data.map((d) => {
           return (
             <Link
-              to="/admin/detail-pelatihan"
+              to="/tenant/detail-mentoring"
               className="card w-56 bg-base-100 "
             >
               <figure className="px-3 pt-3 ">

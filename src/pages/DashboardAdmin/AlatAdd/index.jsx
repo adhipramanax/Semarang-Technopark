@@ -15,9 +15,7 @@ const index = () => {
       <div className="flex bg-[#F9F9F9]">
         <Sidebar />
         <Wrapper>
-          {/* <div className="w-full"> */}
           <NavbarDashboard judul="Tambah Alat" />
-          {/* <div className="w-full ml-64 p-5"> */}
           <div className="flex flex-col gap-5 ">
             <Title title="Tambah Alat" />
             <InformasiAlat informasiName="Informasi Alat" />
@@ -30,8 +28,6 @@ const index = () => {
             </div>
           </div>
         </Wrapper>
-        {/* </div> */}
-        {/* </div> */}
       </div>
     </>
   );

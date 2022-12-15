@@ -1,4 +1,3 @@
-import { data } from "autoprefixer";
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -147,7 +146,7 @@ const DetailPenilaian = () => {
   return (
     <div className="w-full">
       <div className="w-full h-16 bg-white p-5 flex gap-7 mb-3">
-        <Link to="/">
+        <Link to="/juri/calon-tenant">
           <svg
             width="9"
             height="18"
@@ -165,7 +164,7 @@ const DetailPenilaian = () => {
             />
           </svg>
         </Link>
-        <h1>Co Working Detail</h1>
+        <h1>Detail Penilaian Tenant</h1>
       </div>
       <div className="bg-white p-5 flex items-center gap-8">
         <div className="avatar">

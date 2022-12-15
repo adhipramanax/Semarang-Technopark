@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { useState, useContext } from "react";
-import logo from "../../assets/images/st-logo.png";
 import userContext from "../../context/userContext";
 import Setting from "./Setting";
 
@@ -25,7 +24,6 @@ const SidebarTemplate = (props) => {
       <aside class={`${cekHide(hide)} h-screen bg-white fixed flex justify-between flex-col duration-500 ease-out`} aria-label="Sidebar">
         <div class="overflow-y-auto py-4 px-3 -z-10">
           <div className="flex justify-center py-5">
-            {/* <img src={logo} alt="logo" /> */}
             <button
               id="hamburger"
               className="button-toggle flex flex-col justify-center align-center gap-[3px] absolute right-[20px] top-[20px] z-[100]"
