@@ -45,6 +45,7 @@ import DetailPelatihan from "./pages/DashboardAdmin/DetailPelatihan";
 // import dashboard tenant
 import TenantMentoring from "./pages/DashboardTenant/Mentoring";
 import DetailMentoring from "./pages/DashboardTenant/DetailMentoring";
+import UploadProposal from "./pages/DashboardTenant/UploadProposal";
 
 // Import dashboard juri
 import CalonTenant from "./pages/DashboardJuri/CalonTenant";
@@ -151,6 +152,11 @@ function App() {
               path="/tenant/detail-mentoring"
               element={<DetailMentoring />}
             />
+            <Route
+              path="/tenant/upload-proposal"
+              element={<UploadProposal />}
+            />
+
             {/*End dashboard tenant */}
 
             {/* dashboard juri */}
