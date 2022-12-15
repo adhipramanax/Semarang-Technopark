@@ -6,7 +6,7 @@ import Wrapper from "../../../components/Wrapper/Wrapper";
 import RiwayatMentoring from "./RiwayatMentoring";
 import UpcomingMentoring from "./UpcomingMentoring";
 
-const index = () => {
+const Index = () => {
   return (
     <>
       <div className="flex bg-[#F9F9F9]">
@@ -23,4 +23,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

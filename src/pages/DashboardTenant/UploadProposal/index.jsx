@@ -4,10 +4,7 @@ import Sidebar from "../../../components/Sidebar";
 import NavbarDashboard from "../../../components/Navbar/NavbarDashboard";
 import Wrapper from "../../../components/Wrapper/Wrapper";
 
-import { FaHeading } from "react-icons/fa";
-
 import Steps from "../../../components/Steps";
-// import TipTap from "../../../components/TipTap";
 import Mantine from "../../../components/Mantine";
 
 const index = () => {
@@ -25,6 +22,9 @@ const index = () => {
               <h1 className="text-xl font-bold">Upload Proposal Bab I</h1>
               <div className="flex justify-center my-5">
                 <Mantine />
+              </div>
+              <div className="w-full flex justify-end">
+                <button className="btn bg-[#CD0606] text-white">Next</button>
               </div>
             </div>
           </div>

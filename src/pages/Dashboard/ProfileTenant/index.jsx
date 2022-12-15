@@ -7,6 +7,7 @@ import DocPendukung from "./DocPendukung";
 import Anggota from "./Anggota";
 import EditProfile from "./EditProfileTenant";
 import Wrapper from "../../../components/Wrapper/Wrapper";
+import Proposal from "./Proposal";
 
 const ProfileTenant = () => {
   return (
@@ -18,6 +19,7 @@ const ProfileTenant = () => {
           <div className="flex flex-col gap-5 mx-6 mt-20">
             <Detail />
             <DocPendukung />
+            <Proposal />
             <Anggota />
             {/* <EditProfile />  */}
           </div>
