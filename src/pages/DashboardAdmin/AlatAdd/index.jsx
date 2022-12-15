@@ -16,7 +16,7 @@ const index = () => {
         <Sidebar />
         <Wrapper>
           <NavbarDashboard judul="Tambah Alat" />
-          <div className="flex flex-col gap-5 ">
+          <div className="flex flex-col gap-5 mx-6">
             <Title title="Tambah Alat" />
             <InformasiAlat informasiName="Informasi Alat" />
             <BiayaSewa />

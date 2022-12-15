@@ -5,7 +5,9 @@ const DokumenPendukung = () => {
     <>
       <div className="w-[888px] bg-white px-[20px] py-[10px]">
         <div className="py-[10px]">
-          <h1 className="text-base font-bold">Informasi Alat</h1>
+          <h1 className="text-base font-bold text-[#D73737]">
+            Dokumen Pendukung
+          </h1>
         </div>
         <div className="flex justify-between items-center p-5">
           <div>Foto Working Space</div>

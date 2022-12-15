@@ -8,7 +8,9 @@ const informasiAlat = () => {
     <>
       <div className="w-[888px] bg-white px-[20px] py-[10px]">
         <div className="py-[10px]">
-          <h1 className="text-base font-bold">Informasi Coworking</h1>
+          <h1 className="text-base font-bold text-[#D73737]">
+            Informasi Coworking
+          </h1>
         </div>
         <Forms inputLabel="Nama Workspace" inputForm="Nama Workspace" />
         <FormTextArea textAreaLabel="Alamat" textAreaInput="Alamat" />

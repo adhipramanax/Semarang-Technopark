@@ -7,7 +7,7 @@ const BiayaSewa = () => {
     <>
       <div className="w-[888px] bg-white px-[20px] py-[10px]">
         <div className="py-[10px]">
-          <h1 className="text-base font-bold">Biaya Sewa</h1>
+          <h1 className="text-base font-bold text-[#D73737]">Biaya Sewa</h1>
         </div>
         <FormsDouble
           inputLabel1="Harian"

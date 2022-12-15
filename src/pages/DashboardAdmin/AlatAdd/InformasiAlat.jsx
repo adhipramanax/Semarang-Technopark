@@ -1,24 +1,26 @@
 import React from "react";
 
 import Forms from "../../DashboardAdmin/AlatAdd/Forms";
-import FormsDouble from "../../DashboardAdmin/AlatAdd/FormsDouble";
 
 const informasiAlat = () => {
   return (
     <>
       <div className="w-[888px] bg-white px-[20px] py-[10px]">
         <div className="py-[10px]">
-          <h1 className="text-base font-bold">Infromasi Alat</h1>
+          <h1 className="text-base font-bold text-[#D73737]">Informasi Alat</h1>
         </div>
-        <Forms inputLabel="Nama Alat" inputForm="Nama Alat" />
-        <Forms inputLabel="No Seri" inputForm="No Seri" />
-        <FormsDouble
-          inputLabel1="Merk"
-          inputForm1="Merk"
-          inputLabel2="Tahun Beli"
-          inputForm2="Tahun Beli"
+        <Forms inputLabel="Nama Alat" inputForm="ex: Kamera 360" />
+        <Forms inputLabel="No Seri" inputForm="ex: 1234-XYZ" />
+        <Forms inputLabel="Merk" inputForm="ex: Canon" />
+        <Forms inputLabel="Tahun Beli" inputForm="ex: 2019" />
+        <Forms
+          inputLabel="Pemilik"
+          inputForm="ex: Dinas Pendidikan Kota Semarang"
         />
-        <Forms inputLabel="No Seri" inputForm="No Seri" />
+        <Forms
+          inputLabel="Alamat"
+          inputForm="ex: Jl. Lamongan No.17, Bendan Ngisor"
+        />
       </div>
     </>
   );
