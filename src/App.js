@@ -51,13 +51,13 @@ import ProfileTenant from "./pages/DashboardTenant/ProfileTenant";
 import EditProfileTenant from "./pages/DashboardTenant/EditProfileTenant";
 
 // import dashboard talent
-import DashboardTalent from './pages/DashboardTalent/Dashboard'
-import PelatihanTalent from './pages/DashboardTalent/Pelatihan'
+import DashboardTalent from "./pages/DashboardTalent/Dashboard";
+import PelatihanTalent from "./pages/DashboardTalent/Pelatihan";
 import DetailPelatihanTalent from "./pages/DashboardTalent/DetailPelatihan";
-import SewaCoworkingTalent from './pages/DashboardTalent/SewaCoworking'
-import SewaAlatTalent from './pages/DashboardTalent/SewaAlat'
-import ProfileTenantTalent from './pages/DashboardTalent/ProfileTenant'
-import ProfileTalentTalent from './pages/DashboardTalent/ProfileTalent'
+import SewaCoworkingTalent from "./pages/DashboardTalent/SewaCoworking";
+import SewaAlatTalent from "./pages/DashboardTalent/SewaAlat";
+import ProfileTenantTalent from "./pages/DashboardTalent/ProfileTenant";
+import ProfileTalentTalent from "./pages/DashboardTalent/ProfileTalent";
 
 // Import dashboard juri
 import CalonTenant from "./pages/DashboardJuri/CalonTenant";
@@ -162,30 +162,46 @@ function App() {
             <Route path="/tenant/dashboard" element={<DashboardTenant />} />
             <Route path="/tenant/proposal" element={<ProposalTenant />} />
             <Route path="/tenant/mentoring" element={<MentoringTenant />} />
-            <Route path="/tenant/detail-mentoring" element={<DetailMentoringTenant />}/>
+            <Route
+              path="/tenant/detail-mentoring"
+              element={<DetailMentoringTenant />}
+            />
             <Route
               path="/tenant/sewa-coworking"
               element={<SewaCoworkingTenant />}
             />
-            <Route
-              path="/tenant/sewa-alat"
-              element={<SewaAlatTenant />}
-            />
+            <Route path="/tenant/sewa-alat" element={<SewaAlatTenant />} />
             <Route path="/tenant/profile-tenant" element={<ProfileTenant />} />
             <Route
               path="/tenant/edit-profile-tenant"
               element={<EditProfileTenant />}
+            />
+            <Route
+              path="/tenant/sewa-coworking"
+              element={<SewaCoworkingTenant />}
             />
             {/*End dashboard tenant */}
 
             {/* dashboard talent */}
             <Route path="/talent/dashboard" element={<DashboardTalent />} />
             <Route path="/talent/pelatihan" element={<PelatihanTalent />} />
-            <Route path="/talent/detail-pelatihan" element={<DetailPelatihanTalent />} />
-            <Route path="/talent/sewa-coworking" element={<SewaCoworkingTalent />} />
+            <Route
+              path="/talent/detail-pelatihan"
+              element={<DetailPelatihanTalent />}
+            />
+            <Route
+              path="/talent/sewa-coworking"
+              element={<SewaCoworkingTalent />}
+            />
             <Route path="/talent/sewa-alat" element={<SewaAlatTalent />} />
-            <Route path="/talent/profile-tenant" element={<ProfileTenantTalent />} />
-            <Route path="/talent/profile-talent" element={<ProfileTalentTalent />} />
+            <Route
+              path="/talent/profile-tenant"
+              element={<ProfileTenantTalent />}
+            />
+            <Route
+              path="/talent/profile-talent"
+              element={<ProfileTalentTalent />}
+            />
             {/*End dashboard talent */}
 
             {/* dashboard juri */}
