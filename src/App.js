@@ -64,12 +64,15 @@ import ProfileTalentTalent from "./pages/DashboardTalent/ProfileTalent";
 // Import dashboard juri
 import CalonTenant from "./pages/DashboardJuri/CalonTenant";
 import PenilaianTenant from "./pages/DashboardJuri/PenilaianTenant";
+import JuriDashboard from "./pages/DashboardJuri/Dashboard";
 
 // Import dashboard mentor
 import DashboardMentor from "./pages/DashboardMentor/Dashboard";
 import MentoringMentor from "./pages/DashboardMentor/Mentoring";
 import PelatihanMentor from "./pages/DashboardMentor/Pelatihan";
 import ProfileMentor from "./pages/DashboardMentor/Profile";
+import DetailMentoringMentor from "./pages/DashboardMentor/DetailMentoring/DetailMentoring";
+import EditProfileMentor from "./pages/DashboardMentor/EditProfile";
 
 const cookies = new Cookies();
 
@@ -214,6 +217,7 @@ function App() {
               path="/juri/penilaian-tenant"
               element={<PenilaianTenant />}
             />
+            <Route path="/juri/dashboard" element={<JuriDashboard />} />
             {/*End dashboard juri */}
 
             {/* dashboard mentor */}
@@ -221,6 +225,14 @@ function App() {
             <Route path="/mentor/pelatihan" element={<PelatihanMentor />} />
             <Route path="/mentor/mentoring" element={<MentoringMentor />} />
             <Route path="/mentor/profile" element={<ProfileMentor />} />
+            <Route
+              path="/mentor/detail-mentoring"
+              element={<DetailMentoringMentor />}
+            />
+            <Route
+              path="/mentor/edit-profile-mentor"
+              element={<EditProfileMentor />}
+            />
             {/*End dashboard mentor */}
 
             <Route path="/setting" element={<Setting />} />
