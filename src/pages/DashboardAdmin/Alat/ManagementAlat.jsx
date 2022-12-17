@@ -1,6 +1,6 @@
 import React from "react";
 
-import Table from "../../../components/Table";
+import Table from "../../../components/Table/TableAlat";
 
 const ManagementAlat = () => {
   const tHead = [
@@ -14,7 +14,7 @@ const ManagementAlat = () => {
     },
     {
       judul: "No-Seri",
-      width: "w-auto",
+      width: "w-1/12",
     },
     {
       judul: "Pemilik",
@@ -33,10 +33,10 @@ const ManagementAlat = () => {
   let tBody = [
     {
       no: 1,
-      judul: "IBC Semarang",
+      judul: "Kamera DSLR",
       noseri: {
-        isi: "Food",
-        warna: "success",
+        isi: "1234-xyz-098",
+        warna: "stp-success",
       },
       pemilik: "Brahmasta Bagus",
       aksi: {
@@ -47,10 +47,10 @@ const ManagementAlat = () => {
     },
     {
       no: 1,
-      judul: "IBC Semarang",
+      judul: "Kamera DSLR",
       noseri: {
-        isi: "Food",
-        warna: "success",
+        isi: "1234-xyz-098",
+        warna: "stp-success",
       },
       pemilik: "Brahmasta Bagus",
       aksi: {
@@ -61,10 +61,10 @@ const ManagementAlat = () => {
     },
     {
       no: 1,
-      judul: "IBC Semarang",
+      judul: "Kamera DSLR",
       noseri: {
-        isi: "Food",
-        warna: "success",
+        isi: "1234-xyz-098",
+        warna: "stp-success",
       },
       pemilik: "Brahmasta Bagus",
       aksi: {
@@ -75,10 +75,10 @@ const ManagementAlat = () => {
     },
     {
       no: 1,
-      judul: "IBC Semarang",
+      judul: "Kamera DSLR",
       noseri: {
-        isi: "Food",
-        warna: "success",
+        isi: "1234-xyz-098",
+        warna: "stp-success",
       },
       pemilik: "Brahmasta Bagus",
       aksi: {
@@ -89,10 +89,10 @@ const ManagementAlat = () => {
     },
     {
       no: 1,
-      judul: "IBC Semarang",
+      judul: "Kamera DSLR",
       noseri: {
-        isi: "Food",
-        warna: "success",
+        isi: "1234-xyz-098",
+        warna: "stp-success",
       },
       pemilik: "Brahmasta Bagus",
       aksi: {
@@ -103,10 +103,10 @@ const ManagementAlat = () => {
     },
     {
       no: 1,
-      judul: "IBC Semarang",
+      judul: "Kamera DSLR",
       noseri: {
-        isi: "Food",
-        warna: "success",
+        isi: "1234-xyz-098",
+        warna: "stp-success",
       },
       pemilik: "Brahmasta Bagus",
       aksi: {
@@ -117,10 +117,10 @@ const ManagementAlat = () => {
     },
     {
       no: 1,
-      judul: "IBC Semarang",
+      judul: "Kamera DSLR",
       noseri: {
-        isi: "Food",
-        warna: "success",
+        isi: "1234-xyz-098",
+        warna: "stp-success",
       },
       pemilik: "Brahmasta Bagus",
       aksi: {
@@ -131,10 +131,10 @@ const ManagementAlat = () => {
     },
     {
       no: 1,
-      judul: "IBC Semarang",
+      judul: "Kamera DSLR",
       noseri: {
-        isi: "Food",
-        warna: "success",
+        isi: "1234-xyz-098",
+        warna: "stp-success",
       },
       pemilik: "Brahmasta Bagus",
       aksi: {
@@ -145,10 +145,10 @@ const ManagementAlat = () => {
     },
     {
       no: 1,
-      judul: "IBC Semarang",
+      judul: "Kamera DSLR",
       noseri: {
-        isi: "Food",
-        warna: "success",
+        isi: "1234-xyz-098",
+        warna: "stp-success",
       },
       pemilik: "Brahmasta Bagus",
       aksi: {
@@ -159,10 +159,10 @@ const ManagementAlat = () => {
     },
     {
       no: 1,
-      judul: "IBC Semarang",
+      judul: "Kamera DSLR",
       noseri: {
-        isi: "Food",
-        warna: "success",
+        isi: "1234-xyz-098",
+        warna: "stp-success",
       },
       pemilik: "Brahmasta Bagus",
       aksi: {

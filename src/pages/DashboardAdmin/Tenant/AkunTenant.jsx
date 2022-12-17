@@ -1,6 +1,6 @@
 import React from "react";
 
-import Table from "../../../components/Table";
+import Table from "../../../components/Table/TableTenant";
 
 const AkunTenant = () => {
   const tHead = [
@@ -28,6 +28,10 @@ const AkunTenant = () => {
       judul: "Status",
       width: "w-auto",
     },
+    {
+      judul: "Aksi",
+      width: "w-auto",
+    },
   ];
 
   let tBody = [
@@ -36,130 +40,160 @@ const AkunTenant = () => {
       judul: "IBC Semarang",
       bidang: {
         isi: "Food",
-        warna: "success",
+        warna: "stp-success",
       },
       ketua: "Brahmasta Bagus Aryandra",
       status: {
         isi: "Tenant",
-        warna: "success",
+        warna: "stp-success",
       },
+      aksi: {
+        detail: "admin/detail-tenant",
+      }
     },
     {
       no: 1,
       judul: "IBC Semarang",
       bidang: {
         isi: "Food",
-        warna: "success",
+        warna: "stp-success",
       },
       ketua: "Brahmasta Bagus Aryandra",
       status: {
         isi: "Tenant",
-        warna: "success",
+        warna: "stp-success",
       },
+      aksi: {
+        detail: "admin/detail-tenant",
+      }
     },
     {
       no: 1,
       judul: "IBC Semarang",
       bidang: {
         isi: "Food",
-        warna: "success",
+        warna: "stp-success",
       },
       ketua: "Brahmasta Bagus Aryandra",
       status: {
         isi: "Tenant",
-        warna: "success",
+        warna: "stp-success",
       },
+      aksi: {
+        detail: "admin/detail-tenant",
+      }
     },
     {
       no: 1,
       judul: "IBC Semarang",
       bidang: {
         isi: "Food",
-        warna: "success",
+        warna: "stp-success",
       },
       ketua: "Brahmasta Bagus Aryandra",
       status: {
         isi: "Tenant",
-        warna: "success",
+        warna: "stp-success",
       },
+      aksi: {
+        detail: "admin/detail-tenant",
+      }
     },
     {
       no: 1,
       judul: "IBC Semarang",
       bidang: {
         isi: "Food",
-        warna: "success",
+        warna: "stp-success",
       },
       ketua: "Brahmasta Bagus Aryandra",
       status: {
         isi: "Tenant",
-        warna: "success",
+        warna: "stp-success",
       },
+      aksi: {
+        detail: "admin/detail-tenant",
+      }
     },
     {
       no: 1,
       judul: "IBC Semarang",
       bidang: {
         isi: "Food",
-        warna: "success",
+        warna: "stp-success",
       },
       ketua: "Brahmasta Bagus Aryandra",
       status: {
         isi: "Tenant",
-        warna: "success",
+        warna: "stp-success",
       },
+      aksi: {
+        detail: "admin/detail-tenant",
+      }
     },
     {
       no: 1,
       judul: "IBC Semarang",
       bidang: {
         isi: "Food",
-        warna: "success",
+        warna: "stp-success",
       },
       ketua: "Brahmasta Bagus Aryandra",
       status: {
         isi: "Tenant",
-        warna: "success",
+        warna: "stp-success",
       },
+      aksi: {
+        detail: "admin/detail-tenant",
+      }
     },
     {
       no: 1,
       judul: "IBC Semarang",
       bidang: {
         isi: "Food",
-        warna: "success",
+        warna: "stp-success",
       },
       ketua: "Brahmasta Bagus",
       status: {
         isi: "Calon Tenant",
-        warna: "secondary",
+        warna: "stp-secondary",
       },
+      aksi: {
+        detail: "admin/detail-tenant",
+      }
     },
     {
       no: 1,
       judul: "IBC Semarang",
       bidang: {
         isi: "Food",
-        warna: "success",
+        warna: "stp-success",
       },
       ketua: "Brahmasta Bagus",
       status: {
         isi: "Tenant",
-        warna: "success",
+        warna: "stp-success",
       },
+      aksi: {
+        detail: "admin/detail-tenant",
+      }
     },
     {
       no: 1,
       judul: "IBC Semarang",
       bidang: {
         isi: "Food",
-        warna: "success",
+        warna: "stp-success",
       },
       ketua: "Brahmasta Bagus",
       status: {
         isi: "Calon Tenant",
-        warna: "secondary",
+        warna: "stp-secondary",
       },
+      aksi: {
+        detail: "admin/detail-tenant",
+      }
     },
   ];
   return (

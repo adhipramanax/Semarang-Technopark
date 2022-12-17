@@ -24,6 +24,7 @@ module.exports = {
           error: "#E16868",
           success: "#6EBC14",
           neutral: "#79767B",
+          danger: "#D84866"
         },
       },
       spacing: {
