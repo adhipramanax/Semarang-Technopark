@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import jwt_decode from "jwt-decode";
-import userContext from "./context/userContext";
-import Cookies from "universal-cookie";
+import { UserProvider } from "./context/userContext";
+import AuthMiddleware from "./middleware/AuthMiddleware";
 
 // Landing Page
 import LandingPage from "./pages/LandingPage";
@@ -43,6 +42,9 @@ import AdminPelatihan from "./pages/DashboardAdmin/Pelatihan";
 import AdminDetailPelatihan from "./pages/DashboardAdmin/DetailPelatihan";
 
 // import dashboard tenant
+import TenantMentoring from "./pages/DashboardTenant/Mentoring";
+import DetailMentoring from "./pages/DashboardTenant/DetailMentoring";
+import UploadProposal from "./pages/DashboardTenant/UploadProposal";
 import DashboardTenant from "./pages/DashboardTenant/Dashboard";
 import ProposalTenant from "./pages/DashboardTenant/Proposal";
 import MentoringTenant from "./pages/DashboardTenant/Mentoring";
@@ -64,50 +66,22 @@ import ProfileTalentTalent from "./pages/DashboardTalent/ProfileTalent";
 // Import dashboard juri
 import CalonTenant from "./pages/DashboardJuri/CalonTenant";
 import PenilaianTenant from "./pages/DashboardJuri/PenilaianTenant";
+import PenilaianProposal from "./pages/DashboardJuri/PenilaianProposal";
+import JuriDashboard from "./pages/DashboardJuri/Dashboard";
 
 // Import dashboard mentor
 import DashboardMentor from "./pages/DashboardMentor/Dashboard";
 import MentoringMentor from "./pages/DashboardMentor/Mentoring";
 import PelatihanMentor from "./pages/DashboardMentor/Pelatihan";
 import ProfileMentor from "./pages/DashboardMentor/Profile";
-
-const cookies = new Cookies();
+import DetailMentoringMentor from "./pages/DashboardMentor/DetailMentoring/DetailMentoring";
+import EditProfileMentor from "./pages/DashboardMentor/EditProfile";
 
 function App() {
-  const [user, changeUser] = useState({});
-  const [hide, setHide] = useState(false);
-
-  useEffect(() => {
-    // Ambil dari cookie, cek apabila ada jwtnya
-
-    const jwt_token = cookies.get("jwt_token");
-
-    // Apabila ada jwtnya maka ambil dan decode jwtnya
-    try {
-      var decoded = jwt_decode(jwt_token);
-
-      changeUser({
-        id: decoded.iat,
-        name: decoded.user.name,
-        email: decoded.user.email,
-      });
-    } catch (err) {
-      changeUser(null);
-    }
-    // Setelah di decode, panggil fungsi changeUser() dan ganti dengan isi dari jwtnya
-  }, []);
-
-  const contextValue = {
-    user,
-    changeUser,
-    hide,
-    setHide,
-  };
-
   return (
     <>
-      <userContext.Provider value={contextValue}>
-        <BrowserRouter>
+      <BrowserRouter>
+        <UserProvider>
           <Routes>
             {/* Page */}
             <Route path="/" element={<LandingPage />} />
@@ -122,15 +96,15 @@ function App() {
             <Route path="/verifikasi" element={<Verifikasi />} />
             <Route path="/error" element={<Error />} />
             {/* End Page */}
-
             {/* dashboard user */}
-            <Route path="/dashboard" element={<Dashboard />} />
+            <Route
+              path="/dashboard"
+              element={<AuthMiddleware component={Dashboard} />}
+            />
             <Route path="/dashboard/proposal" element={<Proposal />} />
             <Route path="/dashboard/aktivitas" element={<Aktivitas />} />
             <Route path="/dashboard/mentoring" element={<Mentoring />} />
-
             {/*End dashboard user */}
-
             {/* dashboard admin */}
             <Route path="/admin/dashboard" element={<AdminDashboard />} />
             <Route path="/admin/add-alat" element={<AdminAlatAdd />} />
@@ -161,7 +135,6 @@ function App() {
             <Route path="/admin/pelatihan" element={<AdminPelatihan />} />
             <Route path="/admin/inkubasi" element={<AdminInkubasi />} />
             {/*End dashboard admin */}
-
             {/* dashboard tenant */}
             <Route path="/tenant/dashboard" element={<DashboardTenant />} />
             <Route path="/tenant/proposal" element={<ProposalTenant />} />
@@ -181,11 +154,14 @@ function App() {
               element={<EditProfileTenant />}
             />
             <Route
+              path="/tenant/upload-proposal"
+              element={<UploadProposal />}
+            />
+            <Route
               path="/tenant/sewa-coworking"
               element={<SewaCoworkingTenant />}
             />
             {/*End dashboard tenant */}
-
             {/* dashboard talent */}
             <Route path="/talent/dashboard" element={<DashboardTalent />} />
             <Route path="/talent/pelatihan" element={<PelatihanTalent />} />
@@ -207,26 +183,36 @@ function App() {
               element={<ProfileTalentTalent />}
             />
             {/*End dashboard talent */}
-
             {/* dashboard juri */}
             <Route path="/juri/calon-tenant" element={<CalonTenant />} />
             <Route
               path="/juri/penilaian-tenant"
               element={<PenilaianTenant />}
             />
+            <Route
+              path="/juri/penilaian-proposal"
+              element={<PenilaianProposal />}
+            />
+            <Route path="/juri/dashboard" element={<JuriDashboard />} />
             {/*End dashboard juri */}
-
             {/* dashboard mentor */}
             <Route path="/mentor/dashboard" element={<DashboardMentor />} />
             <Route path="/mentor/pelatihan" element={<PelatihanMentor />} />
             <Route path="/mentor/mentoring" element={<MentoringMentor />} />
             <Route path="/mentor/profile" element={<ProfileMentor />} />
+            <Route
+              path="/mentor/detail-mentoring"
+              element={<DetailMentoringMentor />}
+            />
+            <Route
+              path="/mentor/edit-profile-mentor"
+              element={<EditProfileMentor />}
+            />
             {/*End dashboard mentor */}
-
             <Route path="/setting" element={<Setting />} />
           </Routes>
-        </BrowserRouter>
-      </userContext.Provider>
+        </UserProvider>
+      </BrowserRouter>
     </>
   );
 }

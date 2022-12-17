@@ -1,14 +1,14 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext } from "react";
 
-import { Link, NavLink, useNavigate } from 'react-router-dom';
-import layanan1 from '../../../assets/images/layanan1.png';
-import layanan2 from '../../../assets/images/layanan2.png';
-import layanan3 from '../../../assets/images/layanan3.png';
-import layanan4 from '../../../assets/images/layanan4.png';
-import BtnNavbar from './BtnNavbar';
-import userContext from '../../../context/userContext';
-import { BiChevronDown } from 'react-icons/bi';
-import { MdClose } from 'react-icons/md';
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import layanan1 from "../../../assets/images/layanan1.png";
+import layanan2 from "../../../assets/images/layanan2.png";
+import layanan3 from "../../../assets/images/layanan3.png";
+import layanan4 from "../../../assets/images/layanan4.png";
+import BtnNavbar from "./BtnNavbar";
+import userContext from "../../../context/userContext";
+import { BiChevronDown } from "react-icons/bi";
+import { MdClose } from "react-icons/md";
 
 const Index = (props) => {
   const { user } = useContext(userContext);
@@ -27,7 +27,7 @@ const Index = (props) => {
     }
   };
 
-  window.addEventListener('scroll', changeNavbarColor);
+  window.addEventListener("scroll", changeNavbarColor);
 
   return (
     <nav className="w-full relative">
@@ -35,8 +35,8 @@ const Index = (props) => {
       <div
         className={`pb-4 px-9 md:px-16 fixed top-0 inset-x-0 w-full z-50 transition-all-200 ${
           isChangeNavColor
-            ? 'bg-stp-primary-500 pt-4'
-            : 'bg-transparent pt-6 xsm:pt-9'
+            ? "bg-stp-primary-500 pt-4"
+            : "bg-transparent pt-6 xsm:pt-9"
         }`}
       >
         <div className="max-w-[90remx] mx-auto flex justify-between items-center w-full">
@@ -48,16 +48,10 @@ const Index = (props) => {
           </NavLink>
           <div id="navbar-default">
             <div className="flex gap-5 xsm:gap-8 items-center">
-              <NavLink
-                to="/"
-                className="nav-link-list hidden 2md:block"
-              >
+              <NavLink to="/" className="nav-link-list hidden 2md:block">
                 Home
               </NavLink>
-              <NavLink
-                to="/profile"
-                className="nav-link-list hidden 2md:block"
-              >
+              <NavLink to="/profile" className="nav-link-list hidden 2md:block">
                 Profile
               </NavLink>
               <div className="dropdown dropdown-hover dropdown-end hidden 2md:block">
@@ -74,66 +68,47 @@ const Index = (props) => {
                 >
                   <li className="col-span-1">
                     <button
-                      onClick={() => navigate('/inkubasi')}
+                      onClick={() => navigate("/inkubasi")}
                       className="btn btn-ghost bg-gray-200/50 focus:text-black flex items-center h-full !p-3 !justify-start flex-nowrap"
                       type="button"
                     >
-                      <img
-                        className="w-9 block"
-                        src={layanan1}
-                        alt="layanan"
-                      />
+                      <img className="w-9 block" src={layanan1} alt="layanan" />
                       <span className="block text-left">Inkubasi STP</span>
                     </button>
                   </li>
                   <li className="col-span-1">
                     <button
-                      onClick={() => navigate('/sewa-alat')}
+                      onClick={() => navigate("/sewa-alat")}
                       className="btn btn-ghost bg-gray-200/50 focus:text-black flex items-center h-full !p-3 !justify-start flex-nowrap"
                       type="button"
                     >
-                      <img
-                        className="w-9 block"
-                        src={layanan2}
-                        alt="layanan"
-                      />
+                      <img className="w-9 block" src={layanan2} alt="layanan" />
                       <span className="block text-left">Sewa Alat</span>
                     </button>
                   </li>
                   <li className="col-span-1">
                     <button
-                      onClick={() => navigate('/co-working')}
+                      onClick={() => navigate("/co-working")}
                       className="btn btn-ghost bg-gray-200/50 focus:text-black flex items-center h-full !p-3 !justify-start flex-nowrap"
                       type="button"
                     >
-                      <img
-                        className="w-9 block"
-                        src={layanan3}
-                        alt="layanan"
-                      />
+                      <img className="w-9 block" src={layanan3} alt="layanan" />
                       <span className="block text-left">Co-Working Space</span>
                     </button>
                   </li>
                   <li className="col-span-1">
                     <button
-                      onClick={() => navigate('/pelatihan')}
+                      onClick={() => navigate("/pelatihan")}
                       className="btn btn-ghost bg-gray-200/50 focus:text-black flex items-center h-full !p-3 !justify-start flex-nowrap"
                       type="button"
                     >
-                      <img
-                        className="w-9 block"
-                        src={layanan4}
-                        alt="layanan"
-                      />
+                      <img className="w-9 block" src={layanan4} alt="layanan" />
                       <span className="block text-left">Pelatihan</span>
                     </button>
                   </li>
                 </ul>
               </div>
-              <NavLink
-                to="/"
-                className="nav-link-list hidden 2md:block"
-              >
+              <NavLink to="/" className="nav-link-list hidden 2md:block">
                 Partners
               </NavLink>
 
@@ -177,15 +152,12 @@ const Index = (props) => {
       <div className="2md:hidden">
         <div
           className={`z-[250] bg-white fixed top-0 right-0 h-screen w-80 transition-transform duration-300 ease-in-out p-7 ${
-            isOpenNav ? 'translate-x-0' : 'translate-x-full'
+            isOpenNav ? "translate-x-0" : "translate-x-full"
           }`}
         >
           <div className="flex justify-between mb-6">
             <h1 className="text-stp-primary-500">Semarang Technopark</h1>
-            <button
-              onClick={() => setIsOpenNav(!isOpenNav)}
-              type="button"
-            >
+            <button onClick={() => setIsOpenNav(!isOpenNav)} type="button">
               <MdClose className="text-2xl" />
             </button>
           </div>
@@ -206,10 +178,7 @@ const Index = (props) => {
                 Profile
               </Link>
             </li>
-            <li
-              className="mb-0 overflow-hidden"
-              data-collapsed="false"
-            >
+            <li className="mb-0 overflow-hidden" data-collapsed="false">
               <div
                 className="text-black hover:text-red-600 font-semibold uppercase text-sm py-4 border-b border-black/70 cursor-pointer mb-2 flex items-center justify-between truncate"
                 onClick={() => setIsCollapseNav(!isCollapseNav)}
@@ -217,13 +186,13 @@ const Index = (props) => {
                 Layanan
                 <BiChevronDown
                   className={`text-2xl transition-all-300 ${
-                    isCollapseNav ? 'rotate-180' : 'rotate-0'
+                    isCollapseNav ? "rotate-180" : "rotate-0"
                   }`}
                 />
               </div>
               <ul
                 className={`transition-all-300 flex flex-col ${
-                  isCollapseNav ? 'max-h-96' : 'max-h-0'
+                  isCollapseNav ? "max-h-96" : "max-h-0"
                 }`}
               >
                 <li>
