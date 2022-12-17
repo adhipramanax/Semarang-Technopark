@@ -1,9 +1,8 @@
 import React from "react";
-
-import Sidebar from "../../../components/Sidebar";
+import Sidebar from "../../../components/Sidebar/Sidebar";
 import NavbarDashboard from "../../../components/Navbar/NavbarDashboard";
 import Wrapper from "../../../components/Wrapper/Wrapper";
-import Booking from "./Booking";
+import EditProfileMentor from "./EditProfieMentor";
 
 const Index = () => {
   return (
@@ -11,10 +10,9 @@ const Index = () => {
       <div className="flex bg-[#F9F9F9]">
         <Sidebar />
         <Wrapper>
-          <NavbarDashboard judul="Sewa Co-Working" />
+          <NavbarDashboard judul="Profile Tenant" />
           <div className="flex flex-col gap-5 mx-6 mt-20">
-            <Booking />
-            <Booking />
+            <EditProfileMentor />
           </div>
         </Wrapper>
       </div>

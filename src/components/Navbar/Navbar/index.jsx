@@ -96,15 +96,14 @@ const Index = (props) => {
                       <span className="block text-left">Co-Working Space</span>
                     </button>
                   </li>
-                  <li className="disabled">
+                  <li className="col-span-1">
                     <button
-                      onClick={() => navigate("/")}
-                      className="btn btn-ghost !bg-white focus:text-black flex items-center h-full !p-3 !justify-start flex-nowrap !cursor-not-allowed"
+                      onClick={() => navigate("/pelatihan")}
+                      className="btn btn-ghost bg-gray-200/50 focus:text-black flex items-center h-full !p-3 !justify-start flex-nowrap"
                       type="button"
-                      disabled
                     >
                       <img className="w-9 block" src={layanan4} alt="layanan" />
-                      <span className="block text-left">Event & Pelatihan</span>
+                      <span className="block text-left">Pelatihan</span>
                     </button>
                   </li>
                 </ul>
@@ -252,7 +251,7 @@ const Index = (props) => {
                       className="w-6"
                     />
                     <span className="text-black hover:text-red-600 font-semibold uppercase text-sm block py-2 truncate">
-                      Event & Pelatihan
+                      Pelatihan
                     </span>
                   </Link>
                 </li>

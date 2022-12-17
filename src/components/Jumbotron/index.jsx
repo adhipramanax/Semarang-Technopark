@@ -1,9 +1,9 @@
 import React from "react";
 
-const Jumbotron = (props) => {
+const Index = (props) => {
   return (
     <>
-      <div className="h-[300px] w-screen flex flex-col justify-end">
+      <div className="h-[350px] w-screen flex flex-col justify-end">
         <div className="px-5 xl:px-[108px] mx-auto lg:mx-0 lg:px-24">
           <div className="flex gap-3">
             <img className="w-8 xl:w-11 lg:w-11" src={props.img} alt="office" />
@@ -40,4 +40,4 @@ const Jumbotron = (props) => {
   );
 };
 
-export default Jumbotron;
+export default Index;
