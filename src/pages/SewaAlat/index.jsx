@@ -3,7 +3,7 @@ import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import Filter from "../../components/Filter";
 import Footer from "../../components/Footer";
-import Jumbotron from "../CoWorking/Jumbotron";
+import Jumbotron from "../../components/Jumbotron";
 import Card from "../../components/Card/";
 import pelatihan from "../../assets/images/pelatihan.png";
 import box from "../../assets/images/box.svg";

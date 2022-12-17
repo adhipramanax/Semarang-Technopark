@@ -9,10 +9,10 @@ const EditProfileTenant = () => {
         <div className="flex items-center p-2">
           <div className="avatar mr-10">
             <div className="w-24 rounded-full">
-              <img src="https://placeimg.com/192/192/people" />
+              <img src="https://placeimg.com/192/192/people" alt="" />
             </div>
           </div>
-          <button className="btn bg-transparent flex text-red-500 border-red-500 rounded-md gap-2 items-center mr-2 hover:bg-merah hover:text-white group">
+          <button className="btn bg-transparent flex text-red-500 border-red-500 rounded-md gap-2 items-center mr-2 hover:bg-stp-primary-600 hover:text-white group">
             Delete
             <svg
               className="group-hover:text-white"
@@ -59,7 +59,7 @@ const EditProfileTenant = () => {
               />
             </svg>
           </button>
-          <button className="btn flex text-white bg-merah border-red-500 rounded-md gap-2 items-center">
+          <button className="btn flex text-white bg-stp-primary-600 border-red-500 rounded-md gap-2 items-center">
             Upload
             <svg
               width="24"
@@ -115,14 +115,50 @@ const EditProfileTenant = () => {
           </div>
           <div className="flex items-center mt-5">
             <label className="w-[20%]" htmlFor="bidang">
-              Bidang
+              CEO
             </label>
             <input
               type="text"
-              placeholder="ex : Technology"
+              placeholder="Nama Perusahaan"
               className="input input-bordered w-full max-w-[50%]"
-              name="bidang"
-              id="bidang"
+              name="ceo"
+              id="ceo"
+            />
+          </div>
+          <div className="flex items-center mt-5">
+            <label className="w-[20%]" htmlFor="bidang">
+              Jenis Perusahaan
+            </label>
+            <input
+              type="text"
+              placeholder="ex : PT/CV"
+              className="input input-bordered w-full max-w-[50%]"
+              name="jenisperusahaan"
+              id="jenisperusahaan"
+            />
+          </div>
+          <div className="flex items-center mt-5">
+            <label className="w-[20%]" htmlFor="bidang">
+              Kategori
+            </label>
+            <input
+              type="text"
+              placeholder="ex : Food"
+              className="input input-bordered w-full max-w-[50%]"
+              name="kategori"
+              id="kategori"
+            />
+          </div>
+          <div className="flex items-center mt-5">
+            <label className="w-[20%]" htmlFor="bidang">
+              Tahun Berdiri
+            </label>
+            <input
+              type="text"
+              placeholder="ex : 2021"
+              className="input input-bordered w-full max-w-[50%]"
+              name="tahunberdiri"
+              id="tahunberdiri"
             />
           </div>
           <div className="flex items-center mt-5">
@@ -162,8 +198,20 @@ const EditProfileTenant = () => {
             />
           </div>
           <div className="flex items-center mt-5">
+            <label className="w-[20%]" htmlFor="bidang">
+              Halmaan Perusahaan
+            </label>
+            <input
+              type="text"
+              placeholder="ex : www.virtualstp.com"
+              className="input input-bordered w-full max-w-[50%]"
+              name="halamanperusahaan"
+              id="haalamanperusahaan"
+            />
+          </div>
+          <div className="flex items-center mt-5">
             <label className="w-[20%]" htmlFor="deskripsi">
-              Deskripsi Perusahaan
+              Deskripsi
             </label>
             <textarea
               className="textarea textarea-bordered w-[50%] h-[110px]"
@@ -174,12 +222,12 @@ const EditProfileTenant = () => {
           </div>
           <div className="w-[70%] flex justify-end mt-10">
             <Link
-              to="/dashboard/profile-tenant"
+              to="/tenant/profile-tenant"
               className="btn bg-transparent flex text-red-500 border-red-500 rounded-md gap-2 items-center mr-2 hover:bg-merah hover:text-white group"
             >
               Kembali
             </Link>
-            <button className="btn flex text-white bg-merah border-red-500 rounded-md gap-2 items-center">
+            <button className="btn flex text-white bg-stp-primary-600 border-red-500 rounded-md gap-2 items-center">
               Perbarui
             </button>
           </div>

@@ -53,6 +53,8 @@ const Input = (props) => {
 
         toast.success("Berhasil Masuk");
 
+        console.log(res.data.access_token);
+
         setTimeout(() => {
           navigate("/");
         }, 1000);
@@ -103,7 +105,7 @@ const Input = (props) => {
               Email anda tidak valid.
             </p>
           </div>
-          <div className="flex items-center w-full gap-2">
+          {/* <div className="flex items-center w-full gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="#F08619"
@@ -119,17 +121,8 @@ const Input = (props) => {
               />
             </svg>
             <p className="text-sm xl:text-lg lg:text-lg">Jenis Akun</p>
-          </div>
-          <div className="w-full">
-            {/* <input
-              className="w-full rounded-lg px-5 bg-[#F9F9F9] peer "
-              placeholder="Masukan Email"
-              type="email"
-              name="email"
-              onInput={(e) => {
-                setEmail(e.target.value);
-              }}
-            /> */}
+          </div> */}
+          {/* <div className="w-full">
             <select className="w-full py-2 rounded-lg px-5 bg-[#F9F9F9] text-inherit">
               <option disabled selected>
                 Pilih role
@@ -140,7 +133,7 @@ const Input = (props) => {
               <option>Juri</option>
               <option>User</option>
             </select>
-          </div>
+          </div> */}
           <div className="flex items-center w-full gap-2">
             <svg
               width="22"

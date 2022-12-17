@@ -1,127 +1,127 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ManagementTenant = () => {
   const tHead = [
     {
-      judul: "No",
-      width: "w-auto"
+      judul: 'No',
+      width: 'w-auto',
     },
     {
-      judul: "Nama Tenant",
-      width: "w-1/2"
+      judul: 'Nama Tenant',
+      width: 'w-1/2',
     },
     {
-      judul: "Bidang",
-      width: "w-1/12"
+      judul: 'Bidang',
+      width: 'w-1/12',
     },
     {
-      judul: "Ketua",
-      width: "w-1/2"
+      judul: 'Ketua',
+      width: 'w-1/2',
     },
     {
-      judul: "Status Penilaian",
-      width: "w-1/12"
+      judul: 'Status Penilaian',
+      width: 'w-1/12',
     },
     {
-      judul: "Detail",
-      width: "w-1/2"
+      judul: 'Detail',
+      width: 'w-1/2',
     },
-  ]
+  ];
 
   const tBody = [
     {
       no: 1,
-      NamaTenant: "IBC Semarang",
+      NamaTenant: 'IBC Semarang',
       bidang: {
-        isi: "Food",
-        warna: "success"
+        isi: 'Food',
+        warna: 'success',
       },
-      ketua: "Brahmasta Bagus Aryandra",
+      ketua: 'Brahmasta Bagus Aryandra',
       StatusPenilaian: {
-        isi: "Sudah",
-        warna: "success"
+        isi: 'Sudah',
+        warna: 'success',
       },
     },
     {
       no: 1,
-      NamaTenant: "IBC Semarang",
+      NamaTenant: 'IBC Semarang',
       bidang: {
-        isi: "Food",
-        warna: "success"
+        isi: 'Food',
+        warna: 'success',
       },
-      ketua: "Brahmasta Bagus Aryandra",
+      ketua: 'Brahmasta Bagus Aryandra',
       StatusPenilaian: {
-        isi: "Sudah",
-        warna: "success"
+        isi: 'Sudah',
+        warna: 'success',
       },
     },
     {
       no: 1,
-      NamaTenant: "IBC Semarang",
+      NamaTenant: 'IBC Semarang',
       bidang: {
-        isi: "Food",
-        warna: "success"
+        isi: 'Food',
+        warna: 'success',
       },
-      ketua: "Brahmasta Bagus Aryandra",
+      ketua: 'Brahmasta Bagus Aryandra',
       StatusPenilaian: {
-        isi: "Sudah",
-        warna: "success"
+        isi: 'Sudah',
+        warna: 'success',
       },
     },
     {
       no: 1,
-      NamaTenant: "IBC Semarang",
+      NamaTenant: 'IBC Semarang',
       bidang: {
-        isi: "Food",
-        warna: "success"
+        isi: 'Food',
+        warna: 'success',
       },
-      ketua: "Brahmasta Bagus Aryandra",
+      ketua: 'Brahmasta Bagus Aryandra',
       StatusPenilaian: {
-        isi: "Sudah",
-        warna: "success"
+        isi: 'Sudah',
+        warna: 'success',
       },
     },
     {
       no: 1,
-      NamaTenant: "IBC Semarang",
+      NamaTenant: 'IBC Semarang',
       bidang: {
-        isi: "Food",
-        warna: "success"
+        isi: 'Food',
+        warna: 'success',
       },
-      ketua: "Brahmasta Bagus Aryandra",
+      ketua: 'Brahmasta Bagus Aryandra',
       StatusPenilaian: {
-        isi: "Sudah",
-        warna: "success"
+        isi: 'Sudah',
+        warna: 'success',
       },
     },
     {
       no: 1,
-      NamaTenant: "IBC Semarang",
+      NamaTenant: 'IBC Semarang',
       bidang: {
-        isi: "Food",
-        warna: "success"
+        isi: 'Food',
+        warna: 'success',
       },
-      ketua: "Brahmasta Bagus Aryandra",
+      ketua: 'Brahmasta Bagus Aryandra',
       StatusPenilaian: {
-        isi: "Sudah",
-        warna: "success"
+        isi: 'Sudah',
+        warna: 'success',
       },
     },
     {
       no: 1,
-      NamaTenant: "IBC Semarang",
+      NamaTenant: 'IBC Semarang',
       bidang: {
-        isi: "Food",
-        warna: "success"
+        isi: 'Food',
+        warna: 'success',
       },
-      ketua: "Brahmasta Bagus Aryandra",
+      ketua: 'Brahmasta Bagus Aryandra',
       StatusPenilaian: {
-        isi: "Sudah",
-        warna: "success"
+        isi: 'Sudah',
+        warna: 'success',
       },
     },
-  ]
+  ];
 
   return (
     <>
@@ -200,13 +200,53 @@ const ManagementTenant = () => {
                       </div>
                     </td>
                     <td>
-                      <Link to="/juri/penilaian-tenant" className="flex justify-center">
-                        <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <rect x="0.75" width="32" height="32" rx="2" fill="#338CCA" />
-                          <path d="M25.75 11V21C25.75 24 24.25 26 20.75 26H12.75C9.25 26 7.75 24 7.75 21V11C7.75 8 9.25 6 12.75 6H20.75C24.25 6 25.75 8 25.75 11Z" stroke="#FFFBFF" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                          <path d="M19.25 8.5V10.5C19.25 11.6 20.15 12.5 21.25 12.5H23.25" stroke="#FFFBFF" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                          <path d="M12.75 17H16.75" stroke="#FFFBFF" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                          <path d="M12.75 21H20.75" stroke="#FFFBFF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                      <Link
+                        to="/juri/penilaian-tenant"
+                        className="flex justify-center"
+                      >
+                        <svg
+                          width="33"
+                          height="32"
+                          viewBox="0 0 33 32"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            x="0.75"
+                            width="32"
+                            height="32"
+                            rx="2"
+                            fill="#338CCA"
+                          />
+                          <path
+                            d="M25.75 11V21C25.75 24 24.25 26 20.75 26H12.75C9.25 26 7.75 24 7.75 21V11C7.75 8 9.25 6 12.75 6H20.75C24.25 6 25.75 8 25.75 11Z"
+                            stroke="#FFFBFF"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M19.25 8.5V10.5C19.25 11.6 20.15 12.5 21.25 12.5H23.25"
+                            stroke="#FFFBFF"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M12.75 17H16.75"
+                            stroke="#FFFBFF"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M12.75 21H20.75"
+                            stroke="#FFFBFF"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
                         </svg>
                       </Link>
                     </td>
@@ -216,7 +256,7 @@ const ManagementTenant = () => {
             </tbody>
           </table>
           <div className="flex justify-end mr-5 mt-5 gap-1">
-            <button className="text-sm font-medium select-none h-7 cursor-pointer border-merah border-[1px] unactive w-7 rounded-tl-md rounded-br-md">
+            <button className="text-sm font-medium select-none h-7 cursor-pointer border-stp-primary-600 border-[1px] unactive w-7 rounded-tl-md rounded-br-md">
               <svg
                 className="m-auto"
                 width="20"
@@ -241,22 +281,22 @@ const ManagementTenant = () => {
                 />
               </svg>
             </button>
-            <button className="text-sm font-medium select-none h-7 cursor-pointer border-merah border-[1px] unactive w-7 rounded-tl-md rounded-br-md">
+            <button className="text-sm font-medium select-none h-7 cursor-pointer border-stp-primary-600 border-[1px] unactive w-7 rounded-tl-md rounded-br-md">
               1
             </button>
-            <button className="text-sm font-medium select-none h-7 cursor-pointer border-merah border-[1px] unactive w-7 rounded-tl-md rounded-br-md">
+            <button className="text-sm font-medium select-none h-7 cursor-pointer border-stp-primary-600 border-[1px] unactive w-7 rounded-tl-md rounded-br-md">
               2
             </button>
-            <button className="text-sm font-medium select-none h-7 cursor-pointer border-merah border-[1px] active w-7 rounded-tl-md rounded-br-md">
+            <button className="text-sm font-medium select-none h-7 cursor-pointer border-stp-primary-600 border-[1px] active w-7 rounded-tl-md rounded-br-md">
               3
             </button>
-            <button className="text-sm font-medium select-none h-7 cursor-pointer border-merah border-[1px] unactive w-7 rounded-tl-md rounded-br-md">
+            <button className="text-sm font-medium select-none h-7 cursor-pointer border-stp-primary-600 border-[1px] unactive w-7 rounded-tl-md rounded-br-md">
               4
             </button>
-            <button className="text-sm font-medium select-none h-7 cursor-pointer border-merah border-[1px] unactive w-7 rounded-tl-md rounded-br-md">
+            <button className="text-sm font-medium select-none h-7 cursor-pointer border-stp-primary-600 border-[1px] unactive w-7 rounded-tl-md rounded-br-md">
               6
             </button>
-            <button className="text-sm font-medium select-none h-7 cursor-pointer border-merah border-[1px] unactive w-7 rounded-tl-md rounded-br-md">
+            <button className="text-sm font-medium select-none h-7 cursor-pointer border-stp-primary-600 border-[1px] unactive w-7 rounded-tl-md rounded-br-md">
               <svg
                 className="m-auto"
                 width="20"
@@ -285,7 +325,7 @@ const ManagementTenant = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default ManagementTenant
+export default ManagementTenant;
