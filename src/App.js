@@ -65,6 +65,7 @@ import ProfileTalentTalent from "./pages/DashboardTalent/ProfileTalent";
 // Import dashboard juri
 import CalonTenant from "./pages/DashboardJuri/CalonTenant";
 import PenilaianTenant from "./pages/DashboardJuri/PenilaianTenant";
+import PenilaianProposal from "./pages/DashboardJuri/PenilaianProposal";
 
 // Import dashboard mentor
 import DashboardMentor from "./pages/DashboardMentor/Dashboard";
@@ -213,6 +214,10 @@ function App() {
             <Route
               path="/juri/penilaian-tenant"
               element={<PenilaianTenant />}
+            />
+            <Route
+              path="/juri/penilaian-proposal"
+              element={<PenilaianProposal />}
             />
             {/*End dashboard juri */}
 
