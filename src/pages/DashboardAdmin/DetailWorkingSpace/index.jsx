@@ -1,14 +1,14 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from "react";
 
-import Sidebar from '../../../components/Sidebar';
-import NavbarDashboard from '../../../components/Navbar/NavbarDashboard';
-import { Link } from 'react-router-dom';
-import IBC from '../../../assets/images/ibc.png';
-import Pelatihan from '../../../assets/images/pelatihan.png';
-import Fasilitas from '../WorkingSpace/Fasilitas';
-import Operasional from '../WorkingSpace/Operasional';
-import HargaSewa from '../WorkingSpace/HargaSewa';
-import Wrapper from '../../../components/Wrapper/Wrapper';
+import Sidebar from "../../../components/Sidebar";
+import NavbarDashboard from "../../../components/Navbar/NavbarDashboard";
+import { Link } from "react-router-dom";
+import IBC from "../../../assets/images/ibc.png";
+import Pelatihan from "../../../assets/images/pelatihan.png";
+import Fasilitas from "../WorkingSpace/Fasilitas";
+import Operasional from "../WorkingSpace/Operasional";
+import HargaSewa from "../WorkingSpace/HargaSewa";
+import Wrapper from "../../../components/Wrapper/Wrapper";
 
 const Index = () => {
   const [Gambar, setGambar] = useState();
@@ -18,17 +18,17 @@ const Index = () => {
     // console.log(ref.current.children[0]);
     setGambar(ref.current.children[0].src);
     ref.current.children[0].className =
-      'img rounded w-11 h-11 object-cover cursor-pointer ring';
+      "img rounded w-11 h-11 object-cover cursor-pointer ring";
   }, [ref]);
 
   const handleClick = (index) => {
     // console.log(index.target.classList);
-    let image = document.querySelectorAll('.img');
+    let image = document.querySelectorAll(".img");
     image.forEach((img) => {
-      img.classList.remove('ring');
+      img.classList.remove("ring");
     });
     // index.target.classList.remove("ring")
-    index.target.classList.add('ring');
+    index.target.classList.add("ring");
     setGambar(index.target.src);
   };
 
@@ -36,7 +36,7 @@ const Index = () => {
 
   const fasilitas = [
     {
-      judul: 'Kamar Mandi',
+      judul: "Kamar Mandi",
       icon: (
         <svg
           width="20"
@@ -81,53 +81,7 @@ const Index = () => {
       ),
     },
     {
-      judul: 'Kamar Mandi',
-      icon: (
-        <svg
-          width="20"
-          height="21"
-          viewBox="0 0 20 21"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M1.6665 7.89193V6.22526C1.6665 3.72526 3.33317 2.05859 5.83317 2.05859H14.1665C16.6665 2.05859 18.3332 3.72526 18.3332 6.22526V7.89193"
-            stroke="#CD0606"
-            stroke-miterlimit="10"
-            stroke-
-            linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M1.6665 12.8916V14.5583C1.6665 17.0583 3.33317 18.7249 5.83317 18.7249H14.1665C16.6665 18.7249 18.3332 17.0583 18.3332 14.5583V12.8916"
-            stroke="#CD0606"
-            stroke-miterlimit="10"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M5.5835 8.1084L10.0002 10.6667L14.3835 8.12508"
-            stroke="#CD0606"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M10 15.1999V10.6582"
-            stroke="#CD0606"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M8.96685 5.6334L6.30019 7.11676C5.70019 7.45009 5.2002 8.29175 5.2002 8.98341V11.8084C5.2002 12.5001 5.69186 13.3418 6.30019 13.6751L8.96685 15.1584C9.53352 15.4751 10.4669 15.4751 11.0419 15.1584L13.7085 13.6751C14.3085 13.3418 14.8085 12.5001 14.8085 11.8084V8.98341C14.8085 8.29175 14.3169 7.45009 13.7085 7.11676L11.0419 5.6334C10.4669 5.3084 9.53352 5.3084 8.96685 5.6334Z"
-            stroke="#CD0606"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      ),
-    },
-    {
-      judul: 'Kamar Mandi',
+      judul: "Kamar Mandi",
       icon: (
         <svg
           width="20"
@@ -173,7 +127,53 @@ const Index = () => {
       ),
     },
     {
-      judul: 'Wifi',
+      judul: "Kamar Mandi",
+      icon: (
+        <svg
+          width="20"
+          height="21"
+          viewBox="0 0 20 21"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1.6665 7.89193V6.22526C1.6665 3.72526 3.33317 2.05859 5.83317 2.05859H14.1665C16.6665 2.05859 18.3332 3.72526 18.3332 6.22526V7.89193"
+            stroke="#CD0606"
+            stroke-miterlimit="10"
+            stroke-
+            linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M1.6665 12.8916V14.5583C1.6665 17.0583 3.33317 18.7249 5.83317 18.7249H14.1665C16.6665 18.7249 18.3332 17.0583 18.3332 14.5583V12.8916"
+            stroke="#CD0606"
+            stroke-miterlimit="10"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M5.5835 8.1084L10.0002 10.6667L14.3835 8.12508"
+            stroke="#CD0606"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M10 15.1999V10.6582"
+            stroke="#CD0606"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M8.96685 5.6334L6.30019 7.11676C5.70019 7.45009 5.2002 8.29175 5.2002 8.98341V11.8084C5.2002 12.5001 5.69186 13.3418 6.30019 13.6751L8.96685 15.1584C9.53352 15.4751 10.4669 15.4751 11.0419 15.1584L13.7085 13.6751C14.3085 13.3418 14.8085 12.5001 14.8085 11.8084V8.98341C14.8085 8.29175 14.3169 7.45009 13.7085 7.11676L11.0419 5.6334C10.4669 5.3084 9.53352 5.3084 8.96685 5.6334Z"
+            stroke="#CD0606"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      ),
+    },
+    {
+      judul: "Wifi",
       icon: (
         <svg
           width="20"
@@ -221,7 +221,7 @@ const Index = () => {
   ];
   return (
     <>
-      <div className="flex bg-[#D9D9D9]">
+      <div className="flex bg-[#F9F9F9]">
         <Sidebar />
         <Wrapper>
           {/* <div className="w-full ml-64"> */}
@@ -229,10 +229,7 @@ const Index = () => {
           <div className="flex flex-col gap-5 pb-10 mx-6 mt-20">
             <div className="w-full bg-white py-5 px-3 font-medium text-base rounded">
               <h1 className="flex gap-2">
-                <Link
-                  to="/admin/daftar-working-space"
-                  className="flex gap-2"
-                >
+                <Link to="/admin/daftar-working-space" className="flex gap-2">
                   <svg
                     width="24"
                     height="24"

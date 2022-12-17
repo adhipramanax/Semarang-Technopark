@@ -42,6 +42,9 @@ import AdminPelatihan from "./pages/DashboardAdmin/Pelatihan";
 import AdminDetailPelatihan from "./pages/DashboardAdmin/DetailPelatihan";
 
 // import dashboard tenant
+import TenantMentoring from "./pages/DashboardTenant/Mentoring";
+import DetailMentoring from "./pages/DashboardTenant/DetailMentoring";
+import UploadProposal from "./pages/DashboardTenant/UploadProposal";
 import DashboardTenant from "./pages/DashboardTenant/Dashboard";
 import ProposalTenant from "./pages/DashboardTenant/Proposal";
 import MentoringTenant from "./pages/DashboardTenant/Mentoring";
@@ -63,6 +66,7 @@ import ProfileTalentTalent from "./pages/DashboardTalent/ProfileTalent";
 // Import dashboard juri
 import CalonTenant from "./pages/DashboardJuri/CalonTenant";
 import PenilaianTenant from "./pages/DashboardJuri/PenilaianTenant";
+import PenilaianProposal from "./pages/DashboardJuri/PenilaianProposal";
 import JuriDashboard from "./pages/DashboardJuri/Dashboard";
 
 // Import dashboard mentor
@@ -92,7 +96,6 @@ function App() {
             <Route path="/verifikasi" element={<Verifikasi />} />
             <Route path="/error" element={<Error />} />
             {/* End Page */}
-
             {/* dashboard user */}
             <Route
               path="/dashboard"
@@ -101,9 +104,7 @@ function App() {
             <Route path="/dashboard/proposal" element={<Proposal />} />
             <Route path="/dashboard/aktivitas" element={<Aktivitas />} />
             <Route path="/dashboard/mentoring" element={<Mentoring />} />
-
             {/*End dashboard user */}
-
             {/* dashboard admin */}
             <Route path="/admin/dashboard" element={<AdminDashboard />} />
             <Route path="/admin/add-alat" element={<AdminAlatAdd />} />
@@ -134,7 +135,6 @@ function App() {
             <Route path="/admin/pelatihan" element={<AdminPelatihan />} />
             <Route path="/admin/inkubasi" element={<AdminInkubasi />} />
             {/*End dashboard admin */}
-
             {/* dashboard tenant */}
             <Route path="/tenant/dashboard" element={<DashboardTenant />} />
             <Route path="/tenant/proposal" element={<ProposalTenant />} />
@@ -154,11 +154,14 @@ function App() {
               element={<EditProfileTenant />}
             />
             <Route
+              path="/tenant/upload-proposal"
+              element={<UploadProposal />}
+            />
+            <Route
               path="/tenant/sewa-coworking"
               element={<SewaCoworkingTenant />}
             />
             {/*End dashboard tenant */}
-
             {/* dashboard talent */}
             <Route path="/talent/dashboard" element={<DashboardTalent />} />
             <Route path="/talent/pelatihan" element={<PelatihanTalent />} />
@@ -180,16 +183,18 @@ function App() {
               element={<ProfileTalentTalent />}
             />
             {/*End dashboard talent */}
-
             {/* dashboard juri */}
             <Route path="/juri/calon-tenant" element={<CalonTenant />} />
             <Route
               path="/juri/penilaian-tenant"
               element={<PenilaianTenant />}
             />
+            <Route
+              path="/juri/penilaian-proposal"
+              element={<PenilaianProposal />}
+            />
             <Route path="/juri/dashboard" element={<JuriDashboard />} />
             {/*End dashboard juri */}
-
             {/* dashboard mentor */}
             <Route path="/mentor/dashboard" element={<DashboardMentor />} />
             <Route path="/mentor/pelatihan" element={<PelatihanMentor />} />
@@ -204,7 +209,6 @@ function App() {
               element={<EditProfileMentor />}
             />
             {/*End dashboard mentor */}
-
             <Route path="/setting" element={<Setting />} />
           </Routes>
         </UserProvider>
