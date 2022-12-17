@@ -20,14 +20,18 @@ const Index = (props) => {
 
   function cekHide(hide) {
     if (hide) {
-      return "w-[calc(100%-64px)]"
+      return "w-[calc(100%-64px)]";
     } else {
-      return "w-[calc(100%-256px)]"
+      return "w-[calc(100%-256px)]";
     }
   }
   return (
     <>
-      <nav class={`${cekHide(hide)} p-3 border-gray-200 bg-white fixed duration-500 ease-out z-30`}>
+      <nav
+        class={`${cekHide(
+          hide
+        )} p-3 border-gray-200 bg-white fixed duration-500 ease-out z-30`}
+      >
         <div class=" flex flex-wrap justify-between items-center ">
           <a href="#" class="flex items-center">
             <span class="self-center text-xl font-semibold whitespace-nowrap ">
