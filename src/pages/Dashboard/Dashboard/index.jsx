@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import Sidebar from "../../../components/Sidebar";
 import NavbarDashboard from "../../../components/Navbar/NavbarDashboard";
 import Proposal from "./Proposal";
 import CardTenant from "./CardTenant";
 import TableProposal from "./TableProposal";
+import userContext from "../../../context/userContext";
 import Wrapper from "../../../components/Wrapper/Wrapper";
 
-const index = () => {
+const Index = () => {
+  const { user } = useContext(userContext);
+
   return (
     <>
       <div className="flex bg-[#F9F9F9]">
@@ -27,4 +30,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

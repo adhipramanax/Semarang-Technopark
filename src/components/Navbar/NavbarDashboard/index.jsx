@@ -5,9 +5,10 @@ import Cookies from "universal-cookie";
 import users from "../../../assets/images/mentor-inkubasi.png";
 
 const Index = (props) => {
-  const { user, changeUser, hide } = useContext(userContext);
+  const { user, logout } = useContext(userContext);
   const navigate = useNavigate();
 
+<<<<<<< HEAD
   // console.log(user.name);
 
   const logout = () => {
@@ -32,6 +33,18 @@ const Index = (props) => {
           hide
         )} p-3 border-gray-200 bg-white fixed duration-500 ease-out z-30`}
       >
+=======
+  // function cekHide(hide) {
+  //   if (hide) {
+  //     return "w-[calc(100%-64px)]";
+  //   } else {
+  //     return "w-[calc(100%-256px)]";
+  //   }
+  // }
+  return (
+    <>
+      <nav>
+>>>>>>> 3e4b622ad973a0e1600039b8a3a2683c58669da6
         <div class=" flex flex-wrap justify-between items-center ">
           <a href="#" class="flex items-center">
             <span class="self-center text-xl font-semibold whitespace-nowrap ">
@@ -81,7 +94,8 @@ const Index = (props) => {
                 tabindex="0"
                 class=" m-1 bg-transparent h-full flex items-center gap-1"
               >
-                Verdian Smith
+                {user.name}
+                {/* Verdian Galang */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"

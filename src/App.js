@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import jwt_decode from "jwt-decode";
-import userContext from "./context/userContext";
-import Cookies from "universal-cookie";
+import { UserProvider } from "./context/userContext";
+import AuthMiddleware from "./middleware/AuthMiddleware";
 
 // Landing Page
 import LandingPage from "./pages/LandingPage";
@@ -78,43 +77,11 @@ import ProfileMentor from "./pages/DashboardMentor/Profile";
 import DetailMentoringMentor from "./pages/DashboardMentor/DetailMentoring/DetailMentoring";
 import EditProfileMentor from "./pages/DashboardMentor/EditProfile";
 
-const cookies = new Cookies();
-
 function App() {
-  const [user, changeUser] = useState({});
-  const [hide, setHide] = useState(false);
-
-  useEffect(() => {
-    // Ambil dari cookie, cek apabila ada jwtnya
-
-    const jwt_token = cookies.get("jwt_token");
-
-    // Apabila ada jwtnya maka ambil dan decode jwtnya
-    try {
-      var decoded = jwt_decode(jwt_token);
-
-      changeUser({
-        id: decoded.iat,
-        name: decoded.user.name,
-        email: decoded.user.email,
-      });
-    } catch (err) {
-      changeUser(null);
-    }
-    // Setelah di decode, panggil fungsi changeUser() dan ganti dengan isi dari jwtnya
-  }, []);
-
-  const contextValue = {
-    user,
-    changeUser,
-    hide,
-    setHide,
-  };
-
   return (
     <>
-      <userContext.Provider value={contextValue}>
-        <BrowserRouter>
+      <BrowserRouter>
+        <UserProvider>
           <Routes>
             {/* Page */}
             <Route path="/" element={<LandingPage />} />
@@ -130,7 +97,10 @@ function App() {
             <Route path="/error" element={<Error />} />
             {/* End Page */}
             {/* dashboard user */}
-            <Route path="/dashboard" element={<Dashboard />} />
+            <Route
+              path="/dashboard"
+              element={<AuthMiddleware component={Dashboard} />}
+            />
             <Route path="/dashboard/proposal" element={<Proposal />} />
             <Route path="/dashboard/aktivitas" element={<Aktivitas />} />
             <Route path="/dashboard/mentoring" element={<Mentoring />} />
@@ -241,8 +211,8 @@ function App() {
             {/*End dashboard mentor */}
             <Route path="/setting" element={<Setting />} />
           </Routes>
-        </BrowserRouter>
-      </userContext.Provider>
+        </UserProvider>
+      </BrowserRouter>
     </>
   );
 }
