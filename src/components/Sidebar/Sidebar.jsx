@@ -1,22 +1,32 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import userContext from "../../context/userContext";
 
 import * as AL from "./accessLevel/index";
 import SidebarTemplate from "./SidebarTemplate";
 
+import UserContext from "../../context/userContext";
+
 const Sidebar = () => {
   const [data, setData] = React.useState([]);
-  const { hide, setHide } = useContext(userContext);
+  const { user, setHide } = useContext(UserContext);
 
   React.useEffect(() => {
-    let AC = "admin";
+    // let AC = user.roles[1];
+    let AC = "mentor";
     for (const key of Object.keys(AL)) {
       if (AC.toLowerCase() === key.toLowerCase()) {
         setData(AL[key]);
       }
     }
   }, [data]);
+
+  // const handleOver = () => {
+  //   hide ? setHide(false) : setHide(true);
+  // };
+  // const handleOut = () => {
+  //   hide ? setHide(true) : setHide(false);
+  // };
+  // console.log(hide);
 
   return (
     <SidebarTemplate>
