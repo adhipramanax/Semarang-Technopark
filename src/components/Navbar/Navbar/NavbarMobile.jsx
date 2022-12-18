@@ -1,55 +1,61 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect } from 'react';
 
-import layanan1 from "../../../assets/images/layanan1.png";
-import layanan2 from "../../../assets/images/layanan2.png";
-import layanan3 from "../../../assets/images/layanan3.png";
-import layanan4 from "../../../assets/images/layanan4.png";
+import layanan1 from '../../../assets/images/layanan1.png';
+import layanan2 from '../../../assets/images/layanan2.png';
+import layanan3 from '../../../assets/images/layanan3.png';
+import layanan4 from '../../../assets/images/layanan4.png';
 
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const NavbarMobile = () => {
   const collapse = useRef();
 
   function collapseFunc() {
-    if (this.getAttribute("data-collapsed") == "false") {
-      this.childNodes[1].setAttribute("style", "max-height: 500px");
-      this.childNodes[0].childNodes[1].setAttribute("style", "transform: rotate(180deg)");
-      this.setAttribute("data-collapsed", "true");
+    if (this.getAttribute('data-collapsed') == 'false') {
+      this.childNodes[1].setAttribute('style', 'max-height: 500px');
+      this.childNodes[0].childNodes[1].setAttribute(
+        'style',
+        'transform: rotate(180deg)'
+      );
+      this.setAttribute('data-collapsed', 'true');
       return;
     }
 
-    this.childNodes[1].setAttribute("style", "max-height: 0");
-    this.childNodes[0].childNodes[1].setAttribute("style", "transform: rotate(0)");
-    this.setAttribute("data-collapsed", "false");
+    this.childNodes[1].setAttribute('style', 'max-height: 0');
+    this.childNodes[0].childNodes[1].setAttribute(
+      'style',
+      'transform: rotate(0)'
+    );
+    this.setAttribute('data-collapsed', 'false');
   }
 
   function toggleShow() {
-    const parent = this.closest(".parent-hamburger");
+    const parent = this.closest('.parent-hamburger');
 
-    if (parent.getAttribute("data-show") == "false") {
-      parent.childNodes[2].setAttribute("style", "transform: translate(0)");
-      parent.childNodes[0].setAttribute("style", "visibility: visible");
-      parent.setAttribute("data-show", "true");
+    if (parent.getAttribute('data-show') == 'false') {
+      parent.childNodes[2].setAttribute('style', 'transform: translate(0)');
+      parent.childNodes[0].setAttribute('style', 'visibility: visible');
+      parent.setAttribute('data-show', 'true');
       return;
     }
-    parent.childNodes[2].setAttribute("style", "transform: translate(100%)");
-    parent.childNodes[0].setAttribute("style", "visibility: hidden");
-    parent.setAttribute("data-show", "false");
+    parent.childNodes[2].setAttribute('style', 'transform: translate(100%)');
+    parent.childNodes[0].setAttribute('style', 'visibility: hidden');
+    parent.setAttribute('data-show', 'false');
   }
 
   useEffect(() => {
     let el = collapse.current;
-    el.addEventListener("click", collapseFunc);
+    el.addEventListener('click', collapseFunc);
 
-    let buttons = document.querySelectorAll(".button-toggle");
+    let buttons = document.querySelectorAll('.button-toggle');
     buttons.forEach(function (el) {
-      el.addEventListener("click", toggleShow);
+      el.addEventListener('click', toggleShow);
     });
 
     return () => {
-      el.removeEventListener("click", collapseFunc);
+      el.removeEventListener('click', collapseFunc);
       buttons.forEach(function (el) {
-        el.removeEventListener("click", toggleShow);
+        el.removeEventListener('click', toggleShow);
       });
     };
   }, []);
@@ -95,16 +101,26 @@ const NavbarMobile = () => {
           </div>
           <ul className="block mt-[20px] text-black">
             <li className="my-[10px]">
-              <Link to="/" className="btn-ghost hover:text-red-600 block p-2">
+              <Link
+                to="/"
+                className="btn-ghost hover:text-red-600 block p-2"
+              >
                 Home
               </Link>
             </li>
             <li className="my-[10px]">
-              <Link to="/profile" className="btn-ghost hover:text-red-600 block p-2">
+              <Link
+                to="/profile"
+                className="btn-ghost hover:text-red-600 block p-2"
+              >
                 Profile
               </Link>
             </li>
-            <li className="my-[10px] overflow-hidden  " ref={collapse} data-collapsed="false">
+            <li
+              className="my-[10px] overflow-hidden  "
+              ref={collapse}
+              data-collapsed="false"
+            >
               <div className=" hover:text-red-600 flex justify-between p-2 ">
                 Layanan
                 <svg
@@ -128,7 +144,11 @@ const NavbarMobile = () => {
                     to="/inkubasi"
                     className="btn-ghost hover:text-red-600 pl-3 py-2 flex gap-2"
                   >
-                    <img src={layanan1} alt="gambar" className="w-1/12" />
+                    <img
+                      src={layanan1}
+                      alt="gambar"
+                      className="w-1/12"
+                    />
                     Inkubasi STP
                   </Link>
                 </li>
@@ -137,7 +157,11 @@ const NavbarMobile = () => {
                     to="/sewa-alat"
                     className="btn-ghost hover:text-red-600 pl-3 py-2 flex gap-2"
                   >
-                    <img src={layanan2} alt="gambar" className="w-1/12" />
+                    <img
+                      src={layanan2}
+                      alt="gambar"
+                      className="w-1/12"
+                    />
                     Sewa Alat
                   </Link>
                 </li>
@@ -146,7 +170,11 @@ const NavbarMobile = () => {
                     to="/co-working"
                     className="btn-ghost hover:text-red-600 pl-3 py-2 flex gap-2"
                   >
-                    <img src={layanan3} alt="gambar" className="w-1/12" />
+                    <img
+                      src={layanan3}
+                      alt="gambar"
+                      className="w-1/12"
+                    />
                     Co-Working Space
                   </Link>
                 </li>
@@ -155,14 +183,21 @@ const NavbarMobile = () => {
                     to="/pelatihan"
                     className="btn-ghost hover:text-red-600 pl-3 py-2 flex gap-2 "
                   >
-                    <img src={layanan4} alt="gambar" className="w-1/12" />
+                    <img
+                      src={layanan4}
+                      alt="gambar"
+                      className="w-1/12"
+                    />
                     Event & Pelatihan
                   </Link>
                 </li>
               </ul>
             </li>
             <li className="my-[10px]">
-              <Link to="/profile" className="btn-ghost hover:text-red-600 block p-2">
+              <Link
+                to="/profile"
+                className="btn-ghost hover:text-red-600 block p-2"
+              >
                 Partner
               </Link>
             </li>

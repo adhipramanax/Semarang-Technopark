@@ -20,8 +20,8 @@ const Hero = () => {
             Semarang Technopark
           </h1>
           <p className="w-[290px] md:w-[520px] lg:w-[720px] text-white text-[0.7em] lg:text-base text-center my-5 lg:my-10">
-            Semarang Technopark memiliki berbagai program dan pengelolaan Inkubasi untuk
-            menghasilkan berbagai terobosan inovasi
+            Semarang Technopark memiliki berbagai program dan pengelolaan
+            Inkubasi untuk menghasilkan berbagai terobosan inovasi
           </p>
           <a
             href="#about"
@@ -30,9 +30,10 @@ const Hero = () => {
             About
           </a>
           <div className="hidden lg:block pt-20">
-            <p className="text-lg text-white font-semibold pb-3 text-center">Created by:</p>
-            <div className=" bg-white rounded-2xl lg:w-[500px] h-[120px] p-[20px] lg:flex lg:justify-evenly lg:items-center">
-              <img src={logo} alt="" />
+            <p className="text-lg text-white font-semibold pb-3 text-center">
+              Created by:
+            </p>
+            <div className=" bg-white rounded-2xl h-[120px] p-[20px] lg:flex lg:justify-evenly lg:items-center">
               <img src={logo} alt="" />
             </div>
           </div>
