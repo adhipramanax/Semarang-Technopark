@@ -1,0 +1,9 @@
+.mantine ul,
+.mantine ol {
+  padding: 0 1rem;
+  list-style: revert;
+}
+
+.ProseMirror {
+  min-height: 300px;
+}

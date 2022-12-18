@@ -17,38 +17,22 @@ const index = () => {
       <div className="relative flex bg-[#F9F9F9]">
         <Sidebar />
         <Wrapper>
-          <NavbarDashboard judul="Tambah Coworking Space" />
-            <div className="flex flex-col gap-5 mx-6">
-              <Title title="Tambah Working Space" />
-              <InformasiCoworking />
-              <WaktuOperasional />
-              <BiayaSewa />
-              <Fasilitas />
-              <DokumenPendukung />
-              <div className="w-[888px] flex justify-end">
-                <button className="btn btn-error border-none justify-self-end bg-[#CD0606] w-[127px] px-4 py-3 mb-3 text-white rounded-[4px]">
-                  Tambahkan
-                </button>
-              </div>
+          <NavbarDashboard judul="" />
+          <div className="flex flex-col gap-5 pb-10 mx-6 mt-20">
+            <h1 className="text-2xl font-semibold mt-5">Working Space</h1>
+            <Title title="Tambah Working Space" />
+            <InformasiCoworking />
+            <BiayaSewa />
+            <Fasilitas />
+            <WaktuOperasional />
+            <DokumenPendukung />
+            <div className="w-full flex justify-end">
+              <button className="btn btn-error border-none justify-self-end bg-[#CD0606] w-[127px] px-4 py-3 mb-3 text-white rounded-[4px]">
+                Tambahkan
+              </button>
             </div>
+          </div>
         </Wrapper>
-      </div>
-      <div className="absolute top-[88px] right-10 w-40">
-        <div>
-          <ul className="menu">
-            <li className="bordered">
-              <a className="px-2 py-0 w-44 text-sm" id="">
-                Item 1
-              </a>
-            </li>
-            <li className="bordered">
-              <a className="px-2 py-0 w-44 text-sm">Item 1</a>
-            </li>
-            <li className="border-l border-lime-500">
-              <a className="px-2 py-0 w-44 text-sm">Item 1</a>
-            </li>
-          </ul>
-        </div>
       </div>
     </>
   );

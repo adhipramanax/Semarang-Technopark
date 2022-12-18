@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"] {
+    -webkit-appearance: none;
+    margin: 0;
+    -moz-appearance: textfield !important;
+  }
+}
+
 /* global */
 html {
   background-color: white !important;
@@ -10,13 +20,13 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -72,16 +82,16 @@ h6 {
 .contain {
   @apply px-5;
 }
-a[data-active='true'] {
+a[data-active="true"] {
   background-color: blue !important;
 }
 
-[data-only-image='true'] .desc-caro {
+[data-only-image="true"] .desc-caro {
   display: none;
   width: 0px;
 }
 
-[data-only-image='true'] .carousel-image {
+[data-only-image="true"] .carousel-image {
   width: 100% !important;
 }
 
