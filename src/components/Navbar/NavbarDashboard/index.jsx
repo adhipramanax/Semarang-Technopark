@@ -5,7 +5,7 @@ import Cookies from "universal-cookie";
 import users from "../../../assets/images/mentor-inkubasi.png";
 
 const Index = (props) => {
-  const { user, logout } = useContext(userContext);
+  const { user, setUser } = useContext(userContext);
   const navigate = useNavigate();
 
   // function cekHide(hide) {
@@ -15,6 +15,14 @@ const Index = (props) => {
   //     return "w-[calc(100%-256px)]";
   //   }
   // }
+
+  const logout = () => {
+    const cookies = new Cookies();
+
+    setUser(null);
+    cookies.remove("jwt_token");
+    navigate("/");
+  };
   return (
     <>
       <nav>
@@ -67,7 +75,7 @@ const Index = (props) => {
                 tabindex="0"
                 class=" m-1 bg-transparent h-full flex items-center gap-1"
               >
-                {user.name}
+                {user.user.name}
                 {/* Verdian Galang */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

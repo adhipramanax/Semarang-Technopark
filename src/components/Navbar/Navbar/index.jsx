@@ -12,6 +12,7 @@ import { MdClose } from "react-icons/md";
 
 const Index = (props) => {
   const { user } = useContext(userContext);
+  // console.log(user.user.name);
   // const user = {
   //   name: 'Verdian Galang',
   // };

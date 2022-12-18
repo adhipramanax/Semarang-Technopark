@@ -12,7 +12,7 @@ const Sidebar = () => {
 
   React.useEffect(() => {
     // let AC = user.roles[1];
-    let AC = "mentor";
+    let AC = user.user.role[0];
     for (const key of Object.keys(AL)) {
       if (AC.toLowerCase() === key.toLowerCase()) {
         setData(AL[key]);

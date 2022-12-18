@@ -11,7 +11,7 @@ const BtnNavbar = () => {
   // const { user, logout } = useContext(userContext);
   // const navigate = useNavigate();
 
-  const { user, changeUser } = useContext(userContext);
+  const { user, setUser } = useContext(userContext);
   // const user = {
   //   name: 'Verdian Galang',
   // };
@@ -20,7 +20,7 @@ const BtnNavbar = () => {
   const logout = () => {
     const cookies = new Cookies();
 
-    changeUser(null);
+    setUser(null);
     cookies.remove("jwt_token");
     navigate("/");
   };
@@ -30,7 +30,7 @@ const BtnNavbar = () => {
       <div className="dropdown dropdown-content dropdown-end bg-white  focus:ring-4 font-bold rounded-full text-sm py-2 px-4">
         <label tabindex="0" className="bg-transparent flex items-center">
           <FaUserCircle className="text-lg fill-stp-primary-500 mr-2" />
-          <span className="hidden xsm:block">{user.name}</span>
+          <span className="hidden xsm:block">{user.user.name}</span>
           <BiChevronDown className="text-2xl fill-stp-primary-500 ml-0 xsm:ml-1" />
         </label>
         {/* dropdown link */}
@@ -40,7 +40,7 @@ const BtnNavbar = () => {
         >
           <li>
             <Link
-              to="/dashboard"
+              to={`/${user.user.role}/dashboard`}
               className="btn btn-ghost h-full bg-white active:text-black justify-start"
             >
               <svg

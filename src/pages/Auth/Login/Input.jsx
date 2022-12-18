@@ -5,12 +5,14 @@ import axios from "axios";
 
 import loading from "../../../assets/images/svg/loading.svg";
 import userContext from "../../../context/userContext";
+import Cookies from "universal-cookie";
+import jwt_decode from "jwt-decode";
 
 const Input = (props) => {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const navigate = useNavigate();
-  const { login } = useContext(userContext);
+  const { login, setUser } = useContext(userContext);
 
   const changeEye = () => {
     props.onUpdate(props.password ? false : true);
@@ -37,30 +39,45 @@ const Input = (props) => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
     })
       .then((res) => {
-        // let token = res.data.access_token;
+        // console.log(res);
+        let token = res.data.token;
         // let expires = res.data.expires_in;
 
         // console.log(token);
-        // login(token, new Date(new Date().getTime() + expires * 1000));
+        login(token, new Date(new Date().getTime() + 200 * 1000));
 
         //set cookie
-        document.cookie = `token=${res.data.access_token}; expires=${new Date(
-          new Date().getTime() + res.data.expires_in * 1000
-        )}`;
-        document.cookie = `expires=${new Date(
-          new Date().getTime() + res.data.expires_in * 1000
-        )}`;
+        // document.cookie = `token=${res.data.access_token}; expires=${new Date(
+        //   new Date().getTime() + res.data.expires_in * 1000
+        // )}`;
+        // document.cookie = `expires=${new Date(
+        //   new Date().getTime() + res.data.expires_in * 1000
+        // )}`;
 
+        const cookies = new Cookies();
+
+        cookies.set("jwt_token", token, {
+          expires: new Date(new Date().getTime() + 200 * 1000),
+          path: "/",
+          // httpOnly: true,
+          secure: true,
+          // domain: "www.stp.com",
+        });
         toast.success("Berhasil Masuk");
+        var decoded = jwt_decode(token)
+        setUser({
+          id: decoded.sub,
+          user: decoded.user
+        })
 
-        console.log(res.data.access_token);
+        // console.log(res.data.access_token);
 
         setTimeout(() => {
           navigate("/");
         }, 1000);
       })
       .catch((err) => {
-        // alert("Password salah");
+        console.log(err);
         toast.error("Ulangi, data anda tidak valid");
 
         button.innerHTML = `Masuk`;
