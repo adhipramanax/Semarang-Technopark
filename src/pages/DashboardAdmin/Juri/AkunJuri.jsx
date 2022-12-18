@@ -38,7 +38,7 @@ const AkunJuri = () => {
       password: "juri123",
       status: {
         isi: "Active",
-        warna: "success",
+        warna: "stp-success",
       },
       aksi: {
         edit: "/admin/edit-juri",
@@ -53,7 +53,7 @@ const AkunJuri = () => {
       password: "juri123",
       status: {
         isi: "Active",
-        warna: "success",
+        warna: "stp-success",
       },
       aksi: {
         edit: "/admin/edit-juri",
@@ -68,7 +68,7 @@ const AkunJuri = () => {
       password: "juri123",
       status: {
         isi: "Active",
-        warna: "success",
+        warna: "stp-success",
       },
       aksi: {
         edit: "/admin/edit-juri",
@@ -83,7 +83,7 @@ const AkunJuri = () => {
       password: "juri123",
       status: {
         isi: "Active",
-        warna: "success",
+        warna: "stp-success",
       },
       aksi: {
         edit: "/admin/edit-juri",
@@ -98,7 +98,7 @@ const AkunJuri = () => {
       password: "juri123",
       status: {
         isi: "Active",
-        warna: "success",
+        warna: "stp-success",
       },
       aksi: {
         edit: "/admin/edit-juri",
@@ -113,7 +113,7 @@ const AkunJuri = () => {
       password: "juri123",
       status: {
         isi: "Active",
-        warna: "success",
+        warna: "stp-success",
       },
       aksi: {
         edit: "/admin/edit-juri",
@@ -128,7 +128,7 @@ const AkunJuri = () => {
       password: "juri123",
       status: {
         isi: "Active",
-        warna: "success",
+        warna: "stp-success",
       },
       aksi: {
         edit: "/admin/edit-juri",
@@ -143,7 +143,7 @@ const AkunJuri = () => {
       password: "juri123",
       status: {
         isi: "Active",
-        warna: "success",
+        warna: "stp-success",
       },
       aksi: {
         edit: "/admin/edit-juri",
@@ -158,7 +158,7 @@ const AkunJuri = () => {
       password: "juri123",
       status: {
         isi: "Active",
-        warna: "success",
+        warna: "stp-success",
       },
       aksi: {
         edit: "/admin/edit-juri",
@@ -173,7 +173,7 @@ const AkunJuri = () => {
       password: "juri123",
       status: {
         isi: "Active",
-        warna: "success",
+        warna: "stp-success",
       },
       aksi: {
         edit: "/admin/edit-juri",

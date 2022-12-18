@@ -24,6 +24,7 @@ module.exports = {
           error: "#E16868",
           success: "#6EBC14",
           neutral: "#79767B",
+          danger: "#D84866"
         },
       },
       spacing: {
@@ -51,7 +52,7 @@ module.exports = {
   safelist: [
     {
       pattern:
-        /(bg|text|border-b)-(hijau|primary|secondary|biru|merah|gray|info|warning|error|success|neutral)/,
+        /(bg|text|border-b)-(hijau|primary|stp-secondary|biru|merah|gray|stp-info|stp-warning|error|stp-success|neutral|stp-danger)/,
     },
   ],
 };

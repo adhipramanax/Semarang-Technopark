@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useState, useContext } from "react";
 import userContext from "../../context/userContext";
 import Setting from "./Setting";
+import Logo from '../../assets/images/LOGO 2.png'
 
 const SidebarTemplate = (props) => {
   const { hide, setHide } = useContext(userContext);
@@ -19,6 +20,14 @@ const SidebarTemplate = (props) => {
       return "w-64"
     }
   }
+
+  function cekHides(hide) {
+    if (hide) {
+      return "invisible"
+    } else {
+      return "visible"
+    }
+  }
   return (
     <>
       <aside class={`${cekHide(hide)} h-screen bg-white fixed flex justify-between flex-col duration-500 ease-out`} aria-label="Sidebar">
@@ -33,6 +42,7 @@ const SidebarTemplate = (props) => {
               <span className="w-[20px] h-[2px] bg-black"></span>
               <span className="w-[20px] h-[2px] bg-black"></span>
             </button>
+          <img className={`${cekHides(hide)} h-14`} src={Logo} alt="" />
           </div>
           <div className="flex flex-col justify-between">
             <ul onMouseLeave={() => mode === true ? setHide(true) : setHide(false)}>{props.children}</ul>
