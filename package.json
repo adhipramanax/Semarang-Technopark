@@ -1,6 +1,7 @@
 {
   "name": "semarang-technopark",
   "version": "0.1.0",
+  "homepage": "https://demo.semarangtechnopark.id",
   "private": true,
   "dependencies": {
     "@mantine/rte": "^5.8.4",
