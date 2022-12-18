@@ -11,7 +11,8 @@ const Sidebar = () => {
   const { user, setHide } = useContext(UserContext);
 
   React.useEffect(() => {
-    let AC = "admin";
+    // let AC = user.roles[1];
+    let AC = user.user.role[0];
     for (const key of Object.keys(AL)) {
       if (AC.toLowerCase() === key.toLowerCase()) {
         setData(AL[key]);

@@ -7,6 +7,7 @@ import loading from "../../../assets/images/svg/loading.svg";
 const Input = (props) => {
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
+  const [role, setRole] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [confirmPassword, setConfirmPassword] = React.useState("");
   const navigate = useNavigate();
@@ -30,6 +31,7 @@ const Input = (props) => {
 
     bodyForm.append("name", name);
     bodyForm.append("email", email);
+    bodyForm.append("role", role);
     // bodyForm.append("")
     bodyForm.append("password", password);
     bodyForm.append("password_confirmation", confirmPassword);
@@ -50,11 +52,11 @@ const Input = (props) => {
             },
           });
         }, 1000);
-        console.log(bodyForm);
       })
       .catch((err) => {
+        // console.log();
         // alert("Password salah");
-        toast.error("This is an error!");
+        toast.error("Registrasi Gagal");
         console.log(bodyForm);
 
         button.innerHTML = `Masuk`;
@@ -140,15 +142,16 @@ const Input = (props) => {
             </svg>
             <p className="text-sm xl:text-md lg:text-base">Daftar Sebagai</p>
           </div>
-          <select className="w-full py-2 rounded-lg px-5 bg-[#F9F9F9] text-inherit">
+          <select
+          className="w-full py-2 rounded-lg px-5 bg-[#F9F9F9] text-inherit"
+          onInput={(e) => {
+            setRole(e.target.value);
+          }}>
             <option disabled selected>
               Pilih role
             </option>
-            <option>Admin</option>
-            <option>Mentor</option>
             <option>Tenant</option>
-            <option>Juri</option>
-            <option>User</option>
+            <option>Talent</option>
           </select>
           <div className="flex items-center w-full gap-2">
             <svg

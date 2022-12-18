@@ -17,12 +17,14 @@ export const UserProvider = (props) => {
       const decoded = jwt_decode(token);
       return {
         id: decoded.sub,
-        ...decoded.user,
+        user: decoded.user,
       };
+      // console.log(decoded.user);
     }
 
     return null;
   });
+  // console.log(user);
   const [hide, setHide] = useState(false)
   const navigate = useNavigate();
 
@@ -49,7 +51,7 @@ export const UserProvider = (props) => {
   };
 
   return (
-    <UserContext.Provider value={{ user, login, logout, setHide }}>
+    <UserContext.Provider value={{ user, setUser, login, logout, setHide, hide }}>
       {props.children}
     </UserContext.Provider>
   );

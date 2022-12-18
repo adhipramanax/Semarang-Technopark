@@ -27,7 +27,7 @@ const Index = () => {
     isi = (<ManagementJuri/>)
   }
 
-  console.log(isi);
+  // console.log(isi);
   return (
     <>
       <div className="flex bg-[#F9F9F9]">

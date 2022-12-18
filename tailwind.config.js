@@ -52,7 +52,7 @@ module.exports = {
   safelist: [
     {
       pattern:
-        /(bg|text|border-b)-(hijau|primary|secondary|biru|merah|gray|info|warning|error|success|neutral)/,
+        /(bg|text|border-b)-(hijau|primary|stp-secondary|biru|merah|gray|stp-info|stp-warning|error|stp-success|neutral|stp-danger)/,
     },
   ],
 };
