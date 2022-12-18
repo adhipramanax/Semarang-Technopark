@@ -66,10 +66,10 @@ const Input = (props) => {
   return (
     <>
       <div className="w-full h-screen xl:w-[35%] xl:mx-0 lg:w-[50%] lg:mx-0 flex flex-col justify-center">
-        <h1 className="text-white text-center text-2xl xl:text-4xl font-bold mt-0 xl:mt-10 mb-3 lg:mt-1 lg:mb-3">
+        <h1 className="text-white text-center text-2xl xl:text-4xl font-bold mt-0 xl:mt-20 mb-3 lg:mt-1 lg:mb-3">
           Daftarkan Akun
         </h1>
-        <form className="flex flex-col items-center gap-3 py-4 xl:py-5 lg:py-4 px-6 bg-white rounded-[20px]">
+        <form className="flex flex-col items-center gap-2 py-4 xl:py-5 lg:py-4 px-6 bg-white rounded-[20px]">
           <div className="flex items-center w-full gap-2">
             <svg
               width="24"
@@ -290,7 +290,7 @@ const Input = (props) => {
           <button
             onClick={handleRegister}
             role="button-register"
-            className="btn rounded-[16px] bg-[#04A2FF] w-full h-[3px] xl:h-[50px] lg:h-[45px] text-white border-0 hover:bg-blue-700 tracking-wide"
+            className="btn rounded-[16px] bg-[#04A2FF] w-full h-[3px] xl:h-[50px] lg:h-[45px] text-white border-0 hover:bg-blue-700 tracking-wide mt-2"
           >
             Daftar
           </button>
